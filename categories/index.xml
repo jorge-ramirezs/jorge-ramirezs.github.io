@@ -12,7 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 16 Jul 2020 16:46:42 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2020 19:39:45 -0500</lastBuildDate>
     
         <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -23,7 +23,7 @@
       <item>
         <title>Linux</title>
         <link>/categories/linux/</link>
-        <pubDate>Thu, 16 Jul 2020 16:46:42 -0500</pubDate>
+        <pubDate>Thu, 16 Jul 2020 19:39:45 -0500</pubDate>
         
         
         <guid>/categories/linux/</guid>
@@ -41,7 +41,7 @@
       <item>
         <title>Tutorial</title>
         <link>/categories/tutorial/</link>
-        <pubDate>Thu, 16 Jul 2020 16:46:42 -0500</pubDate>
+        <pubDate>Thu, 16 Jul 2020 19:39:45 -0500</pubDate>
         
         
         <guid>/categories/tutorial/</guid>
