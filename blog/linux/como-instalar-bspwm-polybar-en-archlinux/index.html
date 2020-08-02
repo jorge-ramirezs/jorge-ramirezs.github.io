@@ -1221,7 +1221,7 @@
 
 
     
-<meta name="description" content="En este post vamos a instalar bspwm como manejador de ventanas en una instalacion limpia de Arch Linux. Ademas vamos a instalar y configurar Polybar." />
+<meta name="description" content="En este post vamos a instalar bspwm como manejador de ventanas en una instalación limpia de Arch Linux. Además vamos a instalar y configurar Polybar." />
 
 
 <meta name="keywords" content="archlinux,linux,bspwm,polybar">
@@ -1237,7 +1237,7 @@
 <meta property="og:title" content="Como Instalar Bspwm Polybar en Archlinux">
 <meta property="og:url" content="/blog/linux/como-instalar-bspwm-polybar-en-archlinux/">
 <meta property="og:type" content="article">
-<meta property="og:description" content="En este post vamos a instalar bspwm como manejador de ventanas en una instalacion limpia de Arch Linux. Ademas vamos a instalar y configurar Polybar.">
+<meta property="og:description" content="En este post vamos a instalar bspwm como manejador de ventanas en una instalación limpia de Arch Linux. Además vamos a instalar y configurar Polybar.">
 
   
     <meta property="og:image" content="/images/posts/bspwm-polybar/polybar-logo.svg">
@@ -1245,10 +1245,10 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:app:name:iphone" content="Tech Nerd">
     <meta property="twitter:title" content="Como Instalar Bspwm Polybar en Archlinux">
-    <meta property="twitter:description" content="En este post vamos a instalar bspwm como manejador de ventanas en una instalacion limpia de Arch Linux. Ademas vamos a instalar y configurar Polybar.">
+    <meta property="twitter:description" content="En este post vamos a instalar bspwm como manejador de ventanas en una instalación limpia de Arch Linux. Además vamos a instalar y configurar Polybar.">
   
 
-<meta name="generator" content="Hugo 0.74.0" />
+<meta name="generator" content="Hugo 0.74.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1275,7 +1275,7 @@
     "datePublished": "2020-07-28T18:08:39-05:00",
     "dateModified": "2020-07-28T18:08:39-05:00",
     "url" : "/blog/linux/como-instalar-bspwm-polybar-en-archlinux/",
-    "description": "En este post vamos a instalar bspwm como manejador de ventanas en una instalacion limpia de Arch Linux. Ademas vamos a instalar y configurar Polybar.",
+    "description": "En este post vamos a instalar bspwm como manejador de ventanas en una instalación limpia de Arch Linux. Además vamos a instalar y configurar Polybar.",
     "keywords": ["archlinux","linux","bspwm","polybar"],
     "image" : "/images/posts/bspwm-polybar/polybar-logo.svg",
     "mainEntityOfPage": {
@@ -1555,11 +1555,11 @@
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
       <h2 id="bspwm">BSPWM</h2>
-<p><a href="https://github.com/baskerville/bspwm" target="_blank">bspwm</a> es un manejador de ventanas en mosaico, la caracteristica principal es que presenta las ventanas como hojas de un archivo binario.<br />
-<a href="https://github.com/baskerville/bspwm" target="_blank">bspwm</a> soporta el uso de multiple monitores y es configurado y controlado a traves de mensajes.</p>
-<p>Si has estado siguiendo mi tutorial de como instalar archlinux en una maquina virtual, esta es la continuacion.</p>
-<h3 id="instalacion">Instalacion.</h3>
-<p>Vamos a instalar los paquetes necesarios para correr bspwm. En esta ocasion no voy a instalar un &ldquo;Display Manager&rdquo;, asi que para iniciar el modo grafico vamos a utilizar &ldquo;startx&rdquo;.</p>
+<p><a href="https://github.com/baskerville/bspwm" target="_blank">bspwm</a> es un manejador de ventanas en mosaico, la característica principal es que presenta las ventanas como hojas de un archivo binario.<br />
+<a href="https://github.com/baskerville/bspwm" target="_blank">bspwm</a> soporta el uso de múltiple monitores y es configurado y controlado a través de mensajes.</p>
+<p>Si has estado siguiendo mi tutorial de como instalar archlinux en una máquina virtual, esta es la continuación.</p>
+<h3 id="instalación">Instalación.</h3>
+<p>Vamos a instalar los paquetes necesarios para correr bspwm. En esta ocasión no voy a instalar un &ldquo;Display Manager&rdquo;, así que para iniciar el modo gráfico vamos a utilizar &ldquo;startx&rdquo;.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1568,9 +1568,9 @@
 <pre class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S xorg-server xorg-xinit xf86-video-qxl bspwm sxhkd dmenu nitrogen picom terminator chromium arandr
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="configuracion-inicial">Configuracion Inicial</h3>
-<p>Antes de iniciar el modo grafico tenemos que configurar bspwm y sxhkd</p>
-<p>Vamos a crear los directorios de configuracion y copiar los archivos.</p>
+</div><h3 id="configuración-inicial">Configuración Inicial</h3>
+<p>Antes de iniciar el modo gráfico tenemos que configurar bspwm y sxhkd</p>
+<p>Vamos a crear los directorios de configuración y copiar los archivos.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1625,8 +1625,8 @@ super + Return
 exec bspwm
 </code></pre></td></tr></table>
 </div>
-</div><p>Como estamos en una maquina virtual tenemos que deshabilitar la siguiente opcion en /etc/xdg/picom.conf</p>
-<p>Cambia la opcion &ldquo;vsync = true&rdquo; a</p>
+</div><p>Como estamos en una máquina virtual tenemos que deshabilitar la siguiente opción en /etc/xdg/picom.conf</p>
+<p>Cambia la opción &ldquo;vsync = true&rdquo; a</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1635,9 +1635,9 @@ exec bspwm
 <pre class="chroma"><code class="language-text" data-lang="text">vsync = false
 </code></pre></td></tr></table>
 </div>
-</div><p>O si lo deseas puedes comentar la linea, eso hara que deshabilites la opcion.</p>
-<h3 id="iniciar-modo-grafico-y-configurar-escritorio">Iniciar modo grafico y configurar escritorio</h3>
-<p>Configurado bspwm y sxhkd ahora si, iniciamos el modo grafico con:</p>
+</div><p>O si lo deseas puedes comentar la linea, eso hara que deshabilites la opción.</p>
+<h3 id="iniciar-modo-gráfico-y-configurar-escritorio">Iniciar modo gráfico y configurar escritorio</h3>
+<p>Configurado bspwm y sxhkd, ahora sí, iniciamos el modo gráfico con:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1646,7 +1646,7 @@ exec bspwm
 <pre class="chroma"><code class="language-bash" data-lang="bash">startx
 </code></pre></td></tr></table>
 </div>
-</div><p>Veras que no aparece nada, para verificar que la configuracion es correcta y que bspwm esta funcionando presaiona</p>
+</div><p>Verás que no aparece nada, pero en realidad es que necesitas al menos abrir una terminal, para verificar que la configuración es correcta y que bspwm esta funcionando presaiona</p>
 <pre><code>super + Return
 </code></pre><p>para iniciar terminator. (Donde &ldquo;super&rdquo; es la tecla de &ldquo;windows&rdquo; en tu teclado)</p>
 <h3 id="configurar-resolucion-de-pantalla">Configurar resolucion de pantalla</h3>
@@ -1660,7 +1660,7 @@ exec bspwm
 </code></pre></td></tr></table>
 </div>
 </div><p>para arreglar la resolucion de la pantalla.</p>
-<p>Para grabar la configuracion selecciona el boton de &ldquo;guardar&rdquo; o &ldquo;save&rdquo; y nombra el arcvhivo &ldquo;display.sh&rdquo;</p>
+<p>Para grabar la configuración selecciona el boton de &ldquo;guardar&rdquo; o &ldquo;save&rdquo; y nombra el arcvhivo &ldquo;display.sh&rdquo;</p>
 <p>Lo siguiente es hacer este archivo ejecutable con:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1684,7 +1684,7 @@ exec bspwm
 </code></pre></td></tr></table>
 </div>
 </div><p>Para salir de bspwm, presiona &ldquo;super + alt + q&rdquo;</p>
-<p>E inicia el modo grafico de nuevo con startx.</p>
+<p>E inicia el modo gráfico de nuevo con startx.</p>
 <p>selecciona una imagen de wallpaper</p>
 <p>inicia nitrogen y configura el wallpaper</p>
 <p>agrega nitrogen a xinitrc</p>
@@ -1800,7 +1800,7 @@ picom -f<span class="p">&amp;</span>
 </div>
 </div><h2 id="instalar-polybar">Instalar Polybar</h2>
 <p>Polybar esta en los repositorios AUR, para eso debemos tener instalado &ldquo;yay&rdquo;.</p>
-<p>Cuando instalamos archlinux, tambien instalamos &ldquo;git&rdquo; si no estas siguiendo esta serie de tutoriales, solo instala o verifica que tengas &ldquo;git&rdquo; instalado.</p>
+<p>Cuando instalamos archlinux, tambien instalamos &ldquo;git&rdquo; si no estás siguiendo esta serie de tutoriales, solo instala o verifica que tengas &ldquo;git&rdquo; instalado.</p>
 <h3 id="instalar-yay">Instalar &ldquo;yay&rdquo;</h3>
 <p>Para instalar <a href="https://github.com/Jguer/yay" target="_blank">yay</a> teclea los siguientes comandos:</p>
 <div class="highlight"><div class="chroma">
@@ -1827,9 +1827,9 @@ makepkg -si
 <pre class="chroma"><code class="language-bash" data-lang="bash">yay polybar
 </code></pre></td></tr></table>
 </div>
-</div><p>Acepta los defaults y selecciona &ldquo;N&rdquo; para que no muestre las diferencias.</p>
+</div><p>Acepta los defaults y selecciona &ldquo;N&rdquo; para que no muestre las diferencias en la pantalla.</p>
 <h3 id="configurar-polybar">Configurar Polybar</h3>
-<p>Comienza por instalar el archivo de configuracion de ejemplo.</p>
+<p>Comienza por instalar el archivo de configuración de ejemplo.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1845,7 +1845,7 @@ makepkg -si
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S ttf-unifont siji-git xorg-fonts-misc
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S xorg-fonts-misc
 yay -S ttf-unifont siji-git
 </code></pre></td></tr></table>
 </div>
@@ -1891,7 +1891,7 @@ polybar example  &gt;&gt;/tmp/polybar1.log 2&gt;<span class="p">&amp;</span><spa
 <pre class="chroma"><code class="language-bash" data-lang="bash">chmod +x <span class="nv">$HOME</span>/.config/polybar/launch.sh
 </code></pre></td></tr></table>
 </div>
-</div><p>Después agregamos este script en nuestro archivo bspwmrc para que quede de la siguiente manera:</p>
+</div><p>En este punto agregamos este script en nuestro archivo bspwmrc para que quede de la siguiente manera:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -2521,9 +2521,9 @@ document.addEventListener('DOMContentLoaded', function () {
   <ul>
     <li><a href="#bspwm">BSPWM</a>
       <ul>
-        <li><a href="#instalacion">Instalacion.</a></li>
-        <li><a href="#configuracion-inicial">Configuracion Inicial</a></li>
-        <li><a href="#iniciar-modo-grafico-y-configurar-escritorio">Iniciar modo grafico y configurar escritorio</a></li>
+        <li><a href="#instalación">Instalación.</a></li>
+        <li><a href="#configuración-inicial">Configuración Inicial</a></li>
+        <li><a href="#iniciar-modo-gráfico-y-configurar-escritorio">Iniciar modo gráfico y configurar escritorio</a></li>
         <li><a href="#configurar-resolucion-de-pantalla">Configurar resolucion de pantalla</a></li>
       </ul>
     </li>
