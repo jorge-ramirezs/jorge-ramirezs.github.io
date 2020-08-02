@@ -12,13 +12,67 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 16 Jul 2020 19:39:45 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2020 18:08:39 -0500</lastBuildDate>
     
         <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>ArchLinux</title>
+        <link>/categories/archlinux/</link>
+        <pubDate>Tue, 28 Jul 2020 18:08:39 -0500</pubDate>
+        
+        
+        <guid>/categories/archlinux/</guid>
+        <description></description>
+        
+        <dc:creator>Jorge R.</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>bspwm</title>
+        <link>/categories/bspwm/</link>
+        <pubDate>Tue, 28 Jul 2020 18:08:39 -0500</pubDate>
+        
+        
+        <guid>/categories/bspwm/</guid>
+        <description></description>
+        
+        <dc:creator>Jorge R.</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Escritorio</title>
+        <link>/categories/escritorio/</link>
+        <pubDate>Tue, 28 Jul 2020 18:08:39 -0500</pubDate>
+        
+        
+        <guid>/categories/escritorio/</guid>
+        <description></description>
+        
+        <dc:creator>Jorge R.</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>Linux</title>

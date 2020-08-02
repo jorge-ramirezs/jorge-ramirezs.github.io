@@ -12,7 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 16 Jul 2020 19:39:45 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2020 18:08:39 -0500</lastBuildDate>
     
         <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -23,7 +23,7 @@
       <item>
         <title>archlinux</title>
         <link>/tags/archlinux/</link>
-        <pubDate>Thu, 16 Jul 2020 19:39:45 -0500</pubDate>
+        <pubDate>Tue, 28 Jul 2020 18:08:39 -0500</pubDate>
         
         
         <guid>/tags/archlinux/</guid>
@@ -39,9 +39,27 @@
       </item>
       
       <item>
+        <title>bspwm</title>
+        <link>/tags/bspwm/</link>
+        <pubDate>Tue, 28 Jul 2020 18:08:39 -0500</pubDate>
+        
+        
+        <guid>/tags/bspwm/</guid>
+        <description></description>
+        
+        <dc:creator>Jorge R.</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
         <title>linux</title>
         <link>/tags/linux/</link>
-        <pubDate>Thu, 16 Jul 2020 19:39:45 -0500</pubDate>
+        <pubDate>Tue, 28 Jul 2020 18:08:39 -0500</pubDate>
         
         
         <guid>/tags/linux/</guid>
@@ -57,12 +75,12 @@
       </item>
       
       <item>
-        <title>raspberry</title>
-        <link>/tags/raspberry/</link>
-        <pubDate>Thu, 16 Jul 2020 16:46:42 -0500</pubDate>
+        <title>polybar</title>
+        <link>/tags/polybar/</link>
+        <pubDate>Tue, 28 Jul 2020 18:08:39 -0500</pubDate>
         
         
-        <guid>/tags/raspberry/</guid>
+        <guid>/tags/polybar/</guid>
         <description></description>
         
         <dc:creator>Jorge R.</dc:creator>
