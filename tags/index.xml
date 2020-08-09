@@ -12,13 +12,49 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 28 Jul 2020 18:08:39 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2020 21:28:36 -0500</lastBuildDate>
     
         <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>artix</title>
+        <link>/tags/artix/</link>
+        <pubDate>Wed, 05 Aug 2020 21:28:36 -0500</pubDate>
+        
+        
+        <guid>/tags/artix/</guid>
+        <description></description>
+        
+        <dc:creator>Jorge R.</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>tutorial</title>
+        <link>/tags/tutorial/</link>
+        <pubDate>Wed, 05 Aug 2020 21:28:36 -0500</pubDate>
+        
+        
+        <guid>/tags/tutorial/</guid>
+        <description></description>
+        
+        <dc:creator>Jorge R.</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>archlinux</title>

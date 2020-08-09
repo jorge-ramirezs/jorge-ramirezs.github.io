@@ -3,6 +3,56 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/categories/artix/</loc>
+    <lastmod>2020-08-05T21:28:36-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/artix/</loc>
+    <lastmod>2020-08-05T21:28:36-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/</loc>
+    <lastmod>2020-08-05T21:28:36-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2020-08-05T21:28:36-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/linux/como-instalar-artix-linux-openrc/</loc>
+    <lastmod>2020-08-05T21:28:36-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/instalaci%C3%B3n-base/</loc>
+    <lastmod>2020-08-05T21:28:36-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-08-05T21:28:36-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-08-05T21:28:36-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/tutorial/</loc>
+    <lastmod>2020-08-05T21:28:36-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/tutorial/</loc>
+    <lastmod>2020-08-05T21:28:36-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/categories/archlinux/</loc>
     <lastmod>2020-07-28T18:08:39-05:00</lastmod>
   </url>
@@ -13,22 +63,12 @@
   </url>
   
   <url>
-    <loc>/blog/</loc>
-    <lastmod>2020-07-28T18:08:39-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/bspwm/</loc>
     <lastmod>2020-07-28T18:08:39-05:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/bspwm/</loc>
-    <lastmod>2020-07-28T18:08:39-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
     <lastmod>2020-07-28T18:08:39-05:00</lastmod>
   </url>
   
@@ -63,27 +103,12 @@
   </url>
   
   <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-07-28T18:08:39-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2020-07-28T18:08:39-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/blog/linux/como-instalar-archlinux-en-virtualbox/</loc>
     <lastmod>2020-07-16T19:39:45-05:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/linux/</loc>
-    <lastmod>2020-07-16T19:39:45-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/tutorial/</loc>
     <lastmod>2020-07-16T19:39:45-05:00</lastmod>
   </url>
   
