@@ -6,9 +6,9 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>neovim on Tech Nerd</title>
+    <title>neovim on Linux Fácil</title>
     <link>/tags/neovim/</link>
-    <description>Recent content in neovim on Tech Nerd</description>
+    <description>Recent content in neovim on Linux Fácil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>©{year}, All Rights Reserved</copyright>

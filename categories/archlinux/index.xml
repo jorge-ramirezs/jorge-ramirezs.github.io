@@ -6,9 +6,9 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>ArchLinux on Tech Nerd</title>
+    <title>ArchLinux on Linux Fácil</title>
     <link>/categories/archlinux/</link>
-    <description>Recent content in ArchLinux on Tech Nerd</description>
+    <description>Recent content in ArchLinux on Linux Fácil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>©{year}, All Rights Reserved</copyright>
