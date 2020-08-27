@@ -7,14 +7,14 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Tags on Linux Fácil</title>
-    <link>/tags/</link>
+    <link>https://linuxfacil.mx/tags/</link>
     <description>Recent content in Tags on Linux Fácil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>©{year}, All Rights Reserved</copyright>
     <lastBuildDate>Wed, 05 Aug 2020 21:28:36 -0500</lastBuildDate>
     
-        <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://linuxfacil.mx/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -22,11 +22,11 @@
       
       <item>
         <title>artix</title>
-        <link>/tags/artix/</link>
+        <link>https://linuxfacil.mx/tags/artix/</link>
         <pubDate>Wed, 05 Aug 2020 21:28:36 -0500</pubDate>
         
         
-        <guid>/tags/artix/</guid>
+        <guid>https://linuxfacil.mx/tags/artix/</guid>
         <description></description>
         
         <dc:creator>Jorge R.</dc:creator>
@@ -40,11 +40,11 @@
       
       <item>
         <title>tutorial</title>
-        <link>/tags/tutorial/</link>
+        <link>https://linuxfacil.mx/tags/tutorial/</link>
         <pubDate>Wed, 05 Aug 2020 21:28:36 -0500</pubDate>
         
         
-        <guid>/tags/tutorial/</guid>
+        <guid>https://linuxfacil.mx/tags/tutorial/</guid>
         <description></description>
         
         <dc:creator>Jorge R.</dc:creator>
@@ -58,11 +58,11 @@
       
       <item>
         <title>archlinux</title>
-        <link>/tags/archlinux/</link>
+        <link>https://linuxfacil.mx/tags/archlinux/</link>
         <pubDate>Tue, 28 Jul 2020 18:08:39 -0500</pubDate>
         
         
-        <guid>/tags/archlinux/</guid>
+        <guid>https://linuxfacil.mx/tags/archlinux/</guid>
         <description></description>
         
         <dc:creator>Jorge R.</dc:creator>
@@ -76,11 +76,11 @@
       
       <item>
         <title>bspwm</title>
-        <link>/tags/bspwm/</link>
+        <link>https://linuxfacil.mx/tags/bspwm/</link>
         <pubDate>Tue, 28 Jul 2020 18:08:39 -0500</pubDate>
         
         
-        <guid>/tags/bspwm/</guid>
+        <guid>https://linuxfacil.mx/tags/bspwm/</guid>
         <description></description>
         
         <dc:creator>Jorge R.</dc:creator>
@@ -94,11 +94,11 @@
       
       <item>
         <title>linux</title>
-        <link>/tags/linux/</link>
+        <link>https://linuxfacil.mx/tags/linux/</link>
         <pubDate>Tue, 28 Jul 2020 18:08:39 -0500</pubDate>
         
         
-        <guid>/tags/linux/</guid>
+        <guid>https://linuxfacil.mx/tags/linux/</guid>
         <description></description>
         
         <dc:creator>Jorge R.</dc:creator>
@@ -112,11 +112,11 @@
       
       <item>
         <title>polybar</title>
-        <link>/tags/polybar/</link>
+        <link>https://linuxfacil.mx/tags/polybar/</link>
         <pubDate>Tue, 28 Jul 2020 18:08:39 -0500</pubDate>
         
         
-        <guid>/tags/polybar/</guid>
+        <guid>https://linuxfacil.mx/tags/polybar/</guid>
         <description></description>
         
         <dc:creator>Jorge R.</dc:creator>
@@ -130,11 +130,11 @@
       
       <item>
         <title>neovim</title>
-        <link>/tags/neovim/</link>
+        <link>https://linuxfacil.mx/tags/neovim/</link>
         <pubDate>Mon, 06 Jul 2020 18:41:31 -0500</pubDate>
         
         
-        <guid>/tags/neovim/</guid>
+        <guid>https://linuxfacil.mx/tags/neovim/</guid>
         <description></description>
         
         <dc:creator>Jorge R.</dc:creator>
@@ -148,11 +148,11 @@
       
       <item>
         <title>vi</title>
-        <link>/tags/vi/</link>
+        <link>https://linuxfacil.mx/tags/vi/</link>
         <pubDate>Mon, 06 Jul 2020 18:41:31 -0500</pubDate>
         
         
-        <guid>/tags/vi/</guid>
+        <guid>https://linuxfacil.mx/tags/vi/</guid>
         <description></description>
         
         <dc:creator>Jorge R.</dc:creator>
@@ -166,11 +166,11 @@
       
       <item>
         <title>vim</title>
-        <link>/tags/vim/</link>
+        <link>https://linuxfacil.mx/tags/vim/</link>
         <pubDate>Mon, 06 Jul 2020 18:41:31 -0500</pubDate>
         
         
-        <guid>/tags/vim/</guid>
+        <guid>https://linuxfacil.mx/tags/vim/</guid>
         <description></description>
         
         <dc:creator>Jorge R.</dc:creator>
@@ -184,11 +184,11 @@
       
       <item>
         <title>python</title>
-        <link>/tags/python/</link>
+        <link>https://linuxfacil.mx/tags/python/</link>
         <pubDate>Mon, 06 Jul 2020 18:17:40 -0500</pubDate>
         
         
-        <guid>/tags/python/</guid>
+        <guid>https://linuxfacil.mx/tags/python/</guid>
         <description></description>
         
         <dc:creator>Jorge R.</dc:creator>
@@ -202,11 +202,11 @@
       
       <item>
         <title>windows</title>
-        <link>/tags/windows/</link>
+        <link>https://linuxfacil.mx/tags/windows/</link>
         <pubDate>Mon, 06 Jul 2020 18:17:40 -0500</pubDate>
         
         
-        <guid>/tags/windows/</guid>
+        <guid>https://linuxfacil.mx/tags/windows/</guid>
         <description></description>
         
         <dc:creator>Jorge R.</dc:creator>

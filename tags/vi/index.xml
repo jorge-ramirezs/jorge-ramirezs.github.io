@@ -7,14 +7,14 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>vi on Linux Fácil</title>
-    <link>/tags/vi/</link>
+    <link>https://linuxfacil.mx/tags/vi/</link>
     <description>Recent content in vi on Linux Fácil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>©{year}, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 06 Jul 2020 18:41:31 -0500</lastBuildDate>
     
-        <atom:link href="/tags/vi/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://linuxfacil.mx/tags/vi/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -22,16 +22,16 @@
       
       <item>
         <title>Como Configurar Neovim Como Vscode</title>
-        <link>/blog/neovim/como-configurar-neovim-como-vscode/</link>
+        <link>https://linuxfacil.mx/blog/neovim/como-configurar-neovim-como-vscode/</link>
         <pubDate>Mon, 06 Jul 2020 18:41:31 -0500</pubDate>
         
         <atom:modified>Mon, 06 Jul 2020 18:41:31 -0500</atom:modified>
-        <guid>/blog/neovim/como-configurar-neovim-como-vscode/</guid>
+        <guid>https://linuxfacil.mx/blog/neovim/como-configurar-neovim-como-vscode/</guid>
         <description>En este post aprenderás a instalar y configurar NeoVim como un IDE para desarrollar en Python y muchos otros trucos más.
 ¿Qué es y porqué NeoVim? </description>
         
         <dc:creator>Jorge R.</dc:creator>
-        <media:content url="//images/posts/neovim-logo.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://linuxfacil.mx//images/posts/neovim-logo.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
