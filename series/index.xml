@@ -12,7 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 28 Jul 2020 18:08:39 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 15 Aug 2020 19:39:45 -0500</lastBuildDate>
     
         <atom:link href="https://linuxfacil.mx/series/index.xml" rel="self" type="application/rss+xml" />
     
@@ -23,7 +23,7 @@
       <item>
         <title>Como instalar Arch Linux</title>
         <link>https://linuxfacil.mx/series/como-instalar-arch-linux/</link>
-        <pubDate>Tue, 28 Jul 2020 18:08:39 -0500</pubDate>
+        <pubDate>Sat, 15 Aug 2020 19:39:45 -0500</pubDate>
         
         
         <guid>https://linuxfacil.mx/series/como-instalar-arch-linux/</guid>

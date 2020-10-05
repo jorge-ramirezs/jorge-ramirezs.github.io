@@ -3,22 +3,77 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://linuxfacil.mx/tags/archlinux/</loc>
+    <lastmod>2020-08-15T19:39:45-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/tags/bios/</loc>
+    <lastmod>2020-08-15T19:39:45-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/blog/</loc>
+    <lastmod>2020-08-15T19:39:45-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/categories/</loc>
+    <lastmod>2020-08-15T19:39:45-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/series/como-instalar-arch-linux/</loc>
+    <lastmod>2020-08-15T19:39:45-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/blog/linux/como-instalar-archlinux-en-mbr/</loc>
+    <lastmod>2020-08-15T19:39:45-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/categories/linux/</loc>
+    <lastmod>2020-08-15T19:39:45-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/tags/linux/</loc>
+    <lastmod>2020-08-15T19:39:45-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/</loc>
+    <lastmod>2020-08-15T19:39:45-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/tags/mbr/</loc>
+    <lastmod>2020-08-15T19:39:45-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/series/</loc>
+    <lastmod>2020-08-15T19:39:45-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/tags/</loc>
+    <lastmod>2020-08-15T19:39:45-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/categories/tutorial/</loc>
+    <lastmod>2020-08-15T19:39:45-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://linuxfacil.mx/categories/artix/</loc>
     <lastmod>2020-08-05T21:28:36-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://linuxfacil.mx/tags/artix/</loc>
-    <lastmod>2020-08-05T21:28:36-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://linuxfacil.mx/blog/</loc>
-    <lastmod>2020-08-05T21:28:36-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://linuxfacil.mx/categories/</loc>
     <lastmod>2020-08-05T21:28:36-05:00</lastmod>
   </url>
   
@@ -33,32 +88,12 @@
   </url>
   
   <url>
-    <loc>https://linuxfacil.mx/</loc>
-    <lastmod>2020-08-05T21:28:36-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://linuxfacil.mx/tags/</loc>
-    <lastmod>2020-08-05T21:28:36-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://linuxfacil.mx/categories/tutorial/</loc>
-    <lastmod>2020-08-05T21:28:36-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://linuxfacil.mx/tags/tutorial/</loc>
     <lastmod>2020-08-05T21:28:36-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://linuxfacil.mx/categories/archlinux/</loc>
-    <lastmod>2020-07-28T18:08:39-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://linuxfacil.mx/tags/archlinux/</loc>
     <lastmod>2020-07-28T18:08:39-05:00</lastmod>
   </url>
   
@@ -73,11 +108,6 @@
   </url>
   
   <url>
-    <loc>https://linuxfacil.mx/series/como-instalar-arch-linux/</loc>
-    <lastmod>2020-07-28T18:08:39-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://linuxfacil.mx/blog/linux/como-instalar-bspwm-polybar-en-archlinux/</loc>
     <lastmod>2020-07-28T18:08:39-05:00</lastmod>
   </url>
@@ -88,27 +118,12 @@
   </url>
   
   <url>
-    <loc>https://linuxfacil.mx/tags/linux/</loc>
-    <lastmod>2020-07-28T18:08:39-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://linuxfacil.mx/tags/polybar/</loc>
     <lastmod>2020-07-28T18:08:39-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://linuxfacil.mx/series/</loc>
-    <lastmod>2020-07-28T18:08:39-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://linuxfacil.mx/blog/linux/como-instalar-archlinux-en-virtualbox/</loc>
-    <lastmod>2020-07-16T19:39:45-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://linuxfacil.mx/categories/linux/</loc>
     <lastmod>2020-07-16T19:39:45-05:00</lastmod>
   </url>
   

@@ -1566,7 +1566,7 @@ if (!doNotTrack) {
 <div class="single__infos">
   <time class="single__info" title="Escrito el">📅&nbsp;Aug 15, 2020 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Tiempo que toma leer este post"> ☕&nbsp;8&nbsp;minutos de lectura </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Tiempo que toma leer este post"> ☕&nbsp;7&nbsp;minutos de lectura </span>
   
   <span class="single__info">
     
@@ -1591,11 +1591,6 @@ if (!doNotTrack) {
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
       <!-- ![Como instalar Arch Linux en VirtualBox](/images/posts/archvbox-install/Arch-Linux-VirtualBox.png) -->
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/b5gSiNBSLNc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
 <h2 id="bajar-el-iso">Bajar el ISO</h2>
 <p>El primer paso obviamente es bajar el ISO del <a href="https://www.archlinux.org/download/" target="_blank">sitio oficial</a></p>
 <h2 id="instala-arch-linux">Instala Arch Linux</h2>
@@ -1696,9 +1691,8 @@ if (!doNotTrack) {
 </div>
 </div><p><img src="/images/posts/archvbox-install/lsblk01-min.jpg" alt="lsblk" /></p>
 <p>Mi disco está en /dev/<strong>sda</strong></p>
-<p>Tenemos que crear 2 particiones, una para los archivos de inicio o &ldquo;boot&rdquo; y otra donde estará instalado Arch Linux, como este es un tutorial de &ldquo;entrenamiento&rdquo; no vamos a crear partició de SWAP ni tampoco partición para el directorio de &ldquo;home&rdquo;, vamos a hacer una instalación sencilla.</p>
-<p>La primera partición deberá de ser de tipo <strong>EFI</strong> y la segunda tipo <strong>Linux</strong></p>
-<p>Para crear las particiones voy a utilizar <strong>cfdisk</strong></p>
+<p>Tenemos que crear 2 particiones, una para los archivos de inicio o &ldquo;boot&rdquo; y otra donde estará instalado Arch Linux.<br />
+Para crear las particiones voy a utilizar <strong>cfdisk</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1711,30 +1705,27 @@ if (!doNotTrack) {
 <p>Vamos a crear 2 particiones, la primera partición será para SWAP y la segunda para la instalación del sistema.</p>
 <ol>
 <li>
-<p>Selecciona [  New  ]</p>
+<p>Selecciona [ New ]</p>
 </li>
 <li>
 <p>El tamaño de la primera partición será de <strong>4GB</strong> en mi caso</p>
 </li>
 <li>
-<p>Selecciona [  primary ] y presiona ENTER</p>
+<p>Selecciona [ primary ] y presiona ENTER</p>
 </li>
 <li>
 <p>Cambia el tipo de partición a SWAP seleccionando [ Type ] y luego &ldquo;Linux swap&rdquo;</p>
 </li>
 <li>
-<p>Selecciona el espacio disponible (Free Space), luego selecciona [  New  ] , presiona ENTER y luego ENTER de nuevo para seleccionar todo el espacio disponible, en mi caso los 9.8G restantes</p>
+<p>Selecciona el espacio disponible (Free Space), luego selecciona [ New ] , presiona ENTER y luego ENTER de nuevo para seleccionar todo el espacio disponible, en mi caso los 9.8G restantes</p>
+</li>
+<li>
+<p>Selecciona [ Type ] y luego selecciona <strong>&ldquo;Linux filesystem&rdquo;</strong> de la lista</p>
+</li>
+<li>
+<p>Selecciona [ Write ] para guardar los cambios y crear las particiones. cfdisk te preguntara si estás seguro de que deseas crear las nuevas particiones. Teclea &ldquo;yes&rdquo; y presiona ENTER</p>
 </li>
 </ol>
-<p><img src="/images/posts/archvbox-install/cfdisk_part2-min.jpg" alt="particion 2" /></p>
-<ol start="6">
-<li>Selecciona [  Type  ] y luego selecciona <strong>&ldquo;Linux filesystem&rdquo;</strong> de la lista</li>
-</ol>
-<p><img src="/images/posts/archvbox-install/cfdisk_part2_tipo_linux-min.jpg" alt="particion 2" /></p>
-<ol start="7">
-<li>Selecciona [  Write  ] para guardar los cambios y crear las particiones. cfdisk te preguntara si estás seguro de que deseas crear las nuevas particiones. Teclea &ldquo;yes&rdquo; y presiona ENTER</li>
-</ol>
-<p><img src="/images/posts/archvbox-install/cfdisk_write_yes-min.jpg" alt="Guarda los Cambios en cfdisk" /></p>
 <h4 id="verifica-las-particiones">Verifica las particiones</h4>
 <p>Para verificar que todo haya ido bien teclea lsblk y asegurate de que las particiones estén como sigue</p>
 <p><img src="/images/posts/archvbox-install/lsblk02-min.jpg" alt="lsblk" /></p>
@@ -1815,8 +1806,7 @@ swapon /dev/sda1
 <pre class="chroma"><code class="language-bash" data-lang="bash">genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
 </code></pre></td></tr></table>
 </div>
-</div><p><img src="/images/posts/archvbox-install/crea_fstab-min.jpg" alt="Crea fstab" /></p>
-<h3 id="entra-a-la-instalación">Entra a la instalación</h3>
+</div><h3 id="entra-a-la-instalación">Entra a la instalación</h3>
 <p>Listo, ya que veas en tu archivo de fstab que todo está correcto, que tienes ambas particiones configuradas correctamente, vamos a crear nuestro archivo de swap.</p>
 <ol>
 <li>Primero entra a la instalación base</li>
@@ -2306,10 +2296,6 @@ reboot
         
         <li>
           <a href="/blog/linux/como-instalar-archlinux-en-virtualbox/" class="related__link">Como Instalar Archlinux en Virtualbox</a>
-        </li>
-        
-        <li>
-          <a href="/blog/linux/como-instalar-archlinux-raspberry-pi-4/" class="related__link">Como Instalar Archlinux en Raspberry Pi 4</a>
         </li>
         
     </ul>
