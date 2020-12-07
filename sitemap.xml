@@ -3,22 +3,62 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://linuxfacil.mx/blog/</loc>
+    <lastmod>2020-11-30T16:55:32-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/tags/bspwm/</loc>
+    <lastmod>2020-11-30T16:55:32-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/categories/</loc>
+    <lastmod>2020-11-30T16:55:32-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/blog/linux/como-instalar-bspwm-polybar-en-ubuntu/</loc>
+    <lastmod>2020-11-30T16:55:32-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/</loc>
+    <lastmod>2020-11-30T16:55:32-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/categories/manejador-de-ventanas/</loc>
+    <lastmod>2020-11-30T16:55:32-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/tags/polybar/</loc>
+    <lastmod>2020-11-30T16:55:32-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/tags/</loc>
+    <lastmod>2020-11-30T16:55:32-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/tags/ubuntu/</loc>
+    <lastmod>2020-11-30T16:55:32-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/categories/window-manager/</loc>
+    <lastmod>2020-11-30T16:55:32-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://linuxfacil.mx/tags/archlinux/</loc>
     <lastmod>2020-08-15T19:39:45-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://linuxfacil.mx/tags/bios/</loc>
-    <lastmod>2020-08-15T19:39:45-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://linuxfacil.mx/blog/</loc>
-    <lastmod>2020-08-15T19:39:45-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://linuxfacil.mx/categories/</loc>
     <lastmod>2020-08-15T19:39:45-05:00</lastmod>
   </url>
   
@@ -43,22 +83,12 @@
   </url>
   
   <url>
-    <loc>https://linuxfacil.mx/</loc>
-    <lastmod>2020-08-15T19:39:45-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://linuxfacil.mx/tags/mbr/</loc>
     <lastmod>2020-08-15T19:39:45-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://linuxfacil.mx/series/</loc>
-    <lastmod>2020-08-15T19:39:45-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://linuxfacil.mx/tags/</loc>
     <lastmod>2020-08-15T19:39:45-05:00</lastmod>
   </url>
   
@@ -98,11 +128,6 @@
   </url>
   
   <url>
-    <loc>https://linuxfacil.mx/tags/bspwm/</loc>
-    <lastmod>2020-07-28T18:08:39-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://linuxfacil.mx/categories/bspwm/</loc>
     <lastmod>2020-07-28T18:08:39-05:00</lastmod>
   </url>
@@ -114,11 +139,6 @@
   
   <url>
     <loc>https://linuxfacil.mx/categories/escritorio/</loc>
-    <lastmod>2020-07-28T18:08:39-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://linuxfacil.mx/tags/polybar/</loc>
     <lastmod>2020-07-28T18:08:39-05:00</lastmod>
   </url>
   
