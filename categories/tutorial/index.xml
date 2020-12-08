@@ -172,53 +172,6 @@ Crea una máquina virtual nueva con el siguiente nombre y tipo Presiona &amp;ldq
       </item>
       
       <item>
-        <title>Como Configurar Neovim Como Vscode</title>
-        <link>https://linuxfacil.mx/blog/neovim/como-configurar-neovim-como-vscode/</link>
-        <pubDate>Mon, 06 Jul 2020 18:41:31 -0500</pubDate>
-        
-        <atom:modified>Mon, 06 Jul 2020 18:41:31 -0500</atom:modified>
-        <guid>https://linuxfacil.mx/blog/neovim/como-configurar-neovim-como-vscode/</guid>
-        <description>En este post aprenderás a instalar y configurar NeoVim como un IDE para desarrollar en Python y muchos otros trucos más.
-¿Qué es y porqué NeoVim? </description>
-        
-        <dc:creator>Jorge R.</dc:creator>
-        <media:content url="https://linuxfacil.mx//images/posts/neovim-logo.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>vim</category>
-            
-          
-            
-              <category>vi</category>
-            
-          
-            
-              <category>neovim</category>
-            
-          
-        
-        
-          
-            
-              <category>Tutorial</category>
-            
-          
-            
-              <category>Vim</category>
-            
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-      <item>
         <title>Como Instalar Python en Windows 10 en 3 Sencillos Pasos.</title>
         <link>https://linuxfacil.mx/blog/python/como-instalar-python-en-windows-10/</link>
         <pubDate>Mon, 06 Jul 2020 18:17:40 -0500</pubDate>
