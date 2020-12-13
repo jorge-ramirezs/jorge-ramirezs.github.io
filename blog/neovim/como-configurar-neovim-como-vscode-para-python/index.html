@@ -1753,7 +1753,23 @@ mkdir <span class="nv">$HOME</span>/.config/nvim/nvim-plugins
 mkdir <span class="nv">$HOME</span>/.config/nvim/plug-config
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="archivos-vim">Archivos .vim</h3>
+</div><h3 id="ambiente-de-python-para-neovim">Ambiente de Python para Neovim</h3>
+<p>Vamos a crear un ambiente virtual dentro de la carpeta de configuración de Neovim. Para eso, en la terminal tecleamos lo siguiente:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ~/.config/nvim
+
+pipenv install
+</code></pre></td></tr></table>
+</div>
+</div><p>Copia la ruta donde se creó el ambiente virtual pues lo usaremos en el siguiente paso:</p>
+<p><img src="/images/posts/neovim-python/pipenv-install.png" alt="pipenv output" /></p>
+<h3 id="archivos-vim">Archivos .vim</h3>
 <h4 id="generalsettingsvim">general/settings.vim</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2455,7 +2471,49 @@ mkdir <span class="nv">$HOME</span>/.config/nvim/plug-config
 </span><span class="err"></span><span class="nx">endfor</span><span class="err">
 </span></code></pre></td></tr></table>
 </div>
+</div><h2 id="bonus">Bonus</h2>
+<h3 id="gruvbox-">Gruvbox 💻</h3>
+<p>En lo personal, el mejor tema para programar en Neovim, es <a href="https://github.com/morhetz/gruvbox" target="_blank"> Gruvbox</a>, la combinación de colores se me hace seria y sobretodo muy cómodo para la vista, simple y sencillamente&hellip; ¡Me Encanta!</p>
+<p>Primero agregamos el plugin en $HOME/.config/nvim/nvim-plugins/plugins.vim</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-plugins.vim" data-lang="plugins.vim"><span class="c">    &#34; Other themes</span><span class="err">
+</span><span class="err"></span>    <span class="nx">Plug</span> <span class="s1">&#39;morhetz/gruvbox&#39;</span><span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>Recuerda que una vez que guardes los cambios, debes salir de Neovim y volver a entrar, luego correr :PlugInstall</p>
+<p>Después hay que editar $HOME/.config/nvim/general/settings.vim para agregar gruvbox como tema por defecto.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-settings.vim" data-lang="settings.vim"><span class="c">&#34; Gruvbox por defecto</span><span class="err">
+</span><span class="err"></span><span class="nx">colorscheme</span> <span class="nx">gruvbox</span><span class="err">
+</span><span class="err"></span><span class="k">let</span> <span class="nx">g</span>:<span class="nx">gruvbox_contrast_dark</span><span class="p">=</span><span class="s1">&#39;hard&#39;</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">background</span><span class="p">=</span><span class="nb">dark</span><span class="err">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>Por último, vamos a configurar Airline con el mismo tema de colores. Para eso hay que editar $HOME/.config/nvim/plug-config/airline.vim</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-airline.vim" data-lang="airline.vim"><span class="c">&#34;Gruvbox</span><span class="err">
+</span><span class="err"></span><span class="k">let</span> <span class="nx">g</span>:<span class="nx">airline_theme</span><span class="p">=</span><span class="s1">&#39;gruvbox&#39;</span><span class="err">
+</span></code></pre></td></tr></table>
+</div>
 </div><h2 id="conclusión">Conclusión</h2>
+<p><img src="/images/posts/neovim-python/neovim-como-vscode.png" alt="Neovim Como VSCode" /></p>
 <p><a href="https://neovim.io" target="_blank">Neovim</a> es un editor de textos ligero y sobretodo muy &ldquo;configurable&rdquo;, al principio puede parecer intimidante pero con el tiempo y la práctica se vuelve una herramienta muy útil para el desarrollo.</p>
 <p>Si deseas conocer que otras extensiones existen para CoC, visita la <a href="https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions" target="_blank">wiki oficial</a> donde encontraras basta información.</p>
 <p>Si tienes algún comentario o recomendación de algún artículo que te gustaría que cubriera en este blog, no dudes en mandarme un mensaje en twitter a <a href="https://twitter.com/jorgers" target="\_blank">@JorgeRS</a></p>
@@ -3062,8 +3120,14 @@ document.addEventListener('DOMContentLoaded', function () {
     <li><a href="#configuración">Configuración</a>
       <ul>
         <li><a href="#directorio-nvim">Directorio nvim</a></li>
+        <li><a href="#ambiente-de-python-para-neovim">Ambiente de Python para Neovim</a></li>
         <li><a href="#archivos-vim">Archivos .vim</a></li>
         <li><a href="#plugins">Plugins</a></li>
+      </ul>
+    </li>
+    <li><a href="#bonus">Bonus</a>
+      <ul>
+        <li><a href="#gruvbox-">Gruvbox 💻</a></li>
       </ul>
     </li>
     <li><a href="#conclusión">Conclusión</a></li>
