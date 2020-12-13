@@ -4,7 +4,52 @@
   
   <url>
     <loc>https://linuxfacil.mx/blog/</loc>
-    <lastmod>2020-11-30T16:55:32-06:00</lastmod>
+    <lastmod>2020-12-06T20:55:47-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/categories/</loc>
+    <lastmod>2020-12-06T20:55:47-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/blog/neovim/como-configurar-neovim-como-vscode-para-python/</loc>
+    <lastmod>2020-12-06T20:55:47-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/tags/ide/</loc>
+    <lastmod>2020-12-06T20:55:47-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/</loc>
+    <lastmod>2020-12-06T20:55:47-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/tags/neovim/</loc>
+    <lastmod>2020-12-06T20:55:47-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/categories/neovim/</loc>
+    <lastmod>2020-12-06T20:55:47-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/tags/python/</loc>
+    <lastmod>2020-12-06T20:55:47-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/tags/</loc>
+    <lastmod>2020-12-06T20:55:47-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/tags/vim/</loc>
+    <lastmod>2020-12-06T20:55:47-06:00</lastmod>
   </url>
   
   <url>
@@ -13,17 +58,7 @@
   </url>
   
   <url>
-    <loc>https://linuxfacil.mx/categories/</loc>
-    <lastmod>2020-11-30T16:55:32-06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://linuxfacil.mx/blog/linux/como-instalar-bspwm-polybar-en-ubuntu/</loc>
-    <lastmod>2020-11-30T16:55:32-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://linuxfacil.mx/</loc>
     <lastmod>2020-11-30T16:55:32-06:00</lastmod>
   </url>
   
@@ -34,11 +69,6 @@
   
   <url>
     <loc>https://linuxfacil.mx/tags/polybar/</loc>
-    <lastmod>2020-11-30T16:55:32-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://linuxfacil.mx/tags/</loc>
     <lastmod>2020-11-30T16:55:32-06:00</lastmod>
   </url>
   
@@ -154,11 +184,6 @@
   
   <url>
     <loc>https://linuxfacil.mx/categories/python/</loc>
-    <lastmod>2020-07-06T18:17:40-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://linuxfacil.mx/tags/python/</loc>
     <lastmod>2020-07-06T18:17:40-05:00</lastmod>
   </url>
   

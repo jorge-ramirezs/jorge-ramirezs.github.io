@@ -12,7 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 06 Jul 2020 18:41:31 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 06 Dec 2020 20:55:47 -0600</lastBuildDate>
     
         <atom:link href="https://linuxfacil.mx/tags/vim/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,17 +21,19 @@
 
       
       <item>
-        <title>Como Configurar Neovim Como Vscode</title>
-        <link>https://linuxfacil.mx/blog/neovim/como-configurar-neovim-como-vscode/</link>
-        <pubDate>Mon, 06 Jul 2020 18:41:31 -0500</pubDate>
+        <title>Como Configurar Neovim Como VsCode</title>
+        <link>https://linuxfacil.mx/blog/neovim/como-configurar-neovim-como-vscode-para-python/</link>
+        <pubDate>Sun, 06 Dec 2020 20:55:47 -0600</pubDate>
         
-        <atom:modified>Mon, 06 Jul 2020 18:41:31 -0500</atom:modified>
-        <guid>https://linuxfacil.mx/blog/neovim/como-configurar-neovim-como-vscode/</guid>
-        <description>En este post aprenderás a instalar y configurar NeoVim como un IDE para desarrollar en Python y muchos otros trucos más.
-¿Qué es y porqué NeoVim? </description>
+        <atom:modified>Sun, 06 Dec 2020 20:55:47 -0600</atom:modified>
+        <guid>https://linuxfacil.mx/blog/neovim/como-configurar-neovim-como-vscode-para-python/</guid>
+        <description>Introducción Neovim es VIM pero mejorado. La documentación oficial lo define como:
+ Neovim es un editor de texto basado en Vim diseñado para la extensibilidad y usabilidad, para fomentar nuevas aplicaciones y contribuciones.
+ Instalación Prerequisitos Como lo dice el título de este artículo, me estaré concentrando en configurar Neovim como IDE para python, entonces voy a asumir que ya tienes Python y Pip instalados en tu sistema.
+Python, Pip y Pipenv Para verificar que tengas Python instalado corre uno de los siguientes comandos en la consola:</description>
         
         <dc:creator>Jorge R.</dc:creator>
-        <media:content url="https://linuxfacil.mx//images/posts/neovim-logo.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://linuxfacil.mx//images/posts/neovim-python/neovim-logo.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -41,22 +43,22 @@
             
           
             
-              <category>vi</category>
-            
-          
-            
               <category>neovim</category>
             
           
+            
+              <category>python</category>
+            
+          
+            
+              <category>ide</category>
+            
+          
         
         
           
             
-              <category>Tutorial</category>
-            
-          
-            
-              <category>Vim</category>
+              <category>neovim</category>
             
           
         
