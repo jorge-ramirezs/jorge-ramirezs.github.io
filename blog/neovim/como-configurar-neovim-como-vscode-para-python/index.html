@@ -1566,7 +1566,7 @@ if (!doNotTrack) {
 <div class="single__infos">
   <time class="single__info" title="Escrito el">📅&nbsp;Dec 6, 2020 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Tiempo que toma leer este post"> ☕&nbsp;10&nbsp;minutos de lectura </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Tiempo que toma leer este post"> ☕&nbsp;12&nbsp;minutos de lectura </span>
   
   <span class="single__info">
     
@@ -1689,6 +1689,17 @@ pipenv, version 2020.11.15
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash">$ pip3 install pipenv
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="git">Git</h4>
+<p>También vas a necesitar git para poder instalar el manejador de plugins &ldquo;<a href="https://github.com/junegunn/vim-plug%22">https://github.com/junegunn/vim-plug&quot;</a></p>
+<p>Si no lo tienes instalado, lo puedes instalar utilizando:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo apt-get install git
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="neovim">Neovim</h4>
@@ -1854,7 +1865,19 @@ pipenv install
 </span></code></pre></td></tr></table>
 </div>
 </div><h3 id="plugins">Plugins</h3>
-<h4 id="homeconfignvimnvim-pluginspluginsvim">$HOME/.config/nvim/nvim-plugins/plugins.vim</h4>
+<h4 id="instala-vim-plug">Instala vim-plug</h4>
+<p>Para instalar vim-plug vamos a ejecutar el siguiente comando:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sh -c <span class="s1">&#39;curl -fLo &#34;${XDG_DATA_HOME:-$HOME/.local/share}&#34;/nvim/site/autoload/plug.vim --create-dirs \
+</span><span class="s1">       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim&#39;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="homeconfignvimnvim-pluginspluginsvim">$HOME/.config/nvim/nvim-plugins/plugins.vim</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -2465,7 +2488,69 @@ pipenv install
 </span><span class="err"></span><span class="nx">endfor</span><span class="err">
 </span></code></pre></td></tr></table>
 </div>
-</div><h2 id="bonus">Bonus</h2>
+</div><h2 id="reiniciar-neovim-e-instalar-los-plugins">Reiniciar Neovim e instalar los plugins</h2>
+<p>Una vez que guardes los cambios, debes salir de Neovim y volver a entrar, luego ejecutar <strong>:PlugInstall</strong></p>
+<p>Esto instalará los plugins y las extensiones de CConquer of Completion (coc).</p>
+<h2 id="paso-final-configura-coc-python">Paso Final: Configura coc-python</h2>
+<p>Para que todo funcione correctamente debes instalar de manera global una libreria de python llamada <a href="https://pypi.org/project/jedi/" target="_blank">&ldquo;jedi&rdquo;</a>. Al instalarlo de manera global te evitarás tener que instalarlo en cada uno de tus ambientes virtuales.</p>
+<p>Para Instalar:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ pip install jedi
+</code></pre></td></tr></table>
+</div>
+</div><p>Una vez instalada, hay que configurar CoC. Primero copia la ruta donde se instaló jedi, para saber esa ruta ejecuta lo siguiente en la terminal:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ pip show jedi
+
+Name: jedi
+Version: 0.17.2
+Summary: An autocompletion tool <span class="k">for</span> Python that can be used <span class="k">for</span> text editors.
+Home-page: https://github.com/davidhalter/jedi
+Author: David Halter
+Author-email: davidhalter88@gmail.com
+License: MIT
+Location: /usr/lib/python3.9/site-packages &lt;<span class="o">==</span> Esta es la ruta que debes copiar en el siguiente archivo de configuración
+Requires: parso
+Required-by:
+</code></pre></td></tr></table>
+</div>
+</div><p>Abre Neovim y ejecuta <strong>:CocConfig</strong></p>
+<p>Esto abrirá un buffer vacío, este buffer es donde <a href="https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file" target="_blank">configuras CoC</a></p>
+<p>Agrega lo siguiente, reemplazando la ruta por la ruta donde está instalado &ldquo;jedi&rdquo; en tu sistema:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-coc-settings.json" data-lang="coc-settings.json"><span class="p">{</span>
+    <span class="nt">&#34;python.jediPath&#34;</span><span class="p">:</span> <span class="s2">&#34;/usr/lib/python3.9/site-packages&#34;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Guarda el archivo, cierra Neovim y vuelve a abrir.</p>
+<p>Listo, hasta aquí tienes una configuración lista para trabajar con Neovim y reemplazar VSCode.</p>
+<h2 id="bonus">Bonus</h2>
 <h3 id="gruvbox-">Gruvbox 💻</h3>
 <p>En lo personal, el mejor tema para programar en Neovim, es <a href="https://github.com/morhetz/gruvbox" target="_blank"> Gruvbox</a>, la combinación de colores se me hace seria y sobretodo muy cómodo para la vista, simple y sencillamente&hellip; ¡Me Encanta!</p>
 <p>Primero agregamos el plugin en $HOME/.config/nvim/nvim-plugins/plugins.vim</p>
@@ -3119,6 +3204,8 @@ document.addEventListener('DOMContentLoaded', function () {
         <li><a href="#plugins">Plugins</a></li>
       </ul>
     </li>
+    <li><a href="#reiniciar-neovim-e-instalar-los-plugins">Reiniciar Neovim e instalar los plugins</a></li>
+    <li><a href="#paso-final-configura-coc-python">Paso Final: Configura coc-python</a></li>
     <li><a href="#bonus">Bonus</a>
       <ul>
         <li><a href="#gruvbox-">Gruvbox 💻</a></li>
