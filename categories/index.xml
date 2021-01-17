@@ -12,13 +12,49 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 06 Dec 2020 20:55:47 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 17 Jan 2021 12:14:14 -0600</lastBuildDate>
     
         <atom:link href="https://linuxfacil.mx/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Linux</title>
+        <link>https://linuxfacil.mx/categories/linux/</link>
+        <pubDate>Sun, 17 Jan 2021 12:14:14 -0600</pubDate>
+        
+        
+        <guid>https://linuxfacil.mx/categories/linux/</guid>
+        <description></description>
+        
+        <dc:creator>Jorge R.</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Novatos</title>
+        <link>https://linuxfacil.mx/categories/novatos/</link>
+        <pubDate>Sun, 17 Jan 2021 12:14:14 -0600</pubDate>
+        
+        
+        <guid>https://linuxfacil.mx/categories/novatos/</guid>
+        <description></description>
+        
+        <dc:creator>Jorge R.</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>neovim</title>
@@ -63,24 +99,6 @@
         
         
         <guid>https://linuxfacil.mx/categories/window-manager/</guid>
-        <description></description>
-        
-        <dc:creator>Jorge R.</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Linux</title>
-        <link>https://linuxfacil.mx/categories/linux/</link>
-        <pubDate>Sat, 15 Aug 2020 19:39:45 -0500</pubDate>
-        
-        
-        <guid>https://linuxfacil.mx/categories/linux/</guid>
         <description></description>
         
         <dc:creator>Jorge R.</dc:creator>

@@ -4,12 +4,52 @@
   
   <url>
     <loc>https://linuxfacil.mx/blog/</loc>
-    <lastmod>2020-12-06T20:55:47-06:00</lastmod>
+    <lastmod>2021-01-17T12:14:14-06:00</lastmod>
   </url>
   
   <url>
     <loc>https://linuxfacil.mx/categories/</loc>
-    <lastmod>2020-12-06T20:55:47-06:00</lastmod>
+    <lastmod>2021-01-17T12:14:14-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/blog/linux/comandos-basicos-de-linux/</loc>
+    <lastmod>2021-01-17T12:14:14-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/categories/linux/</loc>
+    <lastmod>2021-01-17T12:14:14-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/tags/linux/</loc>
+    <lastmod>2021-01-17T12:14:14-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/</loc>
+    <lastmod>2021-01-17T12:14:14-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/tags/l%C3%ADnea-de-comandos/</loc>
+    <lastmod>2021-01-17T12:14:14-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/categories/novatos/</loc>
+    <lastmod>2021-01-17T12:14:14-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/tags/</loc>
+    <lastmod>2021-01-17T12:14:14-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linuxfacil.mx/tags/terminal/</loc>
+    <lastmod>2021-01-17T12:14:14-06:00</lastmod>
   </url>
   
   <url>
@@ -19,11 +59,6 @@
   
   <url>
     <loc>https://linuxfacil.mx/tags/ide/</loc>
-    <lastmod>2020-12-06T20:55:47-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://linuxfacil.mx/</loc>
     <lastmod>2020-12-06T20:55:47-06:00</lastmod>
   </url>
   
@@ -39,11 +74,6 @@
   
   <url>
     <loc>https://linuxfacil.mx/tags/python/</loc>
-    <lastmod>2020-12-06T20:55:47-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://linuxfacil.mx/tags/</loc>
     <lastmod>2020-12-06T20:55:47-06:00</lastmod>
   </url>
   
@@ -99,16 +129,6 @@
   
   <url>
     <loc>https://linuxfacil.mx/blog/linux/como-instalar-archlinux-en-mbr/</loc>
-    <lastmod>2020-08-15T19:39:45-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://linuxfacil.mx/categories/linux/</loc>
-    <lastmod>2020-08-15T19:39:45-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://linuxfacil.mx/tags/linux/</loc>
     <lastmod>2020-08-15T19:39:45-05:00</lastmod>
   </url>
   
