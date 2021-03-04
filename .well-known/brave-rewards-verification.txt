@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: linuxfacil.mx
+Token: a7933a3bc360fba841b96fc7b2ae191e5d4eb97b72e81e59a3650557e8137374
