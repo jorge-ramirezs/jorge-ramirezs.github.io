@@ -1248,7 +1248,7 @@
     <meta property="twitter:description" content="En este post vamos a instalar bspwm como manejador de ventanas en una instalación limpia de Arch Linux. Además vamos a instalar y configurar Polybar.">
   
 
-<meta name="generator" content="Hugo 0.81.0" />
+<meta name="generator" content="Hugo 0.89.4" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1316,7 +1316,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   
 <script type="application/javascript">
 var doNotTrack = false;
@@ -1437,7 +1436,7 @@ if (!doNotTrack) {
 
       
         <li class="navbarm__menu--item ">
-          <a href="/#">Cursos</a>
+          <a href="https://www.etsy.com/shop/LinuxFacil">Tienda Linux</a>
         </li>
       
       
@@ -1530,7 +1529,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/#" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">Cursos</a>
+  <a href="https://www.etsy.com/shop/LinuxFacil" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">Tienda Linux</a>
   
   
   
@@ -1598,10 +1597,10 @@ if (!doNotTrack) {
 <p>Vamos a instalar los paquetes necesarios para correr bspwm. En esta ocasión no voy a instalar un &ldquo;Display Manager&rdquo;, así que para iniciar el modo gráfico vamos a utilizar &ldquo;startx&rdquo;.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S xorg-server xorg-xinit xf86-video-qxl bspwm sxhkd dmenu nitrogen picom terminator chromium arandr
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S xorg-server xorg-xinit xf86-video-qxl bspwm sxhkd dmenu nitrogen picom terminator chromium arandr
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="configuración-inicial">Configuración Inicial</h3>
@@ -1609,7 +1608,7 @@ if (!doNotTrack) {
 <p>Vamos a crear los directorios de configuración y copiar los archivos.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1617,7 +1616,7 @@ if (!doNotTrack) {
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">mkdir ~/.config/bspwm
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">mkdir ~/.config/bspwm
 mkdir ~/.config/sxhkd
 
 cp /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm
@@ -1630,12 +1629,12 @@ cp /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd
 Y remplaza <strong>urxvt</strong> por <strong>terminator</strong> para que quede como sigue:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text"># terminal emulator
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"># terminal emulator
 super + Return
     terminator
 </code></pre></td></tr></table>
@@ -1644,20 +1643,20 @@ super + Return
 <p>Primero copiamos el archivo de ejempo xinitrc en nuestro directorio</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">cp /etc/X11/xinit/xinitrc ~/.xinitrc
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">cp /etc/X11/xinit/xinitrc ~/.xinitrc
 </code></pre></td></tr></table>
 </div>
 </div><p>Luego removemos las ultimas 5 lineas y agregamos las siguientes dos por lo pronto:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text">picom -f &amp;
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">picom -f &amp;
 exec bspwm
 </code></pre></td></tr></table>
 </div>
@@ -1665,10 +1664,10 @@ exec bspwm
 <p>Cambia la opción &ldquo;vsync = true&rdquo; a</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text">vsync = false
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">vsync = false
 </code></pre></td></tr></table>
 </div>
 </div><p>O si lo deseas puedes comentar la linea, eso hara que deshabilites la opción.</p>
@@ -1676,23 +1675,23 @@ exec bspwm
 <p>Configurado bspwm y sxhkd, ahora sí, iniciamos el modo gráfico con:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">startx
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">startx
 </code></pre></td></tr></table>
 </div>
 </div><p>Verás que no aparece nada, pero en realidad es que necesitas al menos abrir una terminal, para verificar que la configuración es correcta y que bspwm esta funcionando presaiona</p>
-<pre><code>super + Return
+<pre tabindex="0"><code>super + Return
 </code></pre><p>para iniciar terminator. (Donde &ldquo;super&rdquo; es la tecla de &ldquo;windows&rdquo; en tu teclado)</p>
 <h3 id="configurar-resolucion-de-pantalla">Configurar resolucion de pantalla</h3>
 <p>En la terminal que acabas de abrir, teclea:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">arandr
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">arandr
 </code></pre></td></tr></table>
 </div>
 </div><p>para arreglar la resolucion de la pantalla.</p>
@@ -1700,21 +1699,21 @@ exec bspwm
 <p>Lo siguiente es hacer este archivo ejecutable con:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">chmod +x ~/.screenlayout/display.sh
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">chmod +x ~/.screenlayout/display.sh
 </code></pre></td></tr></table>
 </div>
 </div><p>Luego agregalo a .xinitrc justo antes de &ldquo;picom -f &amp;&rdquo; para que quede como sigue:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text">$HOME/.screenlayout/display.sh
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">$HOME/.screenlayout/display.sh
 picom -f&amp;
 exec bspwm
 </code></pre></td></tr></table>
@@ -1726,13 +1725,13 @@ exec bspwm
 <p>agrega nitrogen a xinitrc</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text">$HOME/.screenlayout/display.sh
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">$HOME/.screenlayout/display.sh
 nitrogen --restore &amp;
 picom -f&amp;
 exec bspwm
@@ -1741,16 +1740,16 @@ exec bspwm
 </div><p>Para &ldquo;arreglar&rdquo; el cursor debes instalar xorg-xsetroot</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S xorg-xsetroot
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S xorg-xsetroot
 </code></pre></td></tr></table>
 </div>
 </div><p>Agrega xsetroot -cursor_name left_ptr a .xinitrc para que quede como sigue.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1792,7 +1791,7 @@ exec bspwm
 </span><span class="lnt">40
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/bin/sh
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/bin/sh
 </span><span class="cp"></span>
 <span class="nv">userresources</span><span class="o">=</span><span class="nv">$HOME</span>/.Xresources
 <span class="nv">usermodmap</span><span class="o">=</span><span class="nv">$HOME</span>/.Xmodmap
@@ -1841,13 +1840,13 @@ picom -f<span class="p">&amp;</span>
 <p>Para instalar <a href="https://github.com/Jguer/yay" target="_blank">yay</a> teclea los siguientes comandos:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ~
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ~
 git clone https://aur.archlinux.org/yay.git
 <span class="nb">cd</span> yay
 makepkg -si
@@ -1857,10 +1856,10 @@ makepkg -si
 <p>Para instalar Polybar corremos:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">yay polybar
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">yay polybar
 </code></pre></td></tr></table>
 </div>
 </div><p>Acepta los defaults y selecciona &ldquo;N&rdquo; para que no muestre las diferencias en la pantalla.</p>
@@ -1868,29 +1867,29 @@ makepkg -si
 <p>Comienza por instalar el archivo de configuración de ejemplo.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">install -Dm /usr/share/doc/polybar/config <span class="nv">$HOME</span>/.config/polybar/config
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">install -Dm /usr/share/doc/polybar/config <span class="nv">$HOME</span>/.config/polybar/config
 </code></pre></td></tr></table>
 </div>
 </div><p>Instala los tipos de letra utilizados en la barra de ejemplo</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S xorg-fonts-misc
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S xorg-fonts-misc
 yay -S ttf-unifont siji-git
 </code></pre></td></tr></table>
 </div>
 </div><p>Ahora necesitamos crear un script para iniciar Polybar en</p>
-<pre><code>~/.config/polybar/launch.sh
+<pre tabindex="0"><code>~/.config/polybar/launch.sh
 </code></pre><p>Con el siguiente contenido:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1904,7 +1903,7 @@ yay -S ttf-unifont siji-git
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-launch.sh" data-lang="launch.sh"><span class="cp">#!/usr/bin/env bash
+<pre tabindex="0" class="chroma"><code class="language-launch.sh" data-lang="launch.sh"><span class="cp">#!/usr/bin/env bash
 </span><span class="cp"></span>
 <span class="c1"># Terminate already running bar instances</span>
 killall -q polybar
@@ -1921,16 +1920,16 @@ polybar example  &gt;&gt;/tmp/polybar1.log 2&gt;<span class="p">&amp;</span><spa
 </div><p>Después tenemos que hacer el script ejecutable con:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">chmod +x <span class="nv">$HOME</span>/.config/polybar/launch.sh
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">chmod +x <span class="nv">$HOME</span>/.config/polybar/launch.sh
 </code></pre></td></tr></table>
 </div>
 </div><p>En este punto agregamos este script en nuestro archivo bspwmrc para que quede de la siguiente manera:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1951,7 +1950,7 @@ polybar example  &gt;&gt;/tmp/polybar1.log 2&gt;<span class="p">&amp;</span><spa
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#! /bin/sh
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#! /bin/sh
 </span><span class="cp"></span>
 sxhkd <span class="p">&amp;</span>
 <span class="nv">$HOME</span>/.config/polybar/launch.sh

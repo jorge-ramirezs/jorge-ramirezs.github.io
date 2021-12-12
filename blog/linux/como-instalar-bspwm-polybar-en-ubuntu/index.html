@@ -1248,7 +1248,7 @@
     <meta property="twitter:description" content="En este artículo te voy a explicar como instalar BSPWM y Polybar en Ubuntu 20.10.">
   
 
-<meta name="generator" content="Hugo 0.81.0" />
+<meta name="generator" content="Hugo 0.89.4" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1316,7 +1316,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   
 <script type="application/javascript">
 var doNotTrack = false;
@@ -1437,7 +1436,7 @@ if (!doNotTrack) {
 
       
         <li class="navbarm__menu--item ">
-          <a href="/#">Cursos</a>
+          <a href="https://www.etsy.com/shop/LinuxFacil">Tienda Linux</a>
         </li>
       
       
@@ -1530,7 +1529,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/#" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">Cursos</a>
+  <a href="https://www.etsy.com/shop/LinuxFacil" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">Tienda Linux</a>
   
   
   
@@ -1614,10 +1613,10 @@ bspwm no maneja ninguna entrada de teclado o puntero: se necesita un programa de
 <p>Afortunadamente Ubuntu ya tiene listos los paquetes que necesitamos instalar, así entonces solo necesitamos abrir una terminal y ejecutar el siguiente comando:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo apt-get install bspwm polybar suckless-tools
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ sudo apt-get install bspwm polybar suckless-tools
 </code></pre></td></tr></table>
 </div>
 </div><p><strong>Atención:</strong> sxhkd es una dependencia de bspwm, así que no es necesario mencionarlo en el comando anterior, solo verifica que este paquete también se instale.</p>
@@ -1626,12 +1625,12 @@ bspwm no maneja ninguna entrada de teclado o puntero: se necesita un programa de
 <p>Primero vamos a crear los directorios que contendrán los archivos de configuración:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ mkdir ~/.config/bspwm
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ mkdir ~/.config/bspwm
 $ mkdir ~/.config/sxhkd
 $ mkdir ~/.config/polybar
 </code></pre></td></tr></table>
@@ -1639,12 +1638,12 @@ $ mkdir ~/.config/polybar
 </div><p>El siguiente paso es copiar los archivos de ejemplo a nuestros nuevos directorios de configuración:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ cp /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ cp /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/
 $ cp /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd/
 $ cp /usr/share/doc/polybar/config ~/.config/polybar/
 </code></pre></td></tr></table>
@@ -1657,10 +1656,10 @@ $ cp /usr/share/doc/polybar/config ~/.config/polybar/
 <p>Para motivos de este tutorial y para no meternos en muchos problemas voy a utilizar &ldquo;gedit&rdquo; en el siguiente comando:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ gedit ~/.config/sxhkd/sxhkdrc
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ gedit ~/.config/sxhkd/sxhkdrc
 </code></pre></td></tr></table>
 </div>
 </div><p>Ahora sustituye &ldquo;urxvt&rdquo; por &ldquo;gnome-terminal&rdquo; (Sin las comillas), guarda los cambios con &ldquo;CTRL+s&rdquo; y cierra el archivo.</p>
@@ -1669,16 +1668,16 @@ $ cp /usr/share/doc/polybar/config ~/.config/polybar/
 <p>A continuación vamos a configurar Polybar, aqui lo que debemos hacer es crear un archivo que es el que se va a encargar de ejecutar Polybar.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ gedit ~/.config/polybar/launch.sh
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ gedit ~/.config/polybar/launch.sh
 </code></pre></td></tr></table>
 </div>
 </div><p>Este comando abrirá una ventana en blanco porque se supone no tenemos este archivo, ahora copia lo siguiente y pegalo en gedit.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1692,7 +1691,7 @@ $ cp /usr/share/doc/polybar/config ~/.config/polybar/
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-txt" data-lang="txt">#!/usr/bin/env bash
+<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt">#!/usr/bin/env bash
 
 # Terminate already running bar instances
 killall -q polybar
@@ -1711,29 +1710,29 @@ echo &#34;Bars launched...&#34;
 <p>Ahora debemos asegurarnos de que el archivo que acabamos de crear sea ejectuable, para eso, corre el siguiente comando:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ chmod +x ~/.config/polybar/launch.sh
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ chmod +x ~/.config/polybar/launch.sh
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="por-último-configuramos-bspwmrc">Por último, configuramos &ldquo;bspwmrc&rdquo;</h3>
 <p>Ahora lo que nos resta, es decirla e bspwm que ejecute Polybar cuando se inicie, para eso, modificamos el siguiente archivo:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ gedit ~/.config/bspwm/bspwmrc
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ gedit ~/.config/bspwm/bspwmrc
 </code></pre></td></tr></table>
 </div>
 </div><p>Agrega la siguiente línea:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-txt" data-lang="txt">$HOME/.config/polybar/launch.sh
+<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt">$HOME/.config/polybar/launch.sh
 </code></pre></td></tr></table>
 </div>
 </div><p><img src="/images/posts/bspwm-polybar-ubuntu/bspwmrc.png" alt="Agrega launch.sh en bspwmrc" /></p>
@@ -1753,10 +1752,10 @@ echo &#34;Bars launched...&#34;
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ xrandr
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ xrandr
 </code></pre></td></tr></table>
 </div>
 </div><p><img src="/images/posts/bspwm-polybar-ubuntu/xrandr-Screen-Name.png" alt="xrandr output" /></p>
@@ -1767,10 +1766,10 @@ echo &#34;Bars launched...&#34;
 <p>Ya que identificaste el nombre, para cambiarle la resolución utiliza lo siguiente:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ xrandr -s 1920x1080 -r 60.00
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ xrandr -s 1920x1080 -r 60.00
 </code></pre></td></tr></table>
 </div>
 </div><p>En caso de cualquier duda puedes consultar el manual teclando &ldquo;man xrandr&rdquo; en la terminal.</p>
@@ -1778,19 +1777,19 @@ echo &#34;Bars launched...&#34;
 <p>Ahora lo que toca es <strong>editar el archivo ~/.config/bspwm/bspwmrc</strong> para que cada vez que inicies BSPWM configure la pantalla correctamente.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ gedit ~/.config/bspwm/bspwmrc
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ gedit ~/.config/bspwm/bspwmrc
 </code></pre></td></tr></table>
 </div>
 </div><p>Y agrega el comando que utilizaste:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-txt" data-lang="txt">xrandr --output Virtual-1 --mode 1920x1080
+<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt">xrandr --output Virtual-1 --mode 1920x1080
 </code></pre></td></tr></table>
 </div>
 </div><p>Presiona &ldquo;Ctrl + s&rdquo; para grabar y luego &ldquo;Super + w&rdquo; para cerrar la ventana.</p>
@@ -1798,7 +1797,7 @@ echo &#34;Bars launched...&#34;
 <h3 id="combinación-de-teclas-importantes">Combinación de teclas importantes</h3>
 <p>Aquí te dejo algunas combinaciones de teclas que pueden ser de ayuda, recuerda que las puedes modificar y que puedes crear nuevas.</p>
 <p>Para cambiar de area de trabajo, presiona</p>
-<pre><code>Super + 1
+<pre tabindex="0"><code>Super + 1
 </code></pre><p>Donde &ldquo;1&rdquo; es el número de área de trabajo, en Polybar puedes ver que por default tienes 10, si te quieres mover al 10, presiona &ldquo;Super + 0&rdquo;</p>
 <table>
 <thead>
