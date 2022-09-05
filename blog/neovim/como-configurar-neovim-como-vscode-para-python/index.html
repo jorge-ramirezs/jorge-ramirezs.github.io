@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.9fb19682560d5fa5596fffec85da605067c4acc86aad05add4d8fff9d362a446.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1248,7 +1248,7 @@
     <meta property="twitter:description" content="El día de hoy vamos a instalar y a configurar Neovim para utilizarlo como IDE para programar en Python. Vamos a utilizar algunos &#34;Plugins&#34; para obtener las ventajas que cualquier otro IDE tiene, tales como validación de sintaxis y autocompletado.">
   
 
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.92.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1304,16 +1304,14 @@
 
     
   
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KZYJ35F591"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-KZYJ35F591', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-KZYJ35F591', { 'anonymize_ip': false });
 }
 </script>
 
@@ -1449,7 +1447,7 @@ if (!doNotTrack) {
 
       
         <li class="navbarm__menu--item ">
-          <a href="/podcast">Podcast</a>
+          <a href="https://www.twitch.tv/linuxfacil">Twitch</a>
         </li>
       
       
@@ -1550,7 +1548,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/podcast" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">Podcast</a>
+  <a href="https://www.twitch.tv/linuxfacil" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">Twitch</a>
   
   
   
@@ -1598,13 +1596,13 @@ if (!doNotTrack) {
   🏷️
   
 
-  <li><a href="https://linuxfacil.mx/tags/ide/" class="single__tag" title="ide">#ide</a></li>
+  <li><a href="https://linuxfacil.mx/tags/vim/" class="single__tag" title="vim">#vim</a></li>
 
   <li><a href="https://linuxfacil.mx/tags/neovim/" class="single__tag" title="neovim">#neovim</a></li>
 
   <li><a href="https://linuxfacil.mx/tags/python/" class="single__tag" title="python">#python</a></li>
 
-  <li><a href="https://linuxfacil.mx/tags/vim/" class="single__tag" title="vim">#vim</a></li>
+  <li><a href="https://linuxfacil.mx/tags/ide/" class="single__tag" title="ide">#ide</a></li>
 
 </ul>
     </div>
@@ -1622,11 +1620,11 @@ if (!doNotTrack) {
 <p>Para verificar que tengas Python instalado corre uno de los siguientes comandos en la consola:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ python --version
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ python --version
 $ python3 --version
 </code></pre></td></tr></table>
 </div>
@@ -1634,7 +1632,7 @@ $ python3 --version
 <p>Para verificar si Pip está instalado, solo ejecuta pip en la consola. El comando deberá regresar la &ldquo;ayuda&rdquo;.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1657,7 +1655,7 @@ $ python3 --version
 </span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ pip
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ pip
 
 Usage:
   pip &lt;command&gt; <span class="o">[</span>options<span class="o">]</span>
@@ -1683,21 +1681,21 @@ Commands:
 </div><p>Si no tienes instalado pip, lo puedes instalar ejectando:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo apt-get install python3-pip
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ sudo apt-get install python3-pip
 </code></pre></td></tr></table>
 </div>
 </div><p>Para verificar si Pipenv está instalado, puedes ejecutar:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ pipenv --version
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ pipenv --version
 
 pipenv, version 2020.11.15
 </code></pre></td></tr></table>
@@ -1705,10 +1703,10 @@ pipenv, version 2020.11.15
 </div><p>Para instalar Pipenv, utiliza el siguiente comando:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ pip3 install pipenv
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ pip3 install pipenv
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="git">Git</h4>
@@ -1716,45 +1714,45 @@ pipenv, version 2020.11.15
 <p>Si no lo tienes instalado, lo puedes instalar utilizando:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo apt-get install git
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ sudo apt-get install git
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="neovim">Neovim</h4>
 <p>Por supuesto, debemos tener instalado Neovim con soporte para python, si no lo tienes aún, lo puedes instalar de la siguiente manera:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo apt-get install neovim python3-neovim
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ sudo apt-get install neovim python3-neovim
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="nodejs">Node.js</h4>
 <p>Para poder instalar los plugins que nos van a permitir utilizar Neovim como IDE y reemplazar de una vez por todas VsCode, es necesario también instalar Node.js.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo apt-get install npm
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ sudo apt-get install npm
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="nerdfont-tipo-de-letra">Nerdfont (Tipo de Letra)</h4>
 <p>Para poder visualizar los iconos en la terminal es necesario tener un tipo de letra que lo soporte, en lo personal a mi me gustan las Nerdfonts.</p>
 <p>Puedes descargar <a href="https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/DejaVuSansMono.zip">DejaVuSansMono Nerd Font</a>.</p>
 <p>Una vez que hayas descargado el archivo, descomprimelo y copia los archivos (*.ttf) al siguiente directorio:</p>
-<pre><code>$HOME/.local/share/fonts/
+<pre tabindex="0"><code>$HOME/.local/share/fonts/
 </code></pre><p>Si por alguna razón no tienes el directorio, lo puedes crear.</p>
 <p>Ya que hayas copiado los archivos, para poder utilizar este nuevo tipo de letra, debes ejecutar:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ fc-cache -fv
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ fc-cache -fv
 </code></pre></td></tr></table>
 </div>
 </div><p><strong>Asegurate de configurar este nuevo tipo de letra en la terminal que estés utilizando:</strong></p>
@@ -1763,21 +1761,21 @@ pipenv, version 2020.11.15
 <h3 id="directorio-nvim">Directorio nvim</h3>
 <p>Aunque puedes tener toda la configuración en tu archivo <strong>init.vim</strong> yo prefiero tener archivos separados para una mejor organización y fácil manejo.</p>
 <p>Crea la siguiente estructura de direcorios:</p>
-<pre><code>📂 $HOME/.config/nvim/
+<pre tabindex="0"><code>📂 $HOME/.config/nvim/
 ├──📁 general
 ├──📁 keymapping
 ├──📁 nvim-plugins
 └──📁 plug-config
 </code></pre><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">mkdir <span class="nv">$HOME</span>/.config/nvim
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">mkdir <span class="nv">$HOME</span>/.config/nvim
 mkdir <span class="nv">$HOME</span>/.config/nvim/general
 mkdir <span class="nv">$HOME</span>/.config/nvim/keymapping
 mkdir <span class="nv">$HOME</span>/.config/nvim/nvim-plugins
@@ -1788,12 +1786,12 @@ mkdir <span class="nv">$HOME</span>/.config/nvim/plug-config
 <p>Vamos a crear un ambiente virtual dentro de la carpeta de configuración de Neovim. Para eso, en la terminal tecleamos lo siguiente:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ~/.config/nvim
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ~/.config/nvim
 
 pipenv install
 </code></pre></td></tr></table>
@@ -1804,7 +1802,7 @@ pipenv install
 <h4 id="generalsettingsvim">general/settings.vim</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1844,7 +1842,7 @@ pipenv install
 </span><span class="lnt">38
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-settings.vim" data-lang="settings.vim"><span class="nx">syntax</span> <span class="nx">enable</span><span class="err">
+<pre tabindex="0" class="chroma"><code class="language-settings.vim" data-lang="settings.vim"><span class="nx">syntax</span> <span class="nx">enable</span><span class="err">
 </span><span class="err">
 </span><span class="err"></span><span class="nx">set</span> <span class="nx">guicursor</span><span class="p">=</span>                                     <span class="c">&#34; Disable blinking for the n-v-c modes</span><span class="err">
 </span><span class="err"></span><span class="nx">set</span> <span class="nx">termguicolors</span><span class="err">
@@ -1889,18 +1887,18 @@ pipenv install
 <p>Para instalar vim-plug vamos a ejecutar el siguiente comando:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sh -c <span class="s1">&#39;curl -fLo &#34;${XDG_DATA_HOME:-$HOME/.local/share}&#34;/nvim/site/autoload/plug.vim --create-dirs \
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sh -c <span class="s1">&#39;curl -fLo &#34;${XDG_DATA_HOME:-$HOME/.local/share}&#34;/nvim/site/autoload/plug.vim --create-dirs \
 </span><span class="s1">       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim&#39;</span>
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="homeconfignvimnvim-pluginspluginsvim">$HOME/.config/nvim/nvim-plugins/plugins.vim</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1925,7 +1923,7 @@ pipenv install
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-plugins.vim" data-lang="plugins.vim"><span class="nx">call</span> <span class="nx">plug</span>#<span class="nx">begin</span><span class="p">(</span><span class="nx">stdpath</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">)</span>.<span class="s1">&#39;/plugged&#39;</span><span class="p">)</span><span class="err">
+<pre tabindex="0" class="chroma"><code class="language-plugins.vim" data-lang="plugins.vim"><span class="nx">call</span> <span class="nx">plug</span>#<span class="nx">begin</span><span class="p">(</span><span class="nx">stdpath</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">)</span>.<span class="s1">&#39;/plugged&#39;</span><span class="p">)</span><span class="err">
 </span><span class="err"></span><span class="c">
 </span><span class="c">    &#34; NERDTree</span><span class="err">
 </span><span class="err"></span>    <span class="nx">Plug</span> <span class="s1">&#39;preservim/nerdtree&#39;</span><span class="err">
@@ -1954,7 +1952,7 @@ pipenv install
 <p>El siguiente es un ejemplo funcional tomado de <a href="https://github.com/neoclide/coc.nvim" target="_blank">la documentación oficial</a> en github.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">  1
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
 </span><span class="lnt">  3
 </span><span class="lnt">  4
@@ -2126,7 +2124,7 @@ pipenv install
 </span><span class="lnt">170
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-coc.vim" data-lang="coc.vim"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">coc_global_extensions</span> <span class="p">=</span> [<span class="err">
+<pre tabindex="0" class="chroma"><code class="language-coc.vim" data-lang="coc.vim"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">coc_global_extensions</span> <span class="p">=</span> [<span class="err">
 </span><span class="err"></span>    \ <span class="s1">&#39;coc-snippets&#39;</span><span class="p">,</span><span class="err">
 </span><span class="err"></span>    \ <span class="s1">&#39;coc-pairs&#39;</span><span class="p">,</span><span class="err">
 </span><span class="err"></span>    \ <span class="s1">&#39;coc-python&#39;</span><span class="p">,</span><span class="err">
@@ -2301,7 +2299,7 @@ pipenv install
 </div><h4 id="homeconfignvimplug-confignerdcommentervim">$HOME/.config/nvim/plug-config/nerdcommenter.vim</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2327,7 +2325,7 @@ pipenv install
 </span><span class="lnt">24
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-nerdcommenter.vim" data-lang="nerdcommenter.vim"><span class="c">&#34; Add spaces after comment delimiters by default</span><span class="err">
+<pre tabindex="0" class="chroma"><code class="language-nerdcommenter.vim" data-lang="nerdcommenter.vim"><span class="c">&#34; Add spaces after comment delimiters by default</span><span class="err">
 </span><span class="err"></span><span class="k">let</span> <span class="nx">g</span>:<span class="nx">NERDSpaceDelims</span> <span class="p">=</span> <span class="m">1</span><span class="err">
 </span><span class="err"></span><span class="c">
 </span><span class="c">&#34; Use compact syntax for prettified multi-line comments</span><span class="err">
@@ -2356,7 +2354,7 @@ pipenv install
 </div><h4 id="homeconfignvimplug-configairlinevim">$HOME/.config/nvim/plug-config/airline.vim</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2375,7 +2373,7 @@ pipenv install
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-airline.vim" data-lang="airline.vim"><span class="c">&#34; enable tabline</span><span class="err">
+<pre tabindex="0" class="chroma"><code class="language-airline.vim" data-lang="airline.vim"><span class="c">&#34; enable tabline</span><span class="err">
 </span><span class="err"></span><span class="k">let</span> <span class="nx">g</span>:<span class="nx">airline</span>#<span class="nx">extensions</span>#<span class="nx">tabline</span>#<span class="nx">enabled</span> <span class="p">=</span> <span class="m">1</span><span class="err">
 </span><span class="err"></span><span class="c">&#34; let g:airline#extensions#tabline#left_sep = &#39;&#39;</span><span class="err">
 </span><span class="err"></span><span class="c">&#34; let g:airline#extensions#tabline#left_alt_sep = &#39;&#39;</span><span class="err">
@@ -2397,7 +2395,7 @@ pipenv install
 </div><h4 id="homeconfignvimkeymappingkeysvim">$HOME/.config/nvim/keymapping/keys.vim</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2436,7 +2434,7 @@ pipenv install
 </span><span class="lnt">37
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-keys.vim" data-lang="keys.vim"><span class="c">&#34; Edit vimrc faster</span><span class="err">
+<pre tabindex="0" class="chroma"><code class="language-keys.vim" data-lang="keys.vim"><span class="c">&#34; Edit vimrc faster</span><span class="err">
 </span><span class="err"></span><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">Leader</span><span class="p">&gt;</span><span class="nx">v</span> :<span class="nx">e</span> $<span class="nx">MYVIMRC</span><span class="p">&lt;</span><span class="nx">cr</span><span class="p">&gt;</span><span class="err">
 </span><span class="err"></span><span class="c">
 </span><span class="c">&#34; Reload init.vim</span><span class="err">
@@ -2478,7 +2476,7 @@ pipenv install
 </div><h4 id="homeconfignviminitvim">$HOME/.config/nvim/init.vim</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2493,7 +2491,7 @@ pipenv install
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-init.vim" data-lang="init.vim"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">nvim_data_root</span> <span class="p">=</span> <span class="nx">stdpath</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">)</span><span class="err">
+<pre tabindex="0" class="chroma"><code class="language-init.vim" data-lang="init.vim"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">nvim_data_root</span> <span class="p">=</span> <span class="nx">stdpath</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">)</span><span class="err">
 </span><span class="err"></span><span class="k">let</span> <span class="nx">g</span>:<span class="nx">nvim_config_root</span> <span class="p">=</span> <span class="nx">stdpath</span><span class="p">(</span><span class="s1">&#39;config&#39;</span><span class="p">)</span><span class="err">
 </span><span class="err"></span><span class="k">let</span> <span class="nx">g</span>:<span class="nx">config_file_list</span> <span class="p">=</span> [<span class="s1">&#39;/nvim-plugins/plugins.vim&#39;</span><span class="p">,</span><span class="err">
 </span><span class="err"></span>    \ <span class="s1">&#39;/general/settings.vim&#39;</span><span class="p">,</span><span class="err">
@@ -2512,20 +2510,20 @@ pipenv install
 <p>Una vez que guardes los cambios, debes salir de Neovim y volver a entrar, luego ejecutar <strong>:PlugInstall</strong></p>
 <p>Esto instalará los plugins y las extensiones de CConquer of Completion (coc).</p>
 <h2 id="paso-final-configura-coc-python">Paso Final: Configura coc-python</h2>
-<p>Para que todo funcione correctamente debes instalar de manera global una libreria de python llamada <a href="https://pypi.org/project/jedi/" target="_blank">&quot;jedi&quot;</a>. Al instalarlo de manera global te evitarás tener que instalarlo en cada uno de tus ambientes virtuales.</p>
+<p>Para que todo funcione correctamente debes instalar de manera global una libreria de python llamada <a href="https://pypi.org/project/jedi/" target="_blank">&ldquo;jedi&rdquo;</a>. Al instalarlo de manera global te evitarás tener que instalarlo en cada uno de tus ambientes virtuales.</p>
 <p>Para Instalar:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ pip install jedi
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ pip install jedi
 </code></pre></td></tr></table>
 </div>
 </div><p>Una vez instalada, hay que configurar CoC. Primero copia la ruta donde se instaló jedi, para saber esa ruta ejecuta lo siguiente en la terminal:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2539,7 +2537,7 @@ pipenv install
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ pip show jedi
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ pip show jedi
 
 Name: jedi
 Version: 0.17.2
@@ -2558,12 +2556,12 @@ Required-by:
 <p>Agrega lo siguiente, reemplazando la ruta por la ruta donde está instalado &ldquo;jedi&rdquo; en tu sistema:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-coc-settings.json" data-lang="coc-settings.json"><span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-coc-settings.json" data-lang="coc-settings.json"><span class="p">{</span>
     <span class="nt">&#34;python.jediPath&#34;</span><span class="p">:</span> <span class="s2">&#34;/usr/lib/python3.9/site-packages&#34;</span>
 <span class="p">}</span>
 </code></pre></td></tr></table>
@@ -2576,11 +2574,11 @@ Required-by:
 <p>Primero agregamos el plugin en $HOME/.config/nvim/nvim-plugins/plugins.vim</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-plugins.vim" data-lang="plugins.vim"><span class="c">    &#34; Other themes</span><span class="err">
+<pre tabindex="0" class="chroma"><code class="language-plugins.vim" data-lang="plugins.vim"><span class="c">    &#34; Other themes</span><span class="err">
 </span><span class="err"></span>    <span class="nx">Plug</span> <span class="s1">&#39;morhetz/gruvbox&#39;</span><span class="err">
 </span></code></pre></td></tr></table>
 </div>
@@ -2588,13 +2586,13 @@ Required-by:
 <p>Después hay que editar $HOME/.config/nvim/general/settings.vim para agregar gruvbox como tema por defecto.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-settings.vim" data-lang="settings.vim"><span class="c">&#34; Gruvbox por defecto</span><span class="err">
+<pre tabindex="0" class="chroma"><code class="language-settings.vim" data-lang="settings.vim"><span class="c">&#34; Gruvbox por defecto</span><span class="err">
 </span><span class="err"></span><span class="nx">colorscheme</span> <span class="nx">gruvbox</span><span class="err">
 </span><span class="err"></span><span class="k">let</span> <span class="nx">g</span>:<span class="nx">gruvbox_contrast_dark</span><span class="p">=</span><span class="s1">&#39;hard&#39;</span><span class="err">
 </span><span class="err"></span><span class="nx">set</span> <span class="nx">background</span><span class="p">=</span><span class="nb">dark</span><span class="err">
@@ -2603,11 +2601,11 @@ Required-by:
 </div><p>Por último, vamos a configurar Airline con el mismo tema de colores. Para eso hay que editar $HOME/.config/nvim/plug-config/airline.vim</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-airline.vim" data-lang="airline.vim"><span class="c">&#34;Gruvbox</span><span class="err">
+<pre tabindex="0" class="chroma"><code class="language-airline.vim" data-lang="airline.vim"><span class="c">&#34;Gruvbox</span><span class="err">
 </span><span class="err"></span><span class="k">let</span> <span class="nx">g</span>:<span class="nx">airline_theme</span><span class="p">=</span><span class="s1">&#39;gruvbox&#39;</span><span class="err">
 </span></code></pre></td></tr></table>
 </div>
@@ -2917,7 +2915,7 @@ Required-by:
 </div>
 
 
-<script defer src="/js/swipe.min.08ff2be1b74347bad9e267f732f1388d271b2f9d97b6a8a87bd6a510f17c5ad2.js"></script>
+<script defer src="/js/swipe.min.d70095d96ef6a016133ea2c732c5d4713539d335b739178e356af46f54cf0a16.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

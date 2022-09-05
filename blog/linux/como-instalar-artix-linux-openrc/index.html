@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.9fb19682560d5fa5596fffec85da605067c4acc86aad05add4d8fff9d362a446.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1248,7 +1248,7 @@
     <meta property="twitter:description" content="En esta ocasión vamos a instalar Artix Linux con OpenRC y MATE como escritorio. Básicamente Artix es Arch pero sin Systemd.">
   
 
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.92.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1304,16 +1304,14 @@
 
     
   
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KZYJ35F591"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-KZYJ35F591', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-KZYJ35F591', { 'anonymize_ip': false });
 }
 </script>
 
@@ -1449,7 +1447,7 @@ if (!doNotTrack) {
 
       
         <li class="navbarm__menu--item ">
-          <a href="/podcast">Podcast</a>
+          <a href="https://www.twitch.tv/linuxfacil">Twitch</a>
         </li>
       
       
@@ -1550,7 +1548,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/podcast" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">Podcast</a>
+  <a href="https://www.twitch.tv/linuxfacil" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">Twitch</a>
   
   
   
@@ -1622,10 +1620,10 @@ if (!doNotTrack) {
 <h3 id="verificiar-que-tengas-conexión-a-internet">Verificiar que tengas conexión a Internet.</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">ip a
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">ip a
 </code></pre></td></tr></table>
 </div>
 </div><p>Este comando debe regresar los nombres de los dispositivos de red y una dirección de IP.</p>
@@ -1633,29 +1631,29 @@ if (!doNotTrack) {
 <p>Antes de crear las particiones y comezar la instalación, debemos cambiarnos al usuario de &ldquo;root&rdquo;</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo su -
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo su -
 </code></pre></td></tr></table>
 </div>
 </div><p>Para verificar el nombre del dispositivo, es decir el disco donde instalaremos Artix, teclea:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">lsblk
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">lsblk
 </code></pre></td></tr></table>
 </div>
 </div><p>En mi caso el disco que donde voy a instalar Artix es &ldquo;vda&rdquo;</p>
 <p><img src="/images/posts/artix-mate/lsblk.png" alt="lsblk" /></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">cfdisk /dev/vda
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">cfdisk /dev/vda
 </code></pre></td></tr></table>
 </div>
 </div><p>Como es una instalación sobre UEFI, selecciona &ldquo;gpt&rdquo;</p>
@@ -1667,80 +1665,80 @@ if (!doNotTrack) {
 <p>Formateamos la primera partición de tipo &ldquo;FAT32&rdquo;</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">mkfs.fat -F <span class="m">32</span> /dev/vda1
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">mkfs.fat -F <span class="m">32</span> /dev/vda1
 </code></pre></td></tr></table>
 </div>
 </div><p>Luego formateamos la segunda partición de tipo &ldquo;ext4&rdquo;</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">mkfs.ext4 /dev/vda2
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">mkfs.ext4 /dev/vda2
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="montar-las-particiones">Montar las particiones</h3>
 <p>Primero montamos la partición 2 <strong>&ldquo;vda2&rdquo;</strong> en /mnt</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">mount /dev/vda2 /mnt
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">mount /dev/vda2 /mnt
 </code></pre></td></tr></table>
 </div>
 </div><p>Luego creamos el directorio de <strong>boot</strong> y montamos la primera partición</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">mkdir /mnt/boot
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">mkdir /mnt/boot
 mount /dev/vda1 /mnt/boot
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="instalar-el-sistema-base">Instalar el sistema base</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">basestrap /mnt base base-devel linux linux-firmware openrc vim amd-ucode <span class="o">(</span>intel-ucode si es tu caso<span class="o">)</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">basestrap /mnt base base-devel linux linux-firmware openrc vim amd-ucode <span class="o">(</span>intel-ucode si es tu caso<span class="o">)</span>
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="generar-tabla-de-sistema-de-archivos-fstab">Generar tabla de sistema de archivos (fstab)</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">fstabgen -U /mnt &gt;&gt; /mnt/etc/fstab
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">fstabgen -U /mnt &gt;&gt; /mnt/etc/fstab
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="configurar-el-sistema-base">Configurar el sistema base</h2>
 <p>Para esto hay que entrar a <strong>nuestra instalación</strong> tecleando:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">artools-chroot /mnt
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">artools-chroot /mnt
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="crear-archivo-de-swap">Crear archivo de Swap</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">dd <span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span>swapfile <span class="nv">bs</span><span class="o">=</span>1G <span class="nv">count</span><span class="o">=</span><span class="m">2</span> <span class="nv">status</span><span class="o">=</span>progress
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">dd <span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span>swapfile <span class="nv">bs</span><span class="o">=</span>1G <span class="nv">count</span><span class="o">=</span><span class="m">2</span> <span class="nv">status</span><span class="o">=</span>progress
 chmod <span class="m">600</span> /swapfile
 mkswap /swapfile
 swapon /swapfile
@@ -1750,76 +1748,76 @@ swapon /swapfile
 <p>Agrega lo siguiente al final del archivo</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text">/swapfile   none    swap    defaults    0 0
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">/swapfile   none    swap    defaults    0 0
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="configurar-el-reloj-del-sistema">Configurar el reloj del sistema</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">ln -sf /usr/share/zoneinfo/America/Chicago /etc/localtime
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">ln -sf /usr/share/zoneinfo/America/Chicago /etc/localtime
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="sincroniza-el-reloj-del-hardware-con-el-del-sistema">Sincroniza el reloj del hardware con el del sistema</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">hwclock --systohc
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">hwclock --systohc
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="localización">Localización</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">vim /etc/locale.gen
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">vim /etc/locale.gen
 </code></pre></td></tr></table>
 </div>
 </div><p>Genera el &ldquo;locale&rdquo;</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">locale-gen
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">locale-gen
 </code></pre></td></tr></table>
 </div>
 </div><p>Necesitamos ahora poner este &ldquo;locale&rdquo; en el archivo de configuración</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">vim /etc/locale.conf
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">vim /etc/locale.conf
 </code></pre></td></tr></table>
 </div>
 </div><p>agrega lo siguiente</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text">LANG=&#34;en_US.UTF-8&#34;
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">LANG=&#34;en_US.UTF-8&#34;
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="grub">GRUB</h3>
 <p>Para instalar GRUB</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pacman -S grub os-prober efibootmgr
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pacman -S grub os-prober efibootmgr
 grub-install --target<span class="o">=</span>x86_64-efi --efi-directory<span class="o">=</span>/boot --bootloader-id<span class="o">=</span>grub <span class="o">(</span>para sistemas con UEFI<span class="o">)</span>
 grub-mkconfig -o /boot/grub/grub.cfg
 </code></pre></td></tr></table>
@@ -1827,65 +1825,65 @@ grub-mkconfig -o /boot/grub/grub.cfg
 </div><h3 id="crea-un-password-para-usuario-root">Crea un password para usuario root</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">passwd
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">passwd
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="crea-tu-usuario">Crea tu usuario</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">useradd -mG wheel jorge
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">useradd -mG wheel jorge
 passwd jorge
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="habilita-el-grupo-wheel">Habilita el grupo &ldquo;wheel&rdquo;</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">EDITOR</span><span class="o">=</span>vim visudo
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">EDITOR</span><span class="o">=</span>vim visudo
 </code></pre></td></tr></table>
 </div>
 </div><p>Descomenta la linea que dice:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text">%wheel ALL=(ALL) ALL
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">%wheel ALL=(ALL) ALL
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="configura-la-red">Configura la red</h3>
 <p>Edita el archivo</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">vim /etc/hostname
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">vim /etc/hostname
 </code></pre></td></tr></table>
 </div>
 </div><p>Agrega solo el nombre de tu computadora, sin dominio ni nada más</p>
 <p>Después edita el archivo</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">vim /etc/hosts
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">vim /etc/hosts
 </code></pre></td></tr></table>
 </div>
 </div><p>Para que quede como sigue:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1893,7 +1891,7 @@ passwd jorge
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text"># Static table lookup for hostnames.
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"># Static table lookup for hostnames.
 # See hosts(5) for details.
 
 127.0.0.1	localhost
@@ -1904,23 +1902,23 @@ passwd jorge
 </div><h3 id="instala-connman">Instala connman</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pacman -S connman-openrc connman-gtk <span class="o">(</span>or cmst <span class="k">for</span> Qt-based DEs<span class="o">)</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pacman -S connman-openrc connman-gtk <span class="o">(</span>or cmst <span class="k">for</span> Qt-based DEs<span class="o">)</span>
 rc-update add connmand
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="resetea-la-computadora">Resetea la computadora</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">exit</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">exit</span>
 umount -R /mnt
 reboot
 </code></pre></td></tr></table>
@@ -1929,11 +1927,11 @@ reboot
 <h3 id="instala-xorg">Instala xorg</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -Syyy
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -Syyy
 sudo pacman -S xorg --ignore xorg-server-xdmx
 </code></pre></td></tr></table>
 </div>
@@ -1941,75 +1939,75 @@ sudo pacman -S xorg --ignore xorg-server-xdmx
 <p>Si tienes tarjeta <strong>intel</strong> instala:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S xf86-video-intel
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S xf86-video-intel
 </code></pre></td></tr></table>
 </div>
 </div><p>Si tienes tarjeta <strong>AMD</strong> instala:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S xf86-video-amdgpu
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S xf86-video-amdgpu
 </code></pre></td></tr></table>
 </div>
 </div><p>Si tienes tarjeta <strong>NVIDIA</strong> instala:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S nvidia-lts
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S nvidia-lts
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="instala-el-escritorio">Instala el escritorio</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S mate mate-extra system-config-printer blueman connman-gtk
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S mate mate-extra system-config-printer blueman connman-gtk
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="instala-el-administrador-de-inicio-de-sesión-display-manager">Instala el Administrador de Inicio de Sesión (Display Manager)</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S displaymanager-openrc sddm
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo pacman -S displaymanager-openrc sddm
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="habilita-el-administrador-de-inicio-de-sesión-en-openrc">Habilita el Administrador de Inicio de Sesión en OPENRC</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo rc-update add xdm default
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo rc-update add xdm default
 sudo vim /etc/conf.d/xdm 
 </code></pre></td></tr></table>
 </div>
 </div><p>Edita para que quede así:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text">DISPLAYMANAGER=&#34;sddm&#34;
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">DISPLAYMANAGER=&#34;sddm&#34;
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="reinicia-el-sistema">Reinicia el sistema.</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo reboot
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo reboot
 </code></pre></td></tr></table>
 </div>
 </div>
@@ -2297,7 +2295,7 @@ sudo vim /etc/conf.d/xdm
 </div>
 
 
-<script defer src="/js/swipe.min.08ff2be1b74347bad9e267f732f1388d271b2f9d97b6a8a87bd6a510f17c5ad2.js"></script>
+<script defer src="/js/swipe.min.d70095d96ef6a016133ea2c732c5d4713539d335b739178e356af46f54cf0a16.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

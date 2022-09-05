@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.9fb19682560d5fa5596fffec85da605067c4acc86aad05add4d8fff9d362a446.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1248,7 +1248,7 @@
     <meta property="twitter:description" content="Si tienes una computadora vieja donde quieras instalar ArchLinux y esta tiene BIOS, entoces, esta guía es para tí. También en este artículo te voy a decir como instalar XFCE4, un escritorio bastante ligero que no deberá darte problemas en equipos viejos.">
   
 
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.92.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1304,16 +1304,14 @@
 
     
   
-<script type="application/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KZYJ35F591"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-KZYJ35F591', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-KZYJ35F591', { 'anonymize_ip': false });
 }
 </script>
 
@@ -1449,7 +1447,7 @@ if (!doNotTrack) {
 
       
         <li class="navbarm__menu--item ">
-          <a href="/podcast">Podcast</a>
+          <a href="https://www.twitch.tv/linuxfacil">Twitch</a>
         </li>
       
       
@@ -1550,7 +1548,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="/podcast" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">Podcast</a>
+  <a href="https://www.twitch.tv/linuxfacil" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">Twitch</a>
   
   
   
@@ -1598,13 +1596,13 @@ if (!doNotTrack) {
   🏷️
   
 
-  <li><a href="https://linuxfacil.mx/tags/linux/" class="single__tag" title="linux">#linux</a></li>
-
   <li><a href="https://linuxfacil.mx/tags/archlinux/" class="single__tag" title="archlinux">#archlinux</a></li>
 
-  <li><a href="https://linuxfacil.mx/tags/bios/" class="single__tag" title="bios">#bios</a></li>
+  <li><a href="https://linuxfacil.mx/tags/linux/" class="single__tag" title="linux">#linux</a></li>
 
   <li><a href="https://linuxfacil.mx/tags/mbr/" class="single__tag" title="mbr">#mbr</a></li>
+
+  <li><a href="https://linuxfacil.mx/tags/bios/" class="single__tag" title="bios">#bios</a></li>
 
 </ul>
     </div>
@@ -1619,20 +1617,20 @@ if (!doNotTrack) {
 <h3 id="verifica-que-tengas-conexión-a-internet">Verifica que tengas Conexión a Internet.</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">ip a
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">ip a
 </code></pre></td></tr></table>
 </div>
 </div><p>El comando anterior debe regresarte los dispositivos de red, se recomienda que tengas conectada tu computadora por cable ethernet.</p>
 <p>Si no tienes cable conectado, entonces tendrás que utilizar iwctl:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">iwctl
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">iwctl
 </code></pre></td></tr></table>
 </div>
 </div><p><a href="https://wiki.archlinux.org/index.php/Iwd#iwctl">https://wiki.archlinux.org/index.php/Iwd#iwctl</a></p>
@@ -1640,40 +1638,40 @@ if (!doNotTrack) {
 <p>En mi caso estoy utilizando un teclado en Inglés así que no requiero en este paso, pero si tu estás utilizando un teclado en Español lo mejor es que lo configures para no batallar y hacer la instalación más sencilla.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">loadkeys es
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">loadkeys es
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="sincroniza-el-reloj">Sincroniza el reloj</h4>
 <p>A continuación vamos a sincronizar el reloj con internet, para eso escribimos</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">timedatectl set-ntp <span class="nb">true</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">timedatectl set-ntp <span class="nb">true</span>
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="selecciona-el-servidor-más-cercano-para-instalar-los-paquetes-mirror">Selecciona el servidor más cercano para instalar los paquetes (Mirror)</h4>
 <p>Para esto vamos a necesitar un paquete que se llama <a href="https://wiki.archlinux.org/index.php/Reflector"><strong>Reflector</strong></a>, así que vamos a instalarlo primero escribiendo</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pacman -Syy reflector
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pacman -Syy reflector
 </code></pre></td></tr></table>
 </div>
 </div><p><img src="/images/posts/archvbox-install/instala_reflector-min.jpg" alt="Instala Reflector" /></p>
 <p>Ahora selecciona el servidor más cercano a donde te encuentras, para ver una lista de países escribe</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">reflector --list-countries <span class="p">|</span> more
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">reflector --list-countries <span class="p">|</span> more
 </code></pre></td></tr></table>
 </div>
 </div><p><img src="/images/posts/archvbox-install/reflector_paises-min.jpg" alt="Reflector lista de países" /></p>
@@ -1681,10 +1679,10 @@ if (!doNotTrack) {
 <p>(En mi caso como estoy en Estados Unidos, escogeré United States por supuesto, pero tú puedes cambialo por el país de la lista anterior que te quede más cerca)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">reflector -c <span class="s2">&#34;United States&#34;</span> -a <span class="m">6</span> --sort rate --save /etc/pacman.d/mirrorlist
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">reflector -c <span class="s2">&#34;United States&#34;</span> -a <span class="m">6</span> --sort rate --save /etc/pacman.d/mirrorlist
 </code></pre></td></tr></table>
 </div>
 </div><p><img src="/images/posts/archvbox-install/reflector_actualiza_mirrorlist-min.jpg" alt="Reflector actualiza mirrorlist" /></p>
@@ -1692,10 +1690,10 @@ if (!doNotTrack) {
 <p>Siguente teclea</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pacman -Syyy
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pacman -Syyy
 </code></pre></td></tr></table>
 </div>
 </div><p><img src="/images/posts/archvbox-install/actualiza_pacman-min.jpg" alt="pacman -Syyy" /></p>
@@ -1703,10 +1701,10 @@ if (!doNotTrack) {
 <p>Primero vamos a verificar cual es el dispositivo donde se encuentra el disco de nuestra máquina virtual</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">lsblk
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">lsblk
 </code></pre></td></tr></table>
 </div>
 </div><p><img src="/images/posts/archvbox-install/lsblk01-min.jpg" alt="lsblk" /></p>
@@ -1715,10 +1713,10 @@ if (!doNotTrack) {
 Para crear las particiones voy a utilizar <strong>cfdisk</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">cfdisk /dev/sda
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">cfdisk /dev/sda
 </code></pre></td></tr></table>
 </div>
 </div><p><strong>Selecciona &ldquo;dos&rdquo; porque esta es una instalación en MBR</strong></p>
@@ -1760,10 +1758,10 @@ Para crear las particiones voy a utilizar <strong>cfdisk</strong></p>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">mkfs.ext4 /dev/sda2
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">mkfs.ext4 /dev/sda2
 </code></pre></td></tr></table>
 </div>
 </div><p><img src="/images/posts/archvbox-install/mkfs_ext4-min.jpg" alt="Formatea la segunda partición" /></p>
@@ -1772,11 +1770,11 @@ Para crear las particiones voy a utilizar <strong>cfdisk</strong></p>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">mkswap /dev/sda1
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">mkswap /dev/sda1
 swapon /dev/sda1
 </code></pre></td></tr></table>
 </div>
@@ -1787,10 +1785,10 @@ swapon /dev/sda1
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">mount /dev/sda2 /mnt
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">mount /dev/sda2 /mnt
 </code></pre></td></tr></table>
 </div>
 </div><ol start="2">
@@ -1798,20 +1796,20 @@ swapon /dev/sda1
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">lsblk
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">lsblk
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="instala-los-paquetes-base">Instala los paquetes &ldquo;base&rdquo;</h4>
 <p>Una vez montadas las particiones comenzamos la instalación de los paquetes base, los paquetes que vamos a instalar son &ldquo;base, linux, linux-firmware y vim (puedes instalar nano si lo deseas)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pacstrap /mnt base linux linux-firmware vim
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pacstrap /mnt base linux linux-firmware vim
 </code></pre></td></tr></table>
 </div>
 </div><p><img src="/images/posts/archvbox-install/instalacion_base-min.jpg" alt="Instalación base" /></p>
@@ -1820,10 +1818,10 @@ swapon /dev/sda1
 <p>Listo, la instalación base ya está lista, ahora lo que necesitamos hacer es crear nuestro archivo <strong>fstab</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="entra-a-la-instalación">Entra a la instalación</h3>
@@ -1833,10 +1831,10 @@ swapon /dev/sda1
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">arch-chroot /mnt
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">arch-chroot /mnt
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="configura-tu-zona-horaria">Configura tu zona horaria</h3>
@@ -1846,10 +1844,10 @@ swapon /dev/sda1
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">timedatectl list-timezones <span class="p">|</span> grep Chicago
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">timedatectl list-timezones <span class="p">|</span> grep Chicago
 </code></pre></td></tr></table>
 </div>
 </div><ol start="2">
@@ -1857,10 +1855,10 @@ swapon /dev/sda1
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">ln -sf /usr/share/zoneinfo/America/Chicago /etc/localtime
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">ln -sf /usr/share/zoneinfo/America/Chicago /etc/localtime
 </code></pre></td></tr></table>
 </div>
 </div><ol start="3">
@@ -1868,10 +1866,10 @@ swapon /dev/sda1
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">hwclock --systohc
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">hwclock --systohc
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="configura-tu-localización-locale">Configura tu &ldquo;Localización&rdquo; (locale)</h3>
@@ -1883,10 +1881,10 @@ swapon /dev/sda1
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">vim /etc/locale.gen
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">vim /etc/locale.gen
 </code></pre></td></tr></table>
 </div>
 </div><p><img src="/images/posts/archvbox-install/vim_locale_gen-min.jpg" alt="vim locale.gen" /></p>
@@ -1895,10 +1893,10 @@ swapon /dev/sda1
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">locale-gen
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">locale-gen
 </code></pre></td></tr></table>
 </div>
 </div><p><img src="/images/posts/archvbox-install/locale_gen-min.jpg" alt="locale-gen" /></p>
@@ -1907,10 +1905,10 @@ swapon /dev/sda1
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8 &gt;&gt; /etc/locale.conf
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8 &gt;&gt; /etc/locale.conf
 </code></pre></td></tr></table>
 </div>
 </div><p><strong>Nota:</strong> Sustituye &ldquo;en_US.UTF-8&rdquo; por el código que hayas habilitado en el paso anterior</p>
@@ -1920,10 +1918,10 @@ swapon /dev/sda1
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="nv">KEYMAP</span><span class="o">=</span>es &gt;&gt; /etc/vconsole.conf
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="nv">KEYMAP</span><span class="o">=</span>es &gt;&gt; /etc/vconsole.conf
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="configura-los-archivos-de-red">Configura los archivos de Red</h3>
@@ -1932,10 +1930,10 @@ swapon /dev/sda1
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">vim /etc/hostname
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">vim /etc/hostname
 </code></pre></td></tr></table>
 </div>
 </div><p><img src="/images/posts/archvbox-install/hostname-min.jpg" alt="hostname" /></p>
@@ -1944,20 +1942,20 @@ swapon /dev/sda1
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">vim /etc/hosts
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">vim /etc/hosts
 </code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-txt" data-lang="txt">127.0.0.1	localhost
+<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt">127.0.0.1	localhost
 ::1		localhost
 127.0.1.1	archlinx.localdomain	archlinux
 </code></pre></td></tr></table>
@@ -1968,10 +1966,10 @@ swapon /dev/sda1
 <p>Como ya estamos en nuestra instalación, para cambiar el password solo debemos teclear:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">passwd
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">passwd
 </code></pre></td></tr></table>
 </div>
 </div><p>En el prompt escribe el nuevo password (Uno que no se te olvide) y en el siguente prompt vuelve a escribir el mismo password para confirmarlo.</p>
@@ -1983,10 +1981,10 @@ swapon /dev/sda1
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">pacman -S grub networkmanager network-manager-applet dialog wireless_tools wpa_supplicant os-prober mtools dosfstools base-devel linux-headers cups reflector openssh git virtualbox-guest-utils
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pacman -S grub networkmanager network-manager-applet dialog wireless_tools wpa_supplicant os-prober mtools dosfstools base-devel linux-headers cups reflector openssh git virtualbox-guest-utils
 </code></pre></td></tr></table>
 </div>
 </div><p>Acepta todos los prompts por defecto. Y presiona ENTER para continuar con la instalación</p>
@@ -1998,10 +1996,10 @@ swapon /dev/sda1
 <p>Es momento de instalar grub en el disco, como es una instalación en MBR, el comando es como sigue:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">grub-install --target<span class="o">=</span>i386-pc /dev/sda
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">grub-install --target<span class="o">=</span>i386-pc /dev/sda
 </code></pre></td></tr></table>
 </div>
 </div><ol start="3">
@@ -2009,10 +2007,10 @@ swapon /dev/sda1
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">grub-mkconfig -o /boot/grub/grub.cfg
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">grub-mkconfig -o /boot/grub/grub.cfg
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="habilita-los-servicios">Habilita los servicios</h3>
@@ -2024,12 +2022,12 @@ swapon /dev/sda1
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">systemctl <span class="nb">enable</span> NetworkManager
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">systemctl <span class="nb">enable</span> NetworkManager
 systemctl <span class="nb">enable</span> sshd
 systemctl <span class="nb">enable</span> org.cups.cupsd
 </code></pre></td></tr></table>
@@ -2043,11 +2041,11 @@ systemctl <span class="nb">enable</span> org.cups.cupsd
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">useradd -mG wheel jorge
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">useradd -mG wheel jorge
 passwd jorge
 </code></pre></td></tr></table>
 </div>
@@ -2057,10 +2055,10 @@ passwd jorge
 <p>Recuerda que puedes sustituir &ldquo;vim&rdquo; por &ldquo;nano&rdquo; si lo prefieres.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">EDITOR</span><span class="o">=</span>vim visudo
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">EDITOR</span><span class="o">=</span>vim visudo
 </code></pre></td></tr></table>
 </div>
 </div><p><img src="/images/posts/archvbox-install/visudo-min.jpg" alt="" /></p>
@@ -2073,12 +2071,12 @@ passwd jorge
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">exit</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">exit</span>
 umount -a
 reboot
 </code></pre></td></tr></table>
@@ -2395,7 +2393,7 @@ reboot
 </div>
 
 
-<script defer src="/js/swipe.min.08ff2be1b74347bad9e267f732f1388d271b2f9d97b6a8a87bd6a510f17c5ad2.js"></script>
+<script defer src="/js/swipe.min.d70095d96ef6a016133ea2c732c5d4713539d335b739178e356af46f54cf0a16.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
