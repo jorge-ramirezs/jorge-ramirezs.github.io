@@ -11,12 +11,10 @@
     <description>Recent content in mbr on Linux Fácil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <copyright>©{year}, All Rights Reserved</copyright>
+    <copyright>©2022, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 15 Aug 2020 19:39:45 -0500</lastBuildDate>
     
         <atom:link href="https://linuxfacil.mx/tags/mbr/index.xml" rel="self" type="application/rss+xml" />
-    
-    
     
 
       
@@ -30,7 +28,7 @@
         <description>Bajar el ISO El primer paso obviamente es bajar el ISO del sitio oficial
 Instala Arch Linux Una vez que hayas bajado el ISO y creado el USB, arranca tu maquina.
 A continuación los pasos de la instalación.
-Verifica que tengas Conexión a Internet. 1  ip a   El comando anterior debe regresarte los dispositivos de red, se recomienda que tengas conectada tu computadora por cable ethernet.
+Verifica que tengas Conexión a Internet. 1 ip a El comando anterior debe regresarte los dispositivos de red, se recomienda que tengas conectada tu computadora por cable ethernet.
 Si no tienes cable conectado, entonces tendrás que utilizar iwctl:</description>
         
         <dc:creator>Jorge R.</dc:creator>

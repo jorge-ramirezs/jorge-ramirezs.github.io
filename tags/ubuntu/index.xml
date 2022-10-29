@@ -11,12 +11,10 @@
     <description>Recent content in ubuntu on Linux Fácil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <copyright>©{year}, All Rights Reserved</copyright>
+    <copyright>©2022, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 30 Nov 2020 16:55:32 -0600</lastBuildDate>
     
         <atom:link href="https://linuxfacil.mx/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
-    
-    
     
 
       
@@ -27,10 +25,11 @@
         
         <atom:modified>Mon, 30 Nov 2020 16:55:32 -0600</atom:modified>
         <guid>https://linuxfacil.mx/blog/linux/como-instalar-bspwm-polybar-en-ubuntu/</guid>
-        <description>En YouTube Parte 1: La instalación   Parte 2: La Configuración   Introducción ¿Qué es BSPWM? Según la documentación oficial:
- bwspwm es un administrador de ventanas en mosaico que representa las ventanas como las hojas de un árbol binario completo.
-Solo responde a eventos X Window System  y los mensajes que recibe en un conector dedicado.
-bspc es un programa que escribe mensajes en el socket de bspwm.</description>
+        <description>En YouTube Parte 1: La instalación Parte 2: La Configuración Introducción ¿Qué es BSPWM? Según la documentación oficial:
+bwspwm es un administrador de ventanas en mosaico que representa las ventanas como las hojas de un árbol binario completo.
+Solo responde a eventos X Window System y los mensajes que recibe en un conector dedicado.
+bspc es un programa que escribe mensajes en el socket de bspwm.
+bspwm no maneja ninguna entrada de teclado o puntero: se necesita un programa de terceros (por ejemplo, sxhkd ) para traducir eventos de teclado y puntero a invocaciones bspc.</description>
         
         <dc:creator>Jorge R.</dc:creator>
         <media:content url="https://linuxfacil.mx//images/posts/bspwm-polybar-ubuntu/Ubuntu_bspwm_Blog.png" medium="image"><media:title type="html">featured image</media:title></media:content>

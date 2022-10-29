@@ -10,17 +10,17 @@
 
 
   
-  <script defer src="/js/fuse.min.94c78ad70b02749822921660cf4e9f0b3701bc0680c421afb784a78228de0275.js"></script>
+  <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
 
 
 
 <script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
-<script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
+<script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/js/helper/getParents.min.086022fb02d7a1517e33c2670bffb976b3e80bcacd9caeee0c6a586064f20e42.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.9fb19682560d5fa5596fffec85da605067c4acc86aad05add4d8fff9d362a446.js"></script>
+<script defer src="/js/helper/fadeinout.min.3ce954c8aea3b69cc5e6f734d8273ba4cd48d3a7987dbdca145849bc4b8fc296.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -99,6 +99,74 @@
           navCollapse.setAttribute('data-open', 'true');
           navCollapse.style.maxHeight = navCollapse.scrollHeight + "px";
           navCollapseBtn.classList.add('is-active');
+        }
+      }
+    }) : null;
+    
+
+
+    
+    var tables = document.querySelectorAll('.single__contents > table');
+    for (let i = 0; i < tables.length; i++) {
+      var table = tables[i];
+      var wrapper = document.createElement('div');
+      wrapper.className = 'table-wrapper';
+      table.parentElement.replaceChild(wrapper, table);
+      wrapper.appendChild(table);
+    }
+    
+
+
+    
+    var footNoteRefs = document.querySelectorAll('.footnote-ref');
+    var footNoteBackRefs = document.querySelectorAll('.footnote-backref');
+
+    footNoteRefs ? 
+    footNoteRefs.forEach(function(elem, idx) {
+      elem.onmouseenter = function () {
+        if (navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('scrolling');
+        }
+      }
+
+      elem.onmouseleave = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          setTimeout(function () {
+            navbar.classList.add('scrolling');
+          }, 100);
+        }
+      }
+
+      elem.onclick = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('navbar--show');
+          navbar.classList.remove('navbar--hide');
+          navbar.classList.add('navbar--hide');
+        }
+      }
+    }) : null;
+
+    footNoteBackRefs ? 
+    footNoteBackRefs.forEach(function(elem, idx) {
+      elem.onmouseenter = function () {
+        if (navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('scrolling');
+        }
+      }
+
+      elem.onmouseleave = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          setTimeout(function() {
+            navbar.classList.add('scrolling');
+          }, 100);
+        }
+      }
+
+      elem.onclick = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('navbar--show');
+          navbar.classList.remove('navbar--hide');
+          navbar.classList.add('navbar--hide');
         }
       }
     }) : null;
@@ -292,11 +360,13 @@
         if (st < 45) {
           return null;
         }
-        
-        if (!navbar.classList.contains('navbar--hide')) {
-          navbar.classList.add('navbar--hide');
-        } else if (navbar.classList.contains('navbar--show')) {
-          navbar.classList.remove('navbar--show');
+
+        if (navbar.classList.contains('scrolling')) {
+          if (!navbar.classList.contains('navbar--hide')) {
+            navbar.classList.add('navbar--hide');
+          } else if (navbar.classList.contains('navbar--show')) {
+            navbar.classList.remove('navbar--show');
+          }
         }
 
         if (singleContentsElem) {
@@ -363,10 +433,12 @@
           gttBtn.style.display = "none";
         }
 
-        if (navbar.classList.contains('navbar--hide')) {
-          navbar.classList.remove('navbar--hide');
-        } else if (!navbar.classList.contains('navbar--show')) {
-          navbar.classList.add('navbar--show');
+        if (navbar.classList.contains('scrolling')) {
+          if (navbar.classList.contains('navbar--hide')) {
+            navbar.classList.remove('navbar--hide');
+          } else if (!navbar.classList.contains('navbar--show')) {
+            navbar.classList.add('navbar--show');
+          }
         }
 
         if (singleContentsElem) {
@@ -447,6 +519,17 @@
     var rootEleme = document.getElementById('root');
     var selectThemeElem = document.querySelectorAll('.select-theme');
     var selectThemeItemElem = document.querySelectorAll('.select-theme__item');
+    
+    
+    var skinDarkCode = JSON.parse("\"oscuro\"");
+    
+    var skinLightCode = JSON.parse("\"claro\"");
+    
+    var skinHackerCode = JSON.parse("\"hacker\"");
+    
+    var skinSolarizedCode = JSON.parse("\"solarized\"");
+    
+    var skinKimbieCode = JSON.parse("\"kimbie\"");
 
     var setMetaColor = function(themeColor) {
       var metaMsapplicationTileColor = document.getElementsByName('msapplication-TileColor')[0];
@@ -479,7 +562,21 @@
         metaThemeColor.setAttribute('content', '#eee8d5');
         metaMsapplicationNavbuttonColor.setAttribute('content', '#eee8d5');
         metaAppleMobileWebAappStatusBarStyle.setAttribute('content', '#eee8d5');
-      } 
+      }
+    }
+
+    var parseSkinCode = function(themeText) {
+      if (themeText === skinDarkCode) {
+        return 'dark';
+      } else if (themeText === skinLightCode) {
+        return 'light';
+      } else if (themeText === skinHackerCode) {
+        return 'hacker';
+      } else if (themeText === skinSolarizedCode) {
+        return 'solarized';
+      } else if (themeText === skinKimbieCode) {
+        return 'kimbie';
+      }
     }
     
     if (localTheme) {
@@ -500,7 +597,7 @@
     selectThemeItemElem ? 
     selectThemeItemElem.forEach(function (v, i) {
       v.addEventListener('click', function (e) {
-        var selectedThemeVariant = e.target.text.trim();
+        var selectedThemeVariant = parseSkinCode(e.target.text.trim());
         localStorage.setItem('theme', selectedThemeVariant);
         setMetaColor(selectedThemeVariant);
 
@@ -566,6 +663,12 @@
     
     var enableSearch = JSON.parse("true");
     
+    var searchDistance = JSON.parse("null");
+    
+    var searchThreshold = JSON.parse("null");
+    
+    var searchContent = JSON.parse("null");
+    
     var enableSearchHighlight = JSON.parse("true");
     
     var searchResultPosition = JSON.parse("null");
@@ -589,14 +692,18 @@
         xhr.onload = function () {
           if (xhr.status === 200) {
             fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
-              keys: sectionType.includes('publication') ? ['title', 'abstract'] : ['title', 'description', 'content'],
+              keys: sectionType.includes('publication') ? ['title', 'abstract'] : 
+                searchContent ? ['title', 'description', 'content'] : ['title', 'description'],
               includeMatches: enableSearchHighlight,
-              shouldSort: true,
-              threshold: 0.4,
-              location: 0,
-              distance: 100,
+              shouldSort: true, 
+              threshold: searchThreshold ? searchThreshold : 0.4, 
+              location: 0, 
+              distance: searchDistance ? searchDistance : 100, 
               maxPatternLength: 32,
               minMatchCharLength: 1,
+              isCaseSensitive: false, 
+              findAllMatches: false, 
+              useExtendedSearch: false, 
             });
             window.fuse = fuse;
           }
@@ -613,16 +720,16 @@
       li.className = 'search-result__item';
       
       var a = document.createElement('a');
-      a.innerHTML = obj.title;
+      a.innerHTML = obj.item.title;
       a.setAttribute('class', 'search-result__item--title');
-      a.setAttribute('href', obj.permalink);
+      a.setAttribute('href', obj.item.uri);
 
       var descDiv = document.createElement('div');
       descDiv.setAttribute('class', 'search-result__item--desc');
-      if (obj.description) {
-        descDiv.innerHTML = obj.description;
-      } else if (obj.content) {
-        descDiv.innerHTML = obj.content.substring(0, 225);
+      if (obj.item.description) {
+        descDiv.innerHTML = obj.item.description;
+      } else if (obj.item.content) {
+        descDiv.innerHTML = obj.item.content.substring(0, 225);
       }
       
       li.appendChild(a);
@@ -1096,7 +1203,7 @@
   
     var mobileSearchInputElem = document.querySelector('#search-mobile');
     var mobileSearchClassElem = document.querySelector('.mobile-search');
-    var mobileSearchBtnElem = document.querySelector('#mobileSearchBtn');
+    var mobileSearchBtnElems = document.querySelectorAll('.navbar-search');
     var mobileSearchCloseBtnElem = document.querySelector('#search-mobile-close');
     var mobileSearchContainer = document.querySelector('#search-mobile-container');
     var mobileSearchResultsElem = document.querySelector('#search-mobile-results');
@@ -1106,19 +1213,21 @@
       mobileSearchClassElem.style.display = 'none';
     }
 
-    mobileSearchBtnElem ? 
-    mobileSearchBtnElem.addEventListener('click', function () {
-      if (mobileSearchContainer) {
-        mobileSearchContainer.style.display = 'block';
-      }
+    mobileSearchBtnElems ? 
+    mobileSearchBtnElems.forEach(function (elem, idx) {
+      elem.addEventListener('click', function () {
+        if (mobileSearchContainer) {
+          mobileSearchContainer.style.display = 'block';
+        }
 
-      if (mobileSearchInputElem) {
-        mobileSearchInputElem.focus();
-      }
+        if (mobileSearchInputElem) {
+          mobileSearchInputElem.focus();
+        }
 
-      if (htmlElem) {
-        htmlElem.style.overflowY = 'hidden';
-      }
+        if (htmlElem) {
+          htmlElem.style.overflowY = 'hidden';
+        }
+      });
     }) : null;
 
     mobileSearchCloseBtnElem ? 
@@ -1213,7 +1322,8 @@
     }
   
   });
-</script>    
+</script>
+    
     
 
 
@@ -1248,7 +1358,7 @@
     <meta property="twitter:description" content="">
   
 
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.105.0">
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1352,15 +1462,15 @@ if (!doNotTrack) {
 
 
         <div class="wrapper" data-type="blog" data-kind="page">
-            <nav class="navbar" role="navigation" aria-label="main navigation" data-dir="ltr">
+            <nav class="navbar scrolling" role="navigation" aria-label="main navigation" data-dir="ltr">
   <div class="navbar__brand">
     
-    <a href="/" title="Inicio" rel="home" class="navbar__logo-link">
+    <a href="/" title="inicio" rel="home" class="navbar__logo-link">
       <img src="/logo.png" alt="Home" class="navbar__logo">
     </a>
     
     
-      <a href="/" title="Inicio" rel="home" class="navbar__title-link">
+      <a href="/" title="inicio" rel="home" class="navbar__title-link">
         <h6 class="navbar__title">Linux Fácil</h6>
       </a>
     
@@ -1401,13 +1511,13 @@ if (!doNotTrack) {
 </div>
 
 
-<div id="mobileSearchBtn" class="mobile-search__btn" data-ani="true">
+<div class="mobile-search__btn navbar-search" data-ani="true">
   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15.5 14h-.79l-.28-.27c1.2-1.4 1.82-3.31 1.48-5.34-.47-2.78-2.79-5-5.59-5.34-4.23-.52-7.79 3.04-7.27 7.27.34 2.8 2.56 5.12 5.34 5.59 2.03.34 3.94-.28 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
 </div>
 
 <div id="search-mobile-container" class="mobile-search hide" data-dir="ltr">
   <div class="mobile-search__top">
-    <input id="search-mobile" type="text" aria-label="Mobile Search" placeholder="Buscar" class="mobile-search__top--input"/>
+    <input id="search-mobile" type="text" aria-label="Mobile Search" placeholder="buscar" class="mobile-search__top--input"/>
     <div id="search-mobile-close" class="mobile-search__top--icon">
       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path opacity=".87" fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.59-13L12 10.59 8.41 7 7 8.41 10.59 12 7 15.59 8.41 17 12 13.41 15.59 17 17 15.59 13.41 12 17 8.41z"/></svg>
     </div>
@@ -1486,19 +1596,21 @@ if (!doNotTrack) {
     
       <li class="navbarm__menu--item ">
         <a href="/categories" class="navbarm__menu--term" data-index="1">
-          Categorias
+          Categorías
         </a>
       </li>
     
       <li class="navbarm__menu--item ">
         <a href="/series" class="navbarm__menu--term" data-index="2">
-          Series
+          Serie
         </a>
       </li>
     
   </ul>
 </div>
   <div class="navbar__menu">
+  
+  
   
 <div class="theme" data-ani="true">
   <div class="dropdown">
@@ -1509,11 +1621,11 @@ if (!doNotTrack) {
       
         
         <a href="#" class="dropdown-item select-theme__item is-active">
-          dark
+          oscuro
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
-          light
+          claro
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
@@ -1576,20 +1688,22 @@ if (!doNotTrack) {
   
   
   <div class="single ">
-    <div class="single__nojs">This page looks best with JavaScript enabled</div>
+    <div class="single__nojs">Esta pagina se ve mejor con JavaScript habilitado</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
     <h2 class="single__title" data-ani="true">Comandos Basicos De Linux: Piérdele el miedo a la terminal.</h2>
+    <h3 class="single__subtitle"></h3>
     <div class="single__meta">
       
 <div class="single__infos">
-  <time class="single__info" title="Escrito el">📅&nbsp;Jan 17, 2021 </time>
+  <time class="single__info" title="Escrito en">📅&nbsp;2021-01-17 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Tiempo que toma leer este post"> ☕&nbsp;1&nbsp;minutos de lectura </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Tiempo de lectura"> ☕&nbsp;1&nbsp;minutos lectura </span>
   
   <span class="single__info">
     
   </span>
 </div>
+
       
 <ul class="single__tags caption">
   
@@ -1603,6 +1717,7 @@ if (!doNotTrack) {
   <li><a href="https://linuxfacil.mx/tags/l%C3%ADnea-de-comandos/" class="single__tag" title="línea de comandos">#línea de comandos</a></li>
 
 </ul>
+
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
@@ -1619,6 +1734,119 @@ recuerda que me puedes encontrar en <a href="https://twitter.com/jorgers">Twitte
 
     </article>
     
+    
+<script defer src="/js/clipboard.min.1626706afc88d95ebe1173b553ec732c6dc82a576989315fdf5e7779af738a44.js"></script>
+
+<script defer src="/js/helper/prev.min.js"></script>
+
+<script defer src="/js/helper/prop.min.js"></script>
+<script>
+  'use strict';
+  document.addEventListener('DOMContentLoaded', function () {
+    
+    var clipInit = false;
+    var preChromaElem = document.querySelectorAll('pre.chroma');
+    var langCodeElem = document.querySelectorAll('.language-code');
+    var dollarCodeElem = document.querySelectorAll('div.language-\\$');
+    var gtCodeElem = document.querySelectorAll('div.language-\\>');
+
+    var makeClipboard = function(elem) {
+      var code = elem,
+          text = elem.textContent;
+        
+      if (text.length > 15) {
+        if (!clipInit) {
+          var text, clip = new ClipboardJS('.copy-to-clipboard', {
+            text: function (trigger) {
+              var codeElem = prev(trigger).querySelectorAll('code');
+              if (codeElem.length > 1) {
+                text = prev(trigger).querySelector('code[class^="language-"]').textContent;
+              } else {
+                text = prev(trigger).querySelector('code').textContent;
+              }
+
+              return text.replace(/^\$\s/gm, '');
+            }
+          });
+
+          var inPre;
+          clip.on('success', function (e) {
+            e.clearSelection();
+            inPre = prop(e.trigger.parentNode, 'tagName') == 'PRE';
+            e.trigger.setAttribute('aria-label', 'Copied to clipboard!');
+            e.trigger.classList.add('tooltipped');
+            e.trigger.classList.add('tooltipped-w');
+          });
+
+          clip.on('error', function (e) {
+            inPre = prop(e.trigger.parentNode, 'tagName') == 'PRE';
+            e.trigger.setAttribute('aria-label', e.action.toString());
+            e.trigger.classList.add('tooltipped');
+            e.trigger.classList.add('tooltipped-w');
+          });
+
+          clipInit = true;
+        }
+
+        var notAllowedClass = ['language-mermaid', 'language-viz', 'language-wave', 'language-chart', 'language-msc', 'language-flowchart'];
+        var isNotAllowedIncluded = false;
+        var curClassName = code.getAttribute('class');
+
+        for (var i = 0; i < notAllowedClass.length; i++) {
+          if (curClassName && curClassName.startsWith(notAllowedClass[i])) {
+            isNotAllowedIncluded = true;
+            break;
+          }
+        }
+
+        if (!isNotAllowedIncluded) {
+          if (curClassName) {
+            var newClipboardElem = document.createElement('span');
+            newClipboardElem.setAttribute('class', 'copy-to-clipboard');
+            newClipboardElem.setAttribute('title', 'Copy to clipboard');
+            elem.parentNode.parentNode.insertBefore(newClipboardElem, elem.parentNode.nextElementSibling);
+          }
+        }
+      }
+    }
+
+    var makeSymbolClipboard = function(elem) {
+      var clipboardSpan = document.createElement('span');
+      clipboardSpan.setAttribute('class', 'copy-to-clipboard');
+      clipboardSpan.setAttribute('title', 'Copy to clipboard');
+      elem.parentNode.parentNode.insertBefore(clipboardSpan, elem.parentNode.nextElementSibling);
+    }
+
+    preChromaElem ? 
+    preChromaElem.forEach(function(elem) {
+      elem.querySelectorAll('code').forEach(function(codeElem) {
+        makeClipboard(codeElem);
+      });
+    }) : null;
+    
+    langCodeElem ? 
+    langCodeElem.forEach(function(elem) {
+      elem.querySelectorAll('code').forEach(function (codeElem) {
+        makeClipboard(codeElem);
+      });
+    }) : null;
+
+    dollarCodeElem ? 
+    dollarCodeElem.forEach(function(elem) {
+      elem.querySelectorAll('code').forEach(function (codeElem) {
+        makeSymbolClipboard(codeElem);
+      });
+    }) : null;
+
+    gtCodeElem ?
+    gtCodeElem.forEach(function(elem) {
+      elem.querySelectorAll('code').forEach(function (codeElem) {
+        makeSymbolClipboard(codeElem);
+      });
+    }) : null;
+    
+  });
+</script>
     <script>
   'use strict';
   
@@ -1666,11 +1894,36 @@ recuerda que me puedes encontrar en <a href="https://twitter.com/jorgers">Twitte
     elem.append(newElem);
   }) : null;
   
+
+  
+
+  
+  var dollarCodeElem = document.querySelectorAll('div.language-\\$');
+  var gtCodeElem = document.querySelectorAll('div.language-\\>');
+
+  dollarCodeElem ?
+  dollarCodeElem.forEach(function(elem) {
+    var lnts = elem.parentNode.parentNode ? elem.parentNode.parentNode.querySelectorAll('.lnt') : null;
+    lnts ? 
+    lnts.forEach(function(lnt) {
+      lnt.innerHTML = '$<br/>';
+    }) : null;
+  }) : null;
+
+  gtCodeElem ?
+  gtCodeElem.forEach(function(elem) {
+    var lnts = elem.parentNode.parentNode ? elem.parentNode.parentNode.querySelectorAll('.lnt') : null;
+    lnts ? 
+    lnts.forEach(function(lnt) {
+      lnt.innerHTML = '><br/>';
+    }) : null;
+  }) : null;
+  
 </script>
     
 <div class="donation">
   <div class="donation__message">
-    Compartir en
+    compartir en
   </div>
   <div class="donation__icons">
     
@@ -1689,19 +1942,20 @@ recuerda que me puedes encontrar en <a href="https://twitter.com/jorgers">Twitte
       
     
       
-        <a href="https://www.reddit.com/submit?url=https%3a%2f%2flinuxfacil.mx%2fblog%2flinux%2fcomandos-basicos-de-linux%2f&amp;title=Comandos%20Basicos%20De%20Linux%3a%20Pi%c3%a9rdele%20el%20miedo%20a%20la%20terminal." target="_blank" rel="noreferer" title="Reddit" aria-label="Reddit Share Button" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&amp;title=' +  encodeURIComponent(document.title)); return false;" class="donation__item" data-type="share">
+        <a href="https://www.reddit.com/submit?url=https%3a%2f%2flinuxfacil.mx%2fblog%2flinux%2fcomandos-basicos-de-linux%2f&amp;title=Comandos%20Basicos%20De%20Linux%3a%20Pi%c3%a9rdele%20el%20miedo%20a%20la%20terminal." target="_blank" rel="noreferrer" title="Reddit" aria-label="Reddit Share Button" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&amp;title=' +  encodeURIComponent(document.title)); return false;" class="donation__item" data-type="share">
           <svg data-name="reddit" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m21.325 9.308c-.758 0-1.425.319-1.916.816-1.805-1.268-4.239-2.084-6.936-2.171l1.401-6.406 4.461 1.016c0 1.108.89 2.013 1.982 2.013 1.113 0 2.008-.929 2.008-2.038s-.889-2.038-2.007-2.038c-.779 0-1.451.477-1.786 1.129l-4.927-1.108c-.248-.067-.491.113-.557.365l-1.538 7.062c-2.676.113-5.084.928-6.895 2.197-.491-.518-1.184-.837-1.942-.837-2.812 0-3.733 3.829-1.158 5.138-.091.405-.132.837-.132 1.268 0 4.301 4.775 7.786 10.638 7.786 5.888 0 10.663-3.485 10.663-7.786 0-.431-.045-.883-.156-1.289 2.523-1.314 1.594-5.115-1.203-5.117zm-15.724 5.41c0-1.129.89-2.038 2.008-2.038 1.092 0 1.983.903 1.983 2.038 0 1.109-.89 2.013-1.983 2.013-1.113.005-2.008-.904-2.008-2.013zm10.839 4.798c-1.841 1.868-7.036 1.868-8.878 0-.203-.18-.203-.498 0-.703.177-.18.491-.18.668 0 1.406 1.463 6.07 1.488 7.537 0 .177-.18.491-.18.668 0 .207.206.207.524.005.703zm-.041-2.781c-1.092 0-1.982-.903-1.982-2.011 0-1.129.89-2.038 1.982-2.038 1.113 0 2.008.903 2.008 2.038-.005 1.103-.895 2.011-2.008 2.011z"/></svg>
         </a>
       
     
       
-        <a href='https://telegram.me/share/url?url=' onclick='window.open(&apos;https://telegram.me/share/url?url=&apos;+encodeURIComponent(location.href)+&apos;&amp;bodytext=&amp;tags=&amp;text=&apos;+encodeURIComponent(document.title));return false;' class="donation__item" target="_blank" rel="noreferer" title="Telegram" aria-label="Telegram Share Button" data-type="share">
+        <a href='https://telegram.me/share/url?url=' onclick='window.open(&apos;https://telegram.me/share/url?url=&apos;+encodeURIComponent(location.href)+&apos;&amp;bodytext=&amp;tags=&amp;text=&apos;+encodeURIComponent(document.title));return false;' class="donation__item" target="_blank" rel="noreferrer" title="Telegram" aria-label="Telegram Share Button" data-type="share">
           <svg data-name="telegram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="35" height="35"><path fill="currentColor" d="M 26.070313 3.996094 C 25.734375 4.011719 25.417969 4.109375 25.136719 4.21875 L 25.132813 4.21875 C 24.847656 4.332031 23.492188 4.902344 21.433594 5.765625 C 19.375 6.632813 16.703125 7.757813 14.050781 8.875 C 8.753906 11.105469 3.546875 13.300781 3.546875 13.300781 L 3.609375 13.277344 C 3.609375 13.277344 3.25 13.394531 2.875 13.652344 C 2.683594 13.777344 2.472656 13.949219 2.289063 14.21875 C 2.105469 14.488281 1.957031 14.902344 2.011719 15.328125 C 2.101563 16.050781 2.570313 16.484375 2.90625 16.722656 C 3.246094 16.964844 3.570313 17.078125 3.570313 17.078125 L 3.578125 17.078125 L 8.460938 18.722656 C 8.679688 19.425781 9.949219 23.597656 10.253906 24.558594 C 10.433594 25.132813 10.609375 25.492188 10.828125 25.765625 C 10.933594 25.90625 11.058594 26.023438 11.207031 26.117188 C 11.265625 26.152344 11.328125 26.179688 11.390625 26.203125 C 11.410156 26.214844 11.429688 26.21875 11.453125 26.222656 L 11.402344 26.210938 C 11.417969 26.214844 11.429688 26.226563 11.441406 26.230469 C 11.480469 26.242188 11.507813 26.246094 11.558594 26.253906 C 12.332031 26.488281 12.953125 26.007813 12.953125 26.007813 L 12.988281 25.980469 L 15.871094 23.355469 L 20.703125 27.0625 L 20.8125 27.109375 C 21.820313 27.550781 22.839844 27.304688 23.378906 26.871094 C 23.921875 26.433594 24.132813 25.875 24.132813 25.875 L 24.167969 25.785156 L 27.902344 6.65625 C 28.007813 6.183594 28.035156 5.742188 27.917969 5.3125 C 27.800781 4.882813 27.5 4.480469 27.136719 4.265625 C 26.769531 4.046875 26.40625 3.980469 26.070313 3.996094 Z M 25.96875 6.046875 C 25.964844 6.109375 25.976563 6.101563 25.949219 6.222656 L 25.949219 6.234375 L 22.25 25.164063 C 22.234375 25.191406 22.207031 25.25 22.132813 25.308594 C 22.054688 25.371094 21.992188 25.410156 21.667969 25.28125 L 15.757813 20.75 L 12.1875 24.003906 L 12.9375 19.214844 C 12.9375 19.214844 22.195313 10.585938 22.59375 10.214844 C 22.992188 9.84375 22.859375 9.765625 22.859375 9.765625 C 22.886719 9.3125 22.257813 9.632813 22.257813 9.632813 L 10.082031 17.175781 L 10.078125 17.15625 L 4.242188 15.191406 L 4.242188 15.1875 C 4.238281 15.1875 4.230469 15.183594 4.226563 15.183594 C 4.230469 15.183594 4.257813 15.171875 4.257813 15.171875 L 4.289063 15.15625 L 4.320313 15.144531 C 4.320313 15.144531 9.53125 12.949219 14.828125 10.71875 C 17.480469 9.601563 20.152344 8.476563 22.207031 7.609375 C 24.261719 6.746094 25.78125 6.113281 25.867188 6.078125 C 25.949219 6.046875 25.910156 6.046875 25.96875 6.046875 Z"/></svg>
         </a>
       
     
   </div>
 </div>
+
 
     
     
@@ -1833,7 +2087,7 @@ recuerda que me puedes encontrar en <a href="https://twitter.com/jorgers">Twitte
     <h1 class="related__title">
       <hr class="hr-dots"/>
       <div>
-        Ver Tambien
+        Ver también
       </div>
       <hr class="hr-dots"/>
     </h1>
@@ -1924,7 +2178,7 @@ recuerda que me puedes encontrar en <a href="https://twitter.com/jorgers">Twitte
 </div>
 
 
-<script defer src="/js/swipe.min.d70095d96ef6a016133ea2c732c5d4713539d335b739178e356af46f54cf0a16.js"></script>
+<script defer src="/js/swipe.min.feb438efb7ca009ecd7fc2ac3ad2fced4840990b2798d81f87137f2dc6281f05.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -2197,7 +2451,7 @@ document.addEventListener('DOMContentLoaded', function () {
   <span class="icon">
     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15.5 14h-.79l-.28-.27c1.2-1.4 1.82-3.31 1.48-5.34-.47-2.78-2.79-5-5.59-5.34-4.23-.52-7.79 3.04-7.27 7.27.34 2.8 2.56 5.12 5.34 5.59 2.03.34 3.94-.28 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
   </span>
-  <input id="search" aria-label="Site Search" class="input" type="text" placeholder="Buscar" autocomplete="off">
+  <input id="search" aria-label="Site Search" class="input" type="text" placeholder="buscar" autocomplete="off">
   <div id="search-results" class="dropdown">
     <div id="search-menu" class="dropdown-menu" role="menu">
     </div>
@@ -2217,7 +2471,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <section class="sidebar hide">
   <script>document.querySelector('.sidebar').classList.remove('hide')</script>
   <div class="toc__flexbox" data-position="fixed">
-    <h6 class="toc__title" data-ani="true">En esta pagina</h6>
+    <h6 class="toc__title" data-ani="true">Qué hay en esta página</h6>
     
       <label class="switch" data-ani="true">
         <input id="toggle-toc" aria-label="Toggle TOC" type="checkbox" checked>
@@ -2300,7 +2554,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-<script defer src="/js/clipboard.min.1626706afc88d95ebe1173b553ec732c6dc82a576989315fdf5e7779af738a44.js"></script>
 
 <script defer src="/js/helper/getParents.min.js"></script>
 
@@ -2311,6 +2564,42 @@ document.addEventListener('DOMContentLoaded', function () {
 <script defer src="/js/helper/prop.min.js"></script>
 
 <script defer src="/js/helper/fadeinout.min.js"></script>
+
+<script defer src="/js/helper/throttle.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2348,6 +2637,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
 
 
+
     
     
     
@@ -2363,6 +2653,18 @@ document.addEventListener('DOMContentLoaded', function () {
     
     if ((enableToc || toc) && document.querySelector('.toc')) {
       var tableOfContentsElem = document.querySelector('.toc').querySelector('#TableOfContents');
+
+      tableOfContentsElem.onmouseenter = function() {
+        if (navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('scrolling');
+        }
+      }
+
+      tableOfContentsElem.onmouseleave = function() {
+        if (!navbar.classList.contains('scrolling')) {
+          navbar.classList.add('scrolling');
+        }
+      }
 
       if (false === tocFolding) {
 
@@ -2382,10 +2684,13 @@ document.addEventListener('DOMContentLoaded', function () {
           tableOfContentsElem.querySelectorAll('a').forEach(function (elem) {
             elem.addEventListener('click', function () {
               var id = elem.getAttribute('id');
-              navbar.classList.remove('navbar--show');
-              navbar.classList.remove('navbar--hide');
-              navbar.classList.add('navbar--hide');
 
+              if (!navbar.classList.contains('scrolling')) {
+                navbar.classList.remove('navbar--show');
+                navbar.classList.remove('navbar--hide');
+                navbar.classList.add('navbar--hide');
+              }
+              
               document.querySelector('.toc').querySelectorAll('a').forEach(function (elem) {
                 elem.classList.remove('active');
               });
@@ -2478,18 +2783,24 @@ document.addEventListener('DOMContentLoaded', function () {
       }) : null;
     }
     
-
-
     
-    var tables = document.querySelectorAll('.single__contents > table');
-    for (let i = 0; i < tables.length; i++) {
-      var table = tables[i];
-      var wrapper = document.createElement('div');
-      wrapper.className = 'table-wrapper';
-      table.parentElement.replaceChild(wrapper, table);
-      wrapper.appendChild(table);
+    
+    
+    
+    var topOffset = 120;
+    var botOffset = 70;
+    var handleWindowResize = function () {
+      if (tocElem) {
+        tocElem.style.maxHeight = (window.innerHeight - topOffset - botOffset) + 'px';
+      }
     }
+    var throttledWindowResize = throttle(handleWindowResize, 300);
+    throttledWindowResize()
+
     
+    window.addEventListener('resize', throttledWindowResize);
+    
+
 
 
     
@@ -2501,20 +2812,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
     headers ? 
     headers.forEach(function (elem) {
+      var size = parseInt(elem.tagName.substr(1), 10) * 2;
       var url = encodeURI(document.location.origin + document.location.pathname);
       var link = url + "#" + elem.getAttribute('id');
       var newElemOuter = document.createElement('span');
       newElemOuter.classList.add('anchor');
       newElemOuter.classList.add('hide');
-      newElemOuter.setAttribute('data-clipboard-text', link);
+      newElemOuter.setAttribute('data-clipboard-text', decodeURI(link));
       newElemOuter.style.position = 'relative';
 
       var newElemInner = document.createElement('span');
-      newElemInner.style.fontSize = '1rem';
       newElemInner.style.position = 'absolute';
       newElemInner.style.top = '50%';
+      newElemInner.style.left = '0.75rem';
       newElemInner.style.transform = 'translateY(-50%)';
-      newElemInner.innerText = "🔗";
+      newElemInner.innerHTML = `
+<svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="${32 - size}px" height="${32 - size}px"><path d="M 5.5625 0 C 4.136719 0 2.707031 0.542969 1.625 1.625 C -0.539063 3.789063 -0.539063 7.335938 1.625 9.5 L 5.28125 13.15625 C 5.667969 13.554688 6.304688 13.558594 6.703125 13.171875 C 7.101563 12.785156 7.105469 12.148438 6.71875 11.75 L 3.03125 8.0625 C 1.632813 6.664063 1.632813 4.429688 3.03125 3.03125 C 4.429688 1.632813 6.664063 1.632813 8.0625 3.03125 L 12.96875 7.9375 C 14.367188 9.335938 14.367188 11.570313 12.96875 12.96875 C 12.804688 13.132813 12.621094 13.25 12.4375 13.375 C 11.980469 13.6875 11.859375 14.308594 12.171875 14.765625 C 12.484375 15.222656 13.105469 15.34375 13.5625 15.03125 C 13.847656 14.835938 14.125 14.625 14.375 14.375 C 16.539063 12.210938 16.539063 8.664063 14.375 6.5 L 9.5 1.625 C 8.417969 0.542969 6.988281 0 5.5625 0 Z M 10.78125 8.875 C 10.738281 8.882813 10.695313 8.894531 10.65625 8.90625 C 10.507813 8.9375 10.371094 9 10.25 9.09375 C 10.039063 9.253906 9.820313 9.429688 9.625 9.625 C 7.460938 11.789063 7.460938 15.335938 9.625 17.5 L 14.5 22.375 C 16.664063 24.539063 20.210938 24.539063 22.375 22.375 C 24.539063 20.210938 24.539063 16.664063 22.375 14.5 L 18.71875 10.875 C 18.476563 10.578125 18.089844 10.441406 17.714844 10.527344 C 17.34375 10.613281 17.050781 10.90625 16.964844 11.277344 C 16.878906 11.652344 17.015625 12.039063 17.3125 12.28125 L 20.96875 15.9375 C 22.367188 17.335938 22.367188 19.570313 20.96875 20.96875 C 19.570313 22.367188 17.335938 22.367188 15.9375 20.96875 L 11.03125 16.0625 C 9.632813 14.664063 9.632813 12.429688 11.03125 11.03125 C 11.152344 10.90625 11.300781 10.820313 11.4375 10.71875 C 11.839844 10.472656 12.015625 9.976563 11.855469 9.53125 C 11.699219 9.085938 11.25 8.8125 10.78125 8.875 Z"/></svg>`;
 
       if (languagedir === "rtl") {
         newElemInner.style.left = '-2rem';
@@ -2548,132 +2861,8 @@ document.addEventListener('DOMContentLoaded', function () {
       e.trigger.classList.add('tooltipped');
       e.trigger.classList.add('tooltipped-s');
     });
-    
+    // =================================================================
 
-
-    
-    var clipInit = false;
-    var preChromaElem = document.querySelectorAll('pre.chroma');
-    var langCodeElem = document.querySelectorAll('.language-code');
-    var dollarCodeElem = document.querySelectorAll('div.language-\\$');
-    var gtCodeElem = document.querySelectorAll('div.language-\\>');
-
-    var makeClipboard = function(elem) {
-      var code = elem,
-        text = elem.textContent;
-        
-      if (text.length > 15) {
-        if (!clipInit) {
-          var text, clip = new ClipboardJS('.copy-to-clipboard', {
-            text: function (trigger) {
-              var codeElem = prev(trigger).querySelectorAll('code');
-              if (codeElem.length > 1) {
-                text = prev(trigger).querySelector('code[class^="language-"]').textContent;
-              } else {
-                text = prev(trigger).querySelector('code').textContent;
-              }
-
-              return text.replace(/^\$\s/gm, '');
-            }
-          });
-
-          var inPre;
-          clip.on('success', function (e) {
-            e.clearSelection();
-            inPre = prop(e.trigger.parentNode, 'tagName') == 'PRE';
-            e.trigger.setAttribute('aria-label', 'Copied to clipboard!');
-            e.trigger.classList.add('tooltipped');
-            e.trigger.classList.add('tooltipped-w');
-          });
-
-          clip.on('error', function (e) {
-            inPre = prop(e.trigger.parentNode, 'tagName') == 'PRE';
-            e.trigger.setAttribute('aria-label', e.action.toString());
-            e.trigger.classList.add('tooltipped');
-            e.trigger.classList.add('tooltipped-w');
-          });
-
-          clipInit = true;
-        }
-
-        var notAllowedClass = ['language-mermaid', 'language-viz', 'language-wave', 'language-chart', 'language-msc', 'language-flowchart'];
-        var isNotAllowedIncluded = false;
-        var curClassName = code.getAttribute('class');
-
-        for (var i = 0; i < notAllowedClass.length; i++) {
-          if (curClassName && curClassName.startsWith(notAllowedClass[i])) {
-            isNotAllowedIncluded = true;
-            break;
-          }
-        }
-
-        if (!isNotAllowedIncluded) {
-          if (curClassName) {
-            var newClipboardElem = document.createElement('span');
-            newClipboardElem.setAttribute('class', 'copy-to-clipboard');
-            newClipboardElem.setAttribute('title', 'Copy to clipboard');
-            elem.parentNode.parentNode.insertBefore(newClipboardElem, elem.parentNode.nextElementSibling);
-          }
-        }
-      }
-    }
-
-    var makeSymbolClipboard = function(elem) {
-      var clipboardSpan = document.createElement('span');
-      clipboardSpan.setAttribute('class', 'copy-to-clipboard');
-      clipboardSpan.setAttribute('title', 'Copy to clipboard');
-      elem.parentNode.parentNode.insertBefore(clipboardSpan, elem.parentNode.nextElementSibling);
-    }
-
-    preChromaElem ? 
-    preChromaElem.forEach(function(elem) {
-      elem.querySelectorAll('code').forEach(function(codeElem) {
-        makeClipboard(codeElem);
-      });
-    }) : null;
-    
-    langCodeElem ? 
-    langCodeElem.forEach(function(elem) {
-      elem.querySelectorAll('code').forEach(function (codeElem) {
-        makeClipboard(codeElem);
-      });
-    }) : null;
-
-    dollarCodeElem ? 
-    dollarCodeElem.forEach(function(elem) {
-      elem.querySelectorAll('code').forEach(function (codeElem) {
-        makeSymbolClipboard(codeElem);
-      });
-    }) : null;
-
-    gtCodeElem ?
-    gtCodeElem.forEach(function(elem) {
-      elem.querySelectorAll('code').forEach(function (codeElem) {
-        makeSymbolClipboard(codeElem);
-      });
-    }) : null;
-    
-
-
-    
-    dollarCodeElem ?
-    dollarCodeElem.forEach(function(elem) {
-      var lnts = elem.parentNode.parentNode ? elem.parentNode.parentNode.querySelectorAll('.lnt') : null;
-      lnts ? 
-      lnts.forEach(function(lnt) {
-        lnt.innerHTML = '$<br/>';
-      }) : null;
-    }) : null;
-
-    gtCodeElem ?
-    gtCodeElem.forEach(function(elem) {
-      var lnts = elem.parentNode.parentNode ? elem.parentNode.parentNode.querySelectorAll('.lnt') : null;
-      lnts ? 
-      lnts.forEach(function(lnt) {
-        lnt.innerHTML = '><br/>';
-      }) : null;
-    }) : null;
-    
 
 
     
@@ -2708,6 +2897,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
     
+
     
 
     
@@ -2725,6 +2915,7 @@ document.addEventListener('DOMContentLoaded', function () {
       renderMathInElement(document.querySelector('.single__contents'), options);
     }
     
+
 
 
     
@@ -2752,12 +2943,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
 
+    
 
     
     document.querySelectorAll("mjx-container").forEach(function (x) {
       x.parentElement.classList += 'has-jax'
     });
     
+
 
 
     
@@ -2781,6 +2974,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
     
+
 
 
     
@@ -2824,6 +3018,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
 
 
+
     
     if (lib && lib.includes('wavedrom')) {
       var wavePrefix = "language-wave";
@@ -2844,6 +3039,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
     
+
 
 
     
@@ -2991,11 +3187,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     <hr />
 
-    <div class="basicflex">
+    <div class="basicflex flexwrap">
         
-            <a href="" class="footer__link" target="_blank" rel="noreferrer"></a>
+            
         
-            <a href="" class="footer__link" target="_blank" rel="noreferrer"></a>
+            
         
     </div>
 
