@@ -1,6 +1,10 @@
 # Que Es AppImage Y Como Usarla
 
 
+&lt;!--more--&gt;
+
+&lt;!--content--&gt;
+
 Por ejemplo en Windows puedes compartir archivos &#34;.exe&#34; que se pueden ejecutar en cualquier otra computadora, utilizando Windows por supuesto. Pues bueno, en Linux ahora existe este formato llamado AppImage que permite compartir applicaciones en un solo archivo.
 
 Una de las venatajas es que no tienes que instalar nada utilizando &#34;apt&#34;, &#34;pacman&#34; o &#34;yum&#34;. Todo lo necesario para ejecutar la applicación ya viene incluido en el archivo &#34;.AppImage&#34;.
@@ -18,13 +22,13 @@ La manera más sencilla de ejecutar un AppImage es a través de la terminal:
 2. Te cambias al directorio donde guardaste el archivo .AppImage
 
 3. Cambias los permisos de ejecución con el siguiente comando:
-   
+
    ```bash
    chmod &#43;x nombre_del_archivo.AppImage
    ```
 
 4. Ejecutas el archivo con:
-   
+
    ```bash
    ./nombre_del_archivo.AppImage
    ```
@@ -49,7 +53,7 @@ La otra manera es utilizando el manejador de archivos.
 
 ## ¿Cómo agregar un AppImage al menú de mi escritorio favorito?
 
-La manera más sencilla que yo encontré es utlizando una herramienta que se llama &#34;[appimaged](https://github.com/probonopd/go-appimage/blob/master/src/appimaged/README.md)&#34;. 
+La manera más sencilla que yo encontré es utlizando una herramienta que se llama &#34;[appimaged](https://github.com/probonopd/go-appimage/blob/master/src/appimaged/README.md)&#34;.
 
 [appimaged](https://github.com/probonopd/go-appimage/blob/master/src/appimaged/README.md) es un &#34;demonio&#34; que monitorea el siguiente conjunto de directorios en tu computadora buscando archivos &#34;AppImage&#34;:
 

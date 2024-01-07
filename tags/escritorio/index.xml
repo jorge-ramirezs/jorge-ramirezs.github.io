@@ -9,9 +9,7 @@
   <pubDate>Sun, 06 Mar 2022 14:02:29 -0600</pubDate>
   <author>Autor</author>
   <guid>http://localhost:1313/posts/que-es-appimage-y-como-usarla/</guid>
-  <description><![CDATA[Por ejemplo en Windows puedes compartir archivos &ldquo;.exe&rdquo; que se pueden ejecutar en cualquier otra computadora, utilizando Windows por supuesto. Pues bueno, en Linux ahora existe este formato llamado AppImage que permite compartir applicaciones en un solo archivo.
-Una de las venatajas es que no tienes que instalar nada utilizando &ldquo;apt&rdquo;, &ldquo;pacman&rdquo; o &ldquo;yum&rdquo;. Todo lo necesario para ejecutar la applicación ya viene incluido en el archivo &ldquo;.AppImage&rdquo;.
-Para darte un ejemplo, en este momento estoy escribiendo este artículo utilizando Mark Text el cual lo descargas en AppImage.]]></description>
+  <description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/banners/App-Image-Banner.png" alt="Que Es AppImage Y Como Usarla" title="AppImage provee una manera fácil y sencilla de compartir archivos &#34;binarios&#34; en Linux." referrerpolicy="no-referrer"/></div>AppImage provee una manera fácil y sencilla de compartir archivos "binarios" en Linux.]]></description>
 </item>
 </channel>
 </rss>
