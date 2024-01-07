@@ -11,12 +11,10 @@
     <description>Recent content in raspberry on Linux Fácil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <copyright>©{year}, All Rights Reserved</copyright>
+    <copyright>©2023, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 16 Jul 2020 16:46:42 -0500</lastBuildDate>
     
         <atom:link href="https://linuxfacil.mx/tags/raspberry/index.xml" rel="self" type="application/rss+xml" />
-    
-    
     
 
       
@@ -32,7 +30,7 @@ Bajar Arch Linux para Raspberry Pi. https://archlinuxarm.org/about/downloads
 http://os.archlinuxarm.org/os/ArchLinuxARM-rpi-4-latest.tar.gz
 Crear SD Card. Una vez que tenemos arch en nuestro disco o si deseas mientras se descarga, comencemos a configurarla tarjeta SD, inserta la tarjeta en tu computadora.
 Primero debemos verificar la tarjeta donde queremos instalar Arch.
-1  lsblk   ATENCIÓN: En mi caso el comando lsblk me dice que mi tarjeta está en /dev/mmcblk0, de aquí en adelante debes sustituir mmcblk0 por el dispositivo en tu computadora.</description>
+1 lsblk ATENCIÓN: En mi caso el comando lsblk me dice que mi tarjeta está en /dev/mmcblk0, de aquí en adelante debes sustituir mmcblk0 por el dispositivo en tu computadora.</description>
         
         <dc:creator>Jorge R.</dc:creator>
         

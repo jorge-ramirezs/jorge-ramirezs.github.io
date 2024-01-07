@@ -11,7 +11,7 @@
     <description>Recent content in Blogs on Linux Fácil</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <copyright>©2022, All Rights Reserved</copyright>
+    <copyright>©2023, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 29 Oct 2022 15:31:06 -0500</lastBuildDate>
     
         <atom:link href="https://linuxfacil.mx/blog/index.xml" rel="self" type="application/rss+xml" />
@@ -63,6 +63,46 @@ Vamos entonces a crear un directorio, después creamos un ambiente virtual utili
       </item>
       
       <item>
+        <title>Como Seleccionar La Mejor Distribución De Linux Para Mí</title>
+        <link>https://linuxfacil.mx/blog/linux/como-seleccionar-la-distribucion-correcta-de-linux/</link>
+        <pubDate>Tue, 11 Oct 2022 10:46:50 -0500</pubDate>
+        
+        <atom:modified>Tue, 11 Oct 2022 10:46:50 -0500</atom:modified>
+        <guid>https://linuxfacil.mx/blog/linux/como-seleccionar-la-distribucion-correcta-de-linux/</guid>
+        <description>Todo se reduce al escritorio Cuando estás buscando la mejor distribución de Linux para tu día a día, ya seas novato o experto, todo se reduce al escritorio que vas a estar utilizando.
+Independientemente de que tan fácil o complicado es de configurar lo más importante es que tan sencillo es de utilizar.
+Existen muchos escritorios y manejadores de ventanas de donde escoger, Gnome, KDE, Cinnamon, Budgie, Mate, XFCE4, Enlightenment, LXDE, i3, BSPWM entre otros.</description>
+        
+        <dc:creator>Jorge R.</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>linux</category>
+            
+          
+            
+              <category>distribuciones</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
         <title>Que Es AppImage Y Como Usarla</title>
         <link>https://linuxfacil.mx/blog/linux/que-es-appimage-y-como-usarla/</link>
         <pubDate>Sun, 06 Mar 2022 14:02:29 -0600</pubDate>
@@ -92,6 +132,36 @@ Para darte un ejemplo, en este momento estoy escribiendo este artículo utilizan
           
             
               <category>Escritorio</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Como Instalar VScode en Ubuntu</title>
+        <link>https://linuxfacil.mx/blog/linux/ubuntu/como-instalar-vscode-en-ubuntu/</link>
+        <pubDate>Mon, 28 Jun 2021 09:55:23 -0500</pubDate>
+        
+        <atom:modified>Mon, 28 Jun 2021 09:55:23 -0500</atom:modified>
+        <guid>https://linuxfacil.mx/blog/linux/ubuntu/como-instalar-vscode-en-ubuntu/</guid>
+        <description></description>
+        
+        <dc:creator>Jorge R.</dc:creator>
+        
+        
+        
+        
+          
+            
+          
+        
+        
+          
             
           
         
@@ -456,6 +526,53 @@ Crea una máquina virtual nueva con el siguiente nombre y tipo Presiona &amp;ldq
           
             
               <category>Como instalar Arch Linux</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Como Instalar Archlinux en Raspberry Pi 4</title>
+        <link>https://linuxfacil.mx/blog/linux/como-instalar-archlinux-raspberry-pi-4/</link>
+        <pubDate>Thu, 16 Jul 2020 16:46:42 -0500</pubDate>
+        
+        <atom:modified>Thu, 16 Jul 2020 16:46:42 -0500</atom:modified>
+        <guid>https://linuxfacil.mx/blog/linux/como-instalar-archlinux-raspberry-pi-4/</guid>
+        <description>Guia de Instalacion Oficial: https://archlinuxarm.org/platforms/armv6/raspberry-pi
+Bajar Arch Linux para Raspberry Pi. https://archlinuxarm.org/about/downloads
+http://os.archlinuxarm.org/os/ArchLinuxARM-rpi-4-latest.tar.gz
+Crear SD Card. Una vez que tenemos arch en nuestro disco o si deseas mientras se descarga, comencemos a configurarla tarjeta SD, inserta la tarjeta en tu computadora.
+Primero debemos verificar la tarjeta donde queremos instalar Arch.
+1 lsblk ATENCIÓN: En mi caso el comando lsblk me dice que mi tarjeta está en /dev/mmcblk0, de aquí en adelante debes sustituir mmcblk0 por el dispositivo en tu computadora.</description>
+        
+        <dc:creator>Jorge R.</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>archlinux</category>
+            
+          
+            
+              <category>raspberry</category>
+            
+          
+        
+        
+          
+            
+              <category>Tutorial</category>
+            
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+          
             
           
         

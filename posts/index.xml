@@ -1,0 +1,109 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Todo Artículos - Linux Fácil</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Todo Artículos | Linux Fácil</description>
+    <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>©{year}, All Rights Reserved</copyright><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
+  <title>Como Usar Correo Electrónico En Vez Nombre De Usuario Para Firmarse en Django</title>
+  <link>http://localhost:1313/posts/como-usar-correo-electronico-para-firmarse-en-django/</link>
+  <pubDate>Sat, 29 Oct 2022 15:31:06 -0500</pubDate>
+  <author>Autor</author>
+  <guid>http://localhost:1313/posts/como-usar-correo-electronico-para-firmarse-en-django/</guid>
+  <description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/posts/banners/Django-Python.png" alt="Como Usar Correo Electrónico En Vez Nombre De Usuario Para Firmarse en Django" title="Django por defecto tiene uno de los mejores sistemas de autenticación que conosco, la única desventaja es que no tiene la opción de utilizar la cuenta de correo electrónico para firmarse en vez de un usuario y contraseña, en este artículo te voy a enseñar la solución que yo utilizo y que me ha servido hasta hoy." referrerpolicy="no-referrer"/></div>Django por defecto tiene uno de los mejores sistemas de autenticación que conosco, la única desventaja es que no tiene la opción de utilizar la cuenta de correo electrónico para firmarse en vez de un usuario y contraseña, en este artículo te voy a enseñar la solución que yo utilizo y que me ha servido hasta hoy.]]></description>
+</item>
+<item>
+  <title>Que Es AppImage Y Como Usarla</title>
+  <link>http://localhost:1313/posts/que-es-appimage-y-como-usarla/</link>
+  <pubDate>Sun, 06 Mar 2022 14:02:29 -0600</pubDate>
+  <author>Autor</author>
+  <guid>http://localhost:1313/posts/que-es-appimage-y-como-usarla/</guid>
+  <description><![CDATA[Por ejemplo en Windows puedes compartir archivos &ldquo;.exe&rdquo; que se pueden ejecutar en cualquier otra computadora, utilizando Windows por supuesto. Pues bueno, en Linux ahora existe este formato llamado AppImage que permite compartir applicaciones en un solo archivo.
+Una de las venatajas es que no tienes que instalar nada utilizando &ldquo;apt&rdquo;, &ldquo;pacman&rdquo; o &ldquo;yum&rdquo;. Todo lo necesario para ejecutar la applicación ya viene incluido en el archivo &ldquo;.AppImage&rdquo;.
+Para darte un ejemplo, en este momento estoy escribiendo este artículo utilizando Mark Text el cual lo descargas en AppImage.]]></description>
+</item>
+<item>
+  <title>Comandos Basicos De Linux: Piérdele el miedo a la terminal.</title>
+  <link>http://localhost:1313/posts/comandos-basicos-de-linux/</link>
+  <pubDate>Sun, 17 Jan 2021 12:14:14 -0600</pubDate>
+  <author>Autor</author>
+  <guid>http://localhost:1313/posts/comandos-basicos-de-linux/</guid>
+  <description><![CDATA[En este video quiero compartir contigo algunos comandos básicos de linux para que le vayamos perdiendo el miedo a la terminal.
+Si te gustó el video no olvides suscribirte al canal y darle &ldquo;me gusta&rdquo;.
+También si deseas mandarme una sugerencia sobre algún tema que te gustaría aprender, recuerda que me puedes encontrar en Twitter.]]></description>
+</item>
+<item>
+  <title>Como Configurar Neovim Como VsCode</title>
+  <link>http://localhost:1313/posts/como-configurar-neovim-como-vscode-para-python/</link>
+  <pubDate>Sun, 06 Dec 2020 20:55:47 -0600</pubDate>
+  <author>Autor</author>
+  <guid>http://localhost:1313/posts/como-configurar-neovim-como-vscode-para-python/</guid>
+  <description><![CDATA[IntroducciónNeovim es VIM pero mejorado. La documentación oficial lo define como:
+Neovim es un editor de texto basado en Vim diseñado para la extensibilidad y usabilidad, para fomentar nuevas aplicaciones y contribuciones.
+Instalación PrerequisitosComo lo dice el título de este artículo, me estaré concentrando en configurar Neovim como IDE para python, entonces voy a asumir que ya tienes Python y Pip instalados en tu sistema.
+Python, Pip y PipenvPara verificar que tengas Python instalado corre uno de los siguientes comandos en la consola:]]></description>
+</item>
+<item>
+  <title>Como Instalar Bspwm Polybar en Ubuntu 20.10</title>
+  <link>http://localhost:1313/posts/como-instalar-bspwm-polybar-en-ubuntu/</link>
+  <pubDate>Mon, 30 Nov 2020 16:55:32 -0600</pubDate>
+  <author>Autor</author>
+  <guid>http://localhost:1313/posts/como-instalar-bspwm-polybar-en-ubuntu/</guid>
+  <description><![CDATA[En YouTube Parte 1: La instalación Parte 2: La Configuración Introducción ¿Qué es BSPWM?Según la documentación oficial:
+bwspwm es un administrador de ventanas en mosaico que representa las ventanas como las hojas de un árbol binario completo. Solo responde a eventos X Window System y los mensajes que recibe en un conector dedicado. bspc es un programa que escribe mensajes en el socket de bspwm. bspwm no maneja ninguna entrada de teclado o puntero: se necesita un programa de terceros (por ejemplo, sxhkd ) para traducir eventos de teclado y puntero a invocaciones bspc.]]></description>
+</item>
+<item>
+  <title>Como Instalar Archlinux en BIOS - MBR</title>
+  <link>http://localhost:1313/posts/como-instalar-archlinux-en-mbr/</link>
+  <pubDate>Sat, 15 Aug 2020 19:39:45 -0500</pubDate>
+  <author>Autor</author>
+  <guid>http://localhost:1313/posts/como-instalar-archlinux-en-mbr/</guid>
+  <description><![CDATA[Bajar el ISOEl primer paso obviamente es bajar el ISO del sitio oficial
+Instala Arch LinuxUna vez que hayas bajado el ISO y creado el USB, arranca tu maquina.
+A continuación los pasos de la instalación.
+Verifica que tengas Conexión a Internet. 1 ip a El comando anterior debe regresarte los dispositivos de red, se recomienda que tengas conectada tu computadora por cable ethernet.
+Si no tienes cable conectado, entonces tendrás que utilizar iwctl:]]></description>
+</item>
+<item>
+  <title>Como Instalar Artix Linux Openrc</title>
+  <link>http://localhost:1313/posts/como-instalar-artix-linux-openrc/</link>
+  <pubDate>Wed, 05 Aug 2020 21:28:36 -0500</pubDate>
+  <author>Autor</author>
+  <guid>http://localhost:1313/posts/como-instalar-artix-linux-openrc/</guid>
+  <description><![CDATA[Tutorial en YouTube Bajar el ISOLo primero es descargar el ISO del sitio web oficial de Artix Linux
+Artix tiene varias versiones, en esta ociasión vamos a realizar una instalación base, también instalaremos OpenRC en lugar de systemd y por último pondermos Mate como escritorio:
+Comienza la InstalaciónYa que arrancamos nuestra máquina, ya sea virtual o física comencemos la instalación entonces.
+Verificiar que tengas conexión a Internet. 1 ip a Este comando debe regresar los nombres de los dispositivos de red y una dirección de IP.]]></description>
+</item>
+<item>
+  <title>Como Instalar Bspwm Polybar en Archlinux</title>
+  <link>http://localhost:1313/posts/como-instalar-bspwm-polybar-en-archlinux/</link>
+  <pubDate>Tue, 28 Jul 2020 18:08:39 -0500</pubDate>
+  <author>Autor</author>
+  <guid>http://localhost:1313/posts/como-instalar-bspwm-polybar-en-archlinux/</guid>
+  <description><![CDATA[BSPWMbspwm es un manejador de ventanas en mosaico, la característica principal es que presenta las ventanas como hojas de un archivo binario. bspwm soporta el uso de múltiple monitores y es configurado y controlado a través de mensajes.
+Si has estado siguiendo mi tutorial de como instalar archlinux en una máquina virtual, esta es la continuación.
+Instalación.Vamos a instalar los paquetes necesarios para correr bspwm. En esta ocasión no voy a instalar un &ldquo;Display Manager&rdquo;, así que para iniciar el modo gráfico vamos a utilizar &ldquo;startx&rdquo;.]]></description>
+</item>
+<item>
+  <title>Como Instalar Archlinux en Virtualbox</title>
+  <link>http://localhost:1313/posts/como-instalar-archlinux-en-virtualbox/</link>
+  <pubDate>Thu, 16 Jul 2020 19:39:45 -0500</pubDate>
+  <author>Autor</author>
+  <guid>http://localhost:1313/posts/como-instalar-archlinux-en-virtualbox/</guid>
+  <description><![CDATA[Bajar el ISOEl primer paso obviamente es bajar el ISO del sitio oficial
+Crear una máquina virtual en VirtualBoxVamos a crear una máquina virtual en VirtualBox, las espicificaciones pueden variar dependiendo de tu computadora, en mi caso estoy corriendo VBox en una laptop con 8GB de Memoria y suficiente espacio en disco.
+Crea una máquina virtual nueva con el siguiente nombre y tipoPresiona &ldquo;New&rdquo; para crear una nueva maquina virtual, la llamaremos &ldquo;ArchLinux&rdquo;, sera de tipo &ldquo;Linux&rdquo; por supuesto y VBox deberá seleccionar por defecto la version, si no lo hace asegurate de que la versión sea &ldquo;Arch Linux (64&rsquo;bit)]]></description>
+</item>
+<item>
+  <title>Como Instalar Python en Windows 10 en 3 Sencillos Pasos.</title>
+  <link>http://localhost:1313/posts/como-instalar-python-en-windows-10/</link>
+  <pubDate>Mon, 06 Jul 2020 18:17:40 -0500</pubDate>
+  <author>Autor</author>
+  <guid>http://localhost:1313/posts/como-instalar-python-en-windows-10/</guid>
+  <description><![CDATA[Paso 1: Descargar PythonEl primer paso es descargar descargar python del sitio oficial: https://www.python.org/
+Solo secciona la opción de &ldquo;Download&rdquo; en la página principal, el stitio por defecto debe detectar que estás utlizando Windows y te ofrecerá el instalador que requieres.
+Descarga Python Paso 2: Ejecuta la instalaciónEl siguiente paso es obvio, ejecuta la instalación.
+Es importante que durante la instalación selecciones que deseas instalar PIP y presiona &ldquo;Next&rdquo;]]></description>
+</item>
+</channel>
+</rss>

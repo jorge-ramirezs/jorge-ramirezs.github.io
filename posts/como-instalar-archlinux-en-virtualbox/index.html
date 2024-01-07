@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>Como Instalar Archlinux en Virtualbox - Linux Fácil</title><meta name="author" content="">
+<meta name="author-link" content="">
+<meta name="description" content="Hoy vamos a instalar ArchLinux en una máquina virtual en VirtualBox. La instalación es muy parecida a la que deberás llevar a cabo cuando lo instalemos en una laptop o PC. Bien, entoces, comencemos..." /><meta name="keywords" content='archlinux, linux' /><meta itemprop="name" content="Como Instalar Archlinux en Virtualbox">
+<meta itemprop="description" content="Hoy vamos a instalar ArchLinux en una máquina virtual en VirtualBox. La instalación es muy parecida a la que deberás llevar a cabo cuando lo instalemos en una laptop o PC. Bien, entoces, comencemos..."><meta itemprop="datePublished" content="2020-07-16T19:39:45-05:00" />
+<meta itemprop="dateModified" content="2024-01-06T23:32:59-06:00" />
+<meta itemprop="wordCount" content="2151">
+<meta itemprop="keywords" content="archlinux,linux," /><meta property="og:title" content="Como Instalar Archlinux en Virtualbox" />
+<meta property="og:description" content="Hoy vamos a instalar ArchLinux en una máquina virtual en VirtualBox. La instalación es muy parecida a la que deberás llevar a cabo cuando lo instalemos en una laptop o PC. Bien, entoces, comencemos..." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/como-instalar-archlinux-en-virtualbox/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-07-16T19:39:45-05:00" />
+<meta property="article:modified_time" content="2024-01-06T23:32:59-06:00" />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Como Instalar Archlinux en Virtualbox"/>
+<meta name="twitter:description" content="Hoy vamos a instalar ArchLinux en una máquina virtual en VirtualBox. La instalación es muy parecida a la que deberás llevar a cabo cuando lo instalemos en una laptop o PC. Bien, entoces, comencemos..."/>
+<meta name="twitter:site" content="@JorgeRS"/>
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://localhost:1313/posts/como-instalar-archlinux-en-virtualbox/" /><link rel="prev" href="http://localhost:1313/posts/como-instalar-python-en-windows-10/" /><link rel="next" href="http://localhost:1313/posts/como-instalar-bspwm-polybar-en-archlinux/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Como Instalar Archlinux en Virtualbox",
+    "inLanguage": "en",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/localhost:1313\/posts\/como-instalar-archlinux-en-virtualbox\/"
+    },"genre": "posts","keywords": "archlinux, linux","wordcount":  2151 ,
+    "url": "http:\/\/localhost:1313\/posts\/como-instalar-archlinux-en-virtualbox\/","datePublished": "2020-07-16T19:39:45-05:00","dateModified": "2024-01-06T23:32:59-06:00","license": "©{year}, All Rights Reserved","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "Autor"
+      },"description": "Hoy vamos a instalar ArchLinux en una máquina virtual en VirtualBox. La instalación es muy parecida a la que deberás llevar a cabo cuando lo instalemos en una laptop o PC. Bien, entoces, comencemos..."
+  }
+  </script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><script>(window.localStorage?.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('data-theme', 'dark');</script><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="Linux Fácil"><span class="header-title-text">Linux Fácil</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a
+                class="menu-link"
+                href="https://www.youtube.com/channel/UCkns-R5bBW3snQx7RAYRX-A"
+                
+                rel="noopener noreferrer" target="_blank"
+              ><i class="fa-brands fa-youtube fa-fw fa-sm" aria-hidden="true"></i> YouTube</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/archives/"
+                
+                
+              ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archivo</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/categories/"
+                
+                
+              ><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categorias</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/tags/"
+                
+                
+              ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item delimiter"></li><li class="menu-item theme-switch" title="Cambia el tema">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="Linux Fácil"><span class="header-title-text">Linux Fácil</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="https://www.youtube.com/channel/UCkns-R5bBW3snQx7RAYRX-A"
+                  
+                  rel="noopener noreferrer" target="_blank"
+                ><i class="fa-brands fa-youtube fa-fw fa-sm" aria-hidden="true"></i> YouTube</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/archives/"
+                  
+                  
+                ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archivo</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/categories/"
+                  
+                  
+                ><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categorias</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/tags/"
+                  
+                  
+                ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="Cambia el tema"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label=""></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>Como Instalar Archlinux en Virtualbox</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      </span></span><span class="post-included-in">&nbsp;incluido en <a href="/categories/linux/" class="post-category" title="Categoría - Linux"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Linux</a>&ensp;<a href="/categories/tutorial/" class="post-category" title="Categoría - Tutorial"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Tutorial</a></span></div><div class="post-meta-line"><span title="publicado el 2020-07-16 19:39:45"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2020-07-16">2020-07-16</time></span>&nbsp;<span title="Actualizado el 2024-01-06 23:32:59"><i class="fa-regular fa-calendar-check fa-fw me-1" aria-hidden="true"></i><time datetime="2024-01-06">2024-01-06</time></span>&nbsp;<span title="2151 palabras"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>Aproximadamente 2200 palabras</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>11 minutos</span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>Contenido</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#bajar-el-iso">Bajar el ISO</a></li>
+    <li><a href="#crear-una-máquina-virtual-en-virtualbox">Crear una máquina virtual en VirtualBox</a>
+      <ul>
+        <li><a href="#crea-una-máquina-virtual-nueva-con-el-siguiente-nombre-y-tipo">Crea una máquina virtual nueva con el siguiente nombre y tipo</a></li>
+        <li><a href="#asigna-la-memoria">Asigna la memoria</a></li>
+        <li><a href="#crea-un-disco-virtual">Crea un disco virtual</a></li>
+        <li><a href="#configura-la-nueva-máquina-virtual">Configura la nueva máquina virtual</a>
+          <ul>
+            <li><a href="#habilita-efi">Habilita EFI</a></li>
+            <li><a href="#modifica-el-controlador-de-gráficos">Modifica el controlador de gráficos</a></li>
+            <li><a href="#cambia-el-tipo-de-conexión-a-la-red">Cambia el tipo de conexión a la red</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#instala-arch-linux">Instala Arch Linux</a>
+      <ul>
+        <li><a href="#inicia-la-máquina-virtual">Inicia la máquina virtual</a></li>
+        <li><a href="#inicia-la-instalación-de-arch-linux">Inicia la Instalación de Arch Linux</a>
+          <ul>
+            <li><a href="#configura-el-teclado">Configura el Teclado</a></li>
+            <li><a href="#verifica-uefi-en-la-maquina-virtual">Verifica UEFI en la maquina virtual</a></li>
+            <li><a href="#sincroniza-el-reloj">Sincroniza el reloj</a></li>
+            <li><a href="#selecciona-el-servidor-más-cercano-para-instalar-los-paquetes-mirror">Selecciona el servidor más cercano para instalar los paquetes (Mirror)</a></li>
+            <li><a href="#actualiza-los-servidores-de-paquetes">Actualiza los servidores de paquetes</a></li>
+          </ul>
+        </li>
+        <li><a href="#crea-particiones-en-el-disco">Crea Particiones en el Disco</a>
+          <ul>
+            <li><a href="#verifica-las-particiones">Verifica las particiones</a></li>
+            <li><a href="#formatea-las-particiones">Formatea las particiones</a></li>
+          </ul>
+        </li>
+        <li><a href="#monta-las-particiones">Monta las particiones</a>
+          <ul>
+            <li><a href="#instala-los-paquetes-base">Instala los paquetes &ldquo;base&rdquo;</a></li>
+            <li><a href="#crear-fstab">Crear fstab</a></li>
+          </ul>
+        </li>
+        <li><a href="#crea-el-archivo-de-swap">Crea el archivo de SWAP</a></li>
+        <li><a href="#configura-tu-zona-horaria">Configura tu zona horaria</a></li>
+        <li><a href="#configura-tu-localización">Configura tu &ldquo;Localización&rdquo;</a></li>
+        <li><a href="#configura-la-red">Configura la Red</a></li>
+        <li><a href="#crea-un-password-para-root">Crea un password para root</a></li>
+        <li><a href="#instala-los-paquetes-finales">Instala los paquetes finales</a></li>
+        <li><a href="#instala-grub">Instala GRUB</a></li>
+        <li><a href="#habilita-los-servicios">Habilita los servicios</a></li>
+        <li><a href="#crea-tu-usuario">Crea tu usuario</a></li>
+        <li><a href="#sal-de-la-instalación-y-reinicia-la-máquina-virtual">Sal de la instalación y reinicia la máquina virtual</a></li>
+      </ul>
+    </li>
+    <li><a href="#instalación-exitosa">Instalación Exitosa</a></li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><!-- ![Como instalar Arch Linux en VirtualBox](/images/posts/archvbox-install/Arch-Linux-VirtualBox.png) -->
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube-nocookie.com/embed/b5gSiNBSLNc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h2 id="bajar-el-iso" class="heading-element">
+  <a href="#bajar-el-iso" class="heading-mark"></a>Bajar el ISO</h2><p>El primer paso obviamente es bajar el ISO del <a href="https://www.archlinux.org/download/"target="_blank" rel="external nofollow noopener noreferrer">sitio oficial</a></p>
+<h2 id="crear-una-máquina-virtual-en-virtualbox" class="heading-element">
+  <a href="#crear-una-m%c3%a1quina-virtual-en-virtualbox" class="heading-mark"></a>Crear una máquina virtual en VirtualBox</h2><p>Vamos a crear una máquina virtual en VirtualBox, las espicificaciones pueden variar dependiendo de tu computadora, en mi caso estoy corriendo VBox en una laptop con 8GB de Memoria y suficiente espacio en disco.</p>
+<h3 id="crea-una-máquina-virtual-nueva-con-el-siguiente-nombre-y-tipo" class="heading-element">
+  <a href="#crea-una-m%c3%a1quina-virtual-nueva-con-el-siguiente-nombre-y-tipo" class="heading-mark"></a>Crea una máquina virtual nueva con el siguiente nombre y tipo</h3><p>Presiona &ldquo;New&rdquo; para crear una nueva maquina virtual, la llamaremos &ldquo;ArchLinux&rdquo;, sera de tipo &ldquo;Linux&rdquo; por supuesto y VBox deberá seleccionar por defecto la version, si no lo hace asegurate de que la versión sea &ldquo;Arch Linux (64&rsquo;bit)</p>
+<p><img loading="lazy" src="/images/posts/archvbox-install/nueva-vm-min.jpg" alt="Nueva Maquina" srcset="/images/posts/archvbox-install/nueva-vm-min.jpg?size=small, /images/posts/archvbox-install/nueva-vm-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/nueva-vm-min.jpg?size=large 2x" sizes="auto" data-title="Nueva Maquina" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>Presiona &ldquo;Next&rdquo; o &ldquo;Siguiente&rdquo; para continuar,</p>
+<h3 id="asigna-la-memoria" class="heading-element">
+  <a href="#asigna-la-memoria" class="heading-mark"></a>Asigna la memoria</h3><p>Asigna la memoria que requieras o que tengas disponible. La guía oficial de Arch Linux recomenda como mínimo 530 MB de RAM y 2GB de espacio en disco, pero esta máquina nos va a servir para los siguientes tutoriales yo le voy a asignar 4GB de RAM y 10GB en disco; después le instalaremos un escritorio o manejador de ventanas.</p>
+<p><img loading="lazy" src="/images/posts/archvbox-install/memoria-vm-min.jpg" alt="Selecciona Memoria" srcset="/images/posts/archvbox-install/memoria-vm-min.jpg?size=small, /images/posts/archvbox-install/memoria-vm-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/memoria-vm-min.jpg?size=large 2x" sizes="auto" data-title="Selecciona Memoria" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>Y pesiona &ldquo;Siguente&rdquo; o &ldquo;Next&rdquo;</p>
+<h3 id="crea-un-disco-virtual" class="heading-element">
+  <a href="#crea-un-disco-virtual" class="heading-mark"></a>Crea un disco virtual</h3><p>Como estamos creando una máquina totalmente nueva, seleccionaremos crear un disco virtual Nuevo y presiona &ldquo;Crear&rdquo;</p>
+<p><img loading="lazy" src="/images/posts/archvbox-install/disco-vm-min.jpg" alt="Crea un disco nuevo" srcset="/images/posts/archvbox-install/disco-vm-min.jpg?size=small, /images/posts/archvbox-install/disco-vm-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/disco-vm-min.jpg?size=large 2x" sizes="auto" data-title="Crea un disco nuevo" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>Selecciona el tipo de disco que sea VDI (VirtualBox Disk Image) y presiona &ldquo;Next&rdquo;</p>
+<p><img loading="lazy" src="/images/posts/archvbox-install/disco-vm02-min.jpg" alt="VDI Disk" srcset="/images/posts/archvbox-install/disco-vm02-min.jpg?size=small, /images/posts/archvbox-install/disco-vm02-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/disco-vm02-min.jpg?size=large 2x" sizes="auto" data-title="VDI Disk" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>Ahora selecciona el tipo de almacenamiento dinámico, esto hará que VirtualBox cree un archivo el cual utilizará para almacenar los datos y que irá creciendo conforme vayamos agregando más cosas en nuestra máquina virtual, esto quiere decir que aunque hayamos creado un disco virtual de 10GB, si solo utilizamos 5GB, esto será lo que estaremos utilizando físicamente en nuestra computadora.</p>
+<p><img loading="lazy" src="/images/posts/archvbox-install/disco-vm03-min.jpg" alt="Almacenamiento Dinámico" srcset="/images/posts/archvbox-install/disco-vm03-min.jpg?size=small, /images/posts/archvbox-install/disco-vm03-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/disco-vm03-min.jpg?size=large 2x" sizes="auto" data-title="Almacenamiento Dinámico" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>Por último asigna el espacio y presiona &ldquo;Crear&rdquo;.</p>
+<p><img loading="lazy" src="/images/posts/archvbox-install/disco-vm04-min.jpg" alt="10GB de Almacenamiento" srcset="/images/posts/archvbox-install/disco-vm04-min.jpg?size=small, /images/posts/archvbox-install/disco-vm04-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/disco-vm04-min.jpg?size=large 2x" sizes="auto" data-title="10GB de Almacenamiento" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h3 id="configura-la-nueva-máquina-virtual" class="heading-element">
+  <a href="#configura-la-nueva-m%c3%a1quina-virtual" class="heading-mark"></a>Configura la nueva máquina virtual</h3><p>Antes de iniciar nuestra nueva máquina virtual tenemos que hacer unas modificaciones. La intención de este tutorial es que adquieras los conocimientos para instalar Arch Linux en tu laptop o PC de escritorio. Las computadoras actuales utilizan <a href="https://es.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface"target="_blank" rel="external nofollow noopener noreferrer">UEFI</a> que es lo que viene a reemplazar lo que antes era el <a href="https://es.wikipedia.org/wiki/BIOS"target="_blank" rel="external nofollow noopener noreferrer">BIOS</a> de las computadoras antiguas.</p>
+<h4 id="habilita-efi" class="heading-element">
+  <a href="#habilita-efi" class="heading-mark"></a>Habilita EFI</h4><p>Dicho esto, en la pantalla principal de VirtualBox, selecciona tu nueva máquina virtual y presiona &ldquo;Configuración&rdquo; o &ldquo;Settings&rdquo;.</p>
+<p>Luego selecciona &ldquo;Sistema&rdquo; o &ldquo;System&rdquo;.</p>
+<p>Aquí asegurate de habilitar la opción de <strong>EFI</strong></p>
+<p><img loading="lazy" src="/images/posts/archvbox-install/configura-sistema-min.jpg" alt="Habilita EFI" srcset="/images/posts/archvbox-install/configura-sistema-min.jpg?size=small, /images/posts/archvbox-install/configura-sistema-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/configura-sistema-min.jpg?size=large 2x" sizes="auto" data-title="Habilita EFI" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h4 id="modifica-el-controlador-de-gráficos" class="heading-element">
+  <a href="#modifica-el-controlador-de-gr%c3%a1ficos" class="heading-mark"></a>Modifica el controlador de gráficos</h4><p>A continuación vamos a modificar el controlador de gráficos de nuestra máquina virtual, para esto Selecciona &ldquo;Display&rdquo; y en el controlador de gráficos selecciona <strong>VBoxSVGA</strong> Y presiona &ldquo;OK&rdquo;</p>
+<p><img loading="lazy" src="/images/posts/archvbox-install/graphic-controller-min.jpg" alt="Selecciona VBoxSVGA" srcset="/images/posts/archvbox-install/graphic-controller-min.jpg?size=small, /images/posts/archvbox-install/graphic-controller-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/graphic-controller-min.jpg?size=large 2x" sizes="auto" data-title="Selecciona VBoxSVGA" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>VirtualBox te dirá que la configuración es inválida, no hagas caso, no pasa nada, confía en lo que lees en Internet #Sarcasmo</p>
+<h4 id="cambia-el-tipo-de-conexión-a-la-red" class="heading-element">
+  <a href="#cambia-el-tipo-de-conexi%c3%b3n-a-la-red" class="heading-mark"></a>Cambia el tipo de conexión a la red</h4><p>Por último debemos cambiar el tipo de conexión a la red para que sea tipo &ldquo;Bridged&rdquo;.</p>
+<p><img loading="lazy" src="/images/posts/archvbox-install/bridge_network-min.jpg" alt="Bridged Network" srcset="/images/posts/archvbox-install/bridge_network-min.jpg?size=small, /images/posts/archvbox-install/bridge_network-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/bridge_network-min.jpg?size=large 2x" sizes="auto" data-title="Bridged Network" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h2 id="instala-arch-linux" class="heading-element">
+  <a href="#instala-arch-linux" class="heading-mark"></a>Instala Arch Linux</h2><h3 id="inicia-la-máquina-virtual" class="heading-element">
+  <a href="#inicia-la-m%c3%a1quina-virtual" class="heading-mark"></a>Inicia la máquina virtual</h3><p>Ahora si vamos a comenzar con la instalación de Arch Linux.</p>
+<p>Una vez que inicias la máquina virtual, como no tiene sistema operativo VirtualBox debe darte la opción de seleccionar un ISO para arrancar el sistema.</p>
+<p><img loading="lazy" src="/images/posts/archvbox-install/startup_disk-min.jpg" alt="Selecciona ISO" srcset="/images/posts/archvbox-install/startup_disk-min.jpg?size=small, /images/posts/archvbox-install/startup_disk-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/startup_disk-min.jpg?size=large 2x" sizes="auto" data-title="Selecciona ISO" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>Si por alguna razón no lo hace, lo que puedes hacer es seleccionar el ISO de Arch Linux y asignarlo Disco Óptico como se ve en la siguiente pantalla</p>
+<p>Seleciona &ldquo;Storage&rdquo; luego el controlador IDE y luego selecciona &ldquo;Seleccionar Disco&hellip;&rdquo;</p>
+<p><img loading="lazy" src="/images/posts/archvbox-install/Optic_Disc-min.jpg" alt="Selecciona ISO" srcset="/images/posts/archvbox-install/Optic_Disc-min.jpg?size=small, /images/posts/archvbox-install/Optic_Disc-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/Optic_Disc-min.jpg?size=large 2x" sizes="auto" data-title="Selecciona ISO" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h3 id="inicia-la-instalación-de-arch-linux" class="heading-element">
+  <a href="#inicia-la-instalaci%c3%b3n-de-arch-linux" class="heading-mark"></a>Inicia la Instalación de Arch Linux</h3><p>Para iniciar la instalación selecciona Arch Linux archiso x86_64 UEFI CD</p>
+<p>Una vez iniciado el sistema comienza lo bueno, ahora sí, vamos a instalar Arch Linux.</p>
+<p><img loading="lazy" src="/images/posts/archvbox-install/install01-min.jpg" alt="Pantalla de Inicio" srcset="/images/posts/archvbox-install/install01-min.jpg?size=small, /images/posts/archvbox-install/install01-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/install01-min.jpg?size=large 2x" sizes="auto" data-title="Pantalla de Inicio" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h4 id="configura-el-teclado" class="heading-element">
+  <a href="#configura-el-teclado" class="heading-mark"></a>Configura el Teclado</h4><p>En mi caso estoy utilizando un teclado en Inglés así que no requiero en este paso, pero si tu estás utilizando un teclado en Español lo mejor es que lo configures para no batallar y hacer la instalación más sencilla.</p>
+<div class="highlight" id="id-1"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">loadkeys es</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="verifica-uefi-en-la-maquina-virtual" class="heading-element">
+  <a href="#verifica-uefi-en-la-maquina-virtual" class="heading-mark"></a>Verifica UEFI en la maquina virtual</h4><p>Siguiente vamos a verificar que tengamos configurada nuestra máquina virtual con UEFI activado, para eso debemos teclear:</p>
+<div class="highlight" id="id-2"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ls /sys/firmware/efi/efivars</span></span></code></pre></td></tr></table>
+</div>
+</div><p>El commando deberá regresar un montón de variables en la pantalla, si no es así regresa al paso donde debes habilitar UEFI en la máquina virtual</p>
+<p><img loading="lazy" src="/images/posts/archvbox-install/uefi_vars-min.jpg" alt="UEFI Vars" srcset="/images/posts/archvbox-install/uefi_vars-min.jpg?size=small, /images/posts/archvbox-install/uefi_vars-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/uefi_vars-min.jpg?size=large 2x" sizes="auto" data-title="UEFI Vars" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h4 id="sincroniza-el-reloj" class="heading-element">
+  <a href="#sincroniza-el-reloj" class="heading-mark"></a>Sincroniza el reloj</h4><p>A continuación vamos a sincronizar el reloj con internet, para eso escribimos</p>
+<div class="highlight" id="id-3"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">timedatectl set-ntp true</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="selecciona-el-servidor-más-cercano-para-instalar-los-paquetes-mirror" class="heading-element">
+  <a href="#selecciona-el-servidor-m%c3%a1s-cercano-para-instalar-los-paquetes-mirror" class="heading-mark"></a>Selecciona el servidor más cercano para instalar los paquetes (Mirror)</h4><p>Para esto vamos a necesitar un paquete que se llama <a href="https://wiki.archlinux.org/index.php/Reflector"target="_blank" rel="external nofollow noopener noreferrer"><strong>Reflector</strong></a>, así que vamos a instalarlo primero escribiendo</p>
+<div class="highlight" id="id-4"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -Syy reflector</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="/images/posts/archvbox-install/instala_reflector-min.jpg" alt="Instala Reflector" srcset="/images/posts/archvbox-install/instala_reflector-min.jpg?size=small, /images/posts/archvbox-install/instala_reflector-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/instala_reflector-min.jpg?size=large 2x" sizes="auto" data-title="Instala Reflector" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>Ahora selecciona el servidor más cercano a donde te encuentras, para ver una lista de países escribe</p>
+<div class="highlight" id="id-5"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">reflector --list-countries <span class="p">|</span> more</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="/images/posts/archvbox-install/reflector_paises-min.jpg" alt="Reflector lista de países" srcset="/images/posts/archvbox-install/reflector_paises-min.jpg?size=small, /images/posts/archvbox-install/reflector_paises-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/reflector_paises-min.jpg?size=large 2x" sizes="auto" data-title="Reflector lista de países" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>Ya que tengas identificado el país que te queda más cerca escribe lo siguiente:</p>
+<p>(En mi caso como estoy en Estados Unidos, escogeré United States por supuesto, pero tú puedes cambialo por el país de la lista anterior que te quede más cerca)</p>
+<div class="highlight" id="id-6"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">reflector -c <span class="s2">&#34;United States&#34;</span> -a <span class="m">6</span> --sort rate --save /etc/pacman.d/mirrorlist</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="/images/posts/archvbox-install/reflector_actualiza_mirrorlist-min.jpg" alt="Reflector actualiza mirrorlist" srcset="/images/posts/archvbox-install/reflector_actualiza_mirrorlist-min.jpg?size=small, /images/posts/archvbox-install/reflector_actualiza_mirrorlist-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/reflector_actualiza_mirrorlist-min.jpg?size=large 2x" sizes="auto" data-title="Reflector actualiza mirrorlist" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h4 id="actualiza-los-servidores-de-paquetes" class="heading-element">
+  <a href="#actualiza-los-servidores-de-paquetes" class="heading-mark"></a>Actualiza los servidores de paquetes</h4><p>Siguente teclea</p>
+<div class="highlight" id="id-7"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -Syyy</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="/images/posts/archvbox-install/actualiza_pacman-min.jpg" alt="pacman -Syyy" srcset="/images/posts/archvbox-install/actualiza_pacman-min.jpg?size=small, /images/posts/archvbox-install/actualiza_pacman-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/actualiza_pacman-min.jpg?size=large 2x" sizes="auto" data-title="pacman -Syyy" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h3 id="crea-particiones-en-el-disco" class="heading-element">
+  <a href="#crea-particiones-en-el-disco" class="heading-mark"></a>Crea Particiones en el Disco</h3><p>Primero vamos a verificar cual es el dispositivo donde se encuentra el disco de nuestra máquina virtual</p>
+<div class="highlight" id="id-8"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsblk</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="/images/posts/archvbox-install/lsblk01-min.jpg" alt="lsblk" srcset="/images/posts/archvbox-install/lsblk01-min.jpg?size=small, /images/posts/archvbox-install/lsblk01-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/lsblk01-min.jpg?size=large 2x" sizes="auto" data-title="lsblk" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>Mi disco está en /dev/<strong>sda</strong></p>
+<p>Tenemos que crear 2 particiones, una para los archivos de inicio o &ldquo;boot&rdquo; y otra donde estará instalado Arch Linux, como este es un tutorial de &ldquo;entrenamiento&rdquo; no vamos a crear partició de SWAP ni tampoco partición para el directorio de &ldquo;home&rdquo;, vamos a hacer una instalación sencilla.</p>
+<p>La primera partición deberá de ser de tipo <strong>EFI</strong> y la segunda tipo <strong>Linux</strong></p>
+<p>Para crear las particiones voy a utilizar <strong>cfdisk</strong></p>
+<div class="highlight" id="id-9"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cfdisk</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Selecciona <strong>gpt</strong></p>
+<p><img loading="lazy" src="/images/posts/archvbox-install/cfdisk_label_type-min.jpg" alt="cfdisk tipo de etiquetas" srcset="/images/posts/archvbox-install/cfdisk_label_type-min.jpg?size=small, /images/posts/archvbox-install/cfdisk_label_type-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/cfdisk_label_type-min.jpg?size=large 2x" sizes="auto" data-title="cfdisk tipo de etiquetas" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>Luego creamos la primera partición.</p>
+<ol>
+<li>Selecciona [  New  ]</li>
+<li>El tamaño de la primera partición será de <strong>250M</strong></li>
+</ol>
+<p><img loading="lazy" src="/images/posts/archvbox-install/cfdisk_part1_250Mjpg-min.jpg" alt="particion 1" srcset="/images/posts/archvbox-install/cfdisk_part1_250Mjpg-min.jpg?size=small, /images/posts/archvbox-install/cfdisk_part1_250Mjpg-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/cfdisk_part1_250Mjpg-min.jpg?size=large 2x" sizes="auto" data-title="particion 1" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<ol start="3">
+<li>Selecciona [  Type  ] y luego selecciona el tipo &ldquo;EFI System&rdquo;</li>
+</ol>
+<p><img loading="lazy" src="/images/posts/archvbox-install/cfdisk_part1_tipo_efi-min.jpg" alt="particion tipo EFI" srcset="/images/posts/archvbox-install/cfdisk_part1_tipo_efi-min.jpg?size=small, /images/posts/archvbox-install/cfdisk_part1_tipo_efi-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/cfdisk_part1_tipo_efi-min.jpg?size=large 2x" sizes="auto" data-title="particion tipo EFI" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<ol start="4">
+<li>Selecciona el espacio disponible (Free Space), luego selecciona [  New  ] , presiona ENTER y luego ENTER de nuevo para seleccionar todo el espacio disponible, en mi caso los 9.8G restantes</li>
+</ol>
+<p><img loading="lazy" src="/images/posts/archvbox-install/cfdisk_part2-min.jpg" alt="particion 2" srcset="/images/posts/archvbox-install/cfdisk_part2-min.jpg?size=small, /images/posts/archvbox-install/cfdisk_part2-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/cfdisk_part2-min.jpg?size=large 2x" sizes="auto" data-title="particion 2" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<ol start="5">
+<li>Selecciona [  Type  ] y luego selecciona <strong>&ldquo;Linux filesystem&rdquo;</strong> de la lista</li>
+</ol>
+<p><img loading="lazy" src="/images/posts/archvbox-install/cfdisk_part2_tipo_linux-min.jpg" alt="particion 2" srcset="/images/posts/archvbox-install/cfdisk_part2_tipo_linux-min.jpg?size=small, /images/posts/archvbox-install/cfdisk_part2_tipo_linux-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/cfdisk_part2_tipo_linux-min.jpg?size=large 2x" sizes="auto" data-title="particion 2" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<ol start="6">
+<li>Selecciona [  Write  ] para guardar los cambios y crear las particiones. cfdisk te preguntara si estás seguro de que deseas crear las nuevas particiones. Teclea &ldquo;yes&rdquo; y presiona ENTER</li>
+</ol>
+<p><img loading="lazy" src="/images/posts/archvbox-install/cfdisk_write_yes-min.jpg" alt="Guarda los Cambios en cfdisk" srcset="/images/posts/archvbox-install/cfdisk_write_yes-min.jpg?size=small, /images/posts/archvbox-install/cfdisk_write_yes-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/cfdisk_write_yes-min.jpg?size=large 2x" sizes="auto" data-title="Guarda los Cambios en cfdisk" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h4 id="verifica-las-particiones" class="heading-element">
+  <a href="#verifica-las-particiones" class="heading-mark"></a>Verifica las particiones</h4><p>Para verificar que todo haya ido bien teclea lsblk y asegurate de que las particiones estén como sigue</p>
+<p><img loading="lazy" src="/images/posts/archvbox-install/lsblk02-min.jpg" alt="lsblk" srcset="/images/posts/archvbox-install/lsblk02-min.jpg?size=small, /images/posts/archvbox-install/lsblk02-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/lsblk02-min.jpg?size=large 2x" sizes="auto" data-title="lsblk" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h4 id="formatea-las-particiones" class="heading-element">
+  <a href="#formatea-las-particiones" class="heading-mark"></a>Formatea las particiones</h4><ol>
+<li>La primera partición es nuestra partición tipo EFI por lo tanto debemos formatearla de tipo FAT32</li>
+</ol>
+<div class="highlight" id="id-10"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkfs.fat -F32 /dev/sda1</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="/images/posts/archvbox-install/mkfs_vfat32-min.jpg" alt="Formatea la primera partición" srcset="/images/posts/archvbox-install/mkfs_vfat32-min.jpg?size=small, /images/posts/archvbox-install/mkfs_vfat32-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/mkfs_vfat32-min.jpg?size=large 2x" sizes="auto" data-title="Formatea la primera partición" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<ol start="2">
+<li>Formatea la segunda partición, pero en esta ocasión el tipo será EXT4</li>
+</ol>
+<div class="highlight" id="id-11"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkfs.ext4 /dev/sda2</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="/images/posts/archvbox-install/mkfs_ext4-min.jpg" alt="Formatea la segunda partición" srcset="/images/posts/archvbox-install/mkfs_ext4-min.jpg?size=small, /images/posts/archvbox-install/mkfs_ext4-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/mkfs_ext4-min.jpg?size=large 2x" sizes="auto" data-title="Formatea la segunda partición" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h3 id="monta-las-particiones" class="heading-element">
+  <a href="#monta-las-particiones" class="heading-mark"></a>Monta las particiones</h3><p>Una vez creadas y formateadas nuestras particiones ahora debemos montarlas en nuestro sistema, para eso necesitmos hacer lo siguiente:</p>
+<ol>
+<li>Montar la segunda partición en <strong>/mnt</strong> que es nuestro directorio para la instalación</li>
+</ol>
+<div class="highlight" id="id-12"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mount /dev/sda2 /mnt</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>Siguiente debemos crear el directorio donde estará nuestro partición de inicio, para eso vamos a crear un directorio nuevo en <strong>/mnt/boot/efi</strong> (El directorio boot no existe, así que debemos crearlo primero o podemos crear ambos directorios al mismo tiempo con el siguente comando)</li>
+</ol>
+<div class="highlight" id="id-13"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir -p /mnt/boot/efi</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>Monta la primera partición en <strong>/mnt/boot/efi</strong></li>
+</ol>
+<div class="highlight" id="id-14"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mount /dev/sda1 /mnt/boot/efi</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>Verifica que las particiones estén montadas correctamente utilizando lsblk</li>
+</ol>
+<div class="highlight" id="id-15"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsblk</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="/images/posts/archvbox-install/monta_particiones-min.jpg" alt="Monta las Particiones" srcset="/images/posts/archvbox-install/monta_particiones-min.jpg?size=small, /images/posts/archvbox-install/monta_particiones-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/monta_particiones-min.jpg?size=large 2x" sizes="auto" data-title="Monta las Particiones" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h4 id="instala-los-paquetes-base" class="heading-element">
+  <a href="#instala-los-paquetes-base" class="heading-mark"></a>Instala los paquetes &ldquo;base&rdquo;</h4><p>Una vez montadas las particiones comenzamos la instalación de los paquetes base, los paquetes que vamos a instalar son &ldquo;base, linux, linux-firmware y vim (puedes instalar nano si lo deseas)</p>
+<div class="highlight" id="id-16"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacstrap /mnt base linux linux-firmware vim</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="/images/posts/archvbox-install/instalacion_base-min.jpg" alt="Instalación base" srcset="/images/posts/archvbox-install/instalacion_base-min.jpg?size=small, /images/posts/archvbox-install/instalacion_base-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/instalacion_base-min.jpg?size=large 2x" sizes="auto" data-title="Instalación base" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p><img loading="lazy" src="/images/posts/archvbox-install/instalacion_base02-min.jpg" alt="Instalación base" srcset="/images/posts/archvbox-install/instalacion_base02-min.jpg?size=small, /images/posts/archvbox-install/instalacion_base02-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/instalacion_base02-min.jpg?size=large 2x" sizes="auto" data-title="Instalación base" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h4 id="crear-fstab" class="heading-element">
+  <a href="#crear-fstab" class="heading-mark"></a>Crear fstab</h4><p>Listo, la instalación base ya está lista, ahora lo que necesitamos hacer es crear nuestro archivo <strong>fstab</strong></p>
+<div class="highlight" id="id-17"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">genfstab -U /mnt &gt;&gt; /mnt/etc/fstab</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="/images/posts/archvbox-install/crea_fstab-min.jpg" alt="Crea fstab" srcset="/images/posts/archvbox-install/crea_fstab-min.jpg?size=small, /images/posts/archvbox-install/crea_fstab-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/crea_fstab-min.jpg?size=large 2x" sizes="auto" data-title="Crea fstab" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h3 id="crea-el-archivo-de-swap" class="heading-element">
+  <a href="#crea-el-archivo-de-swap" class="heading-mark"></a>Crea el archivo de SWAP</h3><p>Listo, ya que veas en tu archivo de fstab que todo está correcto, que tienes ambas particiones configuradas correctamente, vamos a crear nuestro archivo de swap.</p>
+<ol>
+<li>Primero entra a la instalación base</li>
+</ol>
+<div class="highlight" id="id-18"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">arch-chroot /mnt</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Fíjate bien y el prompt cambió, ahora está entre corchetes <strong>[root@archiso /]</strong></p>
+<ol start="2">
+<li>Vamos a crear el archivo de swap utilizando el comando <strong>dd</strong>, el archivo que voy a crear será de 2GB, es decir 2 bloques de 1GB cada uno.</li>
+</ol>
+<div class="highlight" id="id-19"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dd <span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span>/swapfile <span class="nv">bs</span><span class="o">=</span>1G <span class="nv">count</span><span class="o">=</span><span class="m">2</span> <span class="nv">status</span><span class="o">=</span>progress</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>Ahora hay que cambiar los permisos del archivo</li>
+</ol>
+<div class="highlight" id="id-20"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">chmod <span class="m">600</span> /swapfile</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>Cambia el tipo de archivo a <strong>swap</strong></li>
+</ol>
+<div class="highlight" id="id-21"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkswap /swapfile</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="5">
+<li>Habilita el archivo con:</li>
+</ol>
+<div class="highlight" id="id-22"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">swapon /swapfile</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="/images/posts/archvbox-install/crea_swapfile-min.jpg" alt="Crea swapfile" srcset="/images/posts/archvbox-install/crea_swapfile-min.jpg?size=small, /images/posts/archvbox-install/crea_swapfile-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/crea_swapfile-min.jpg?size=large 2x" sizes="auto" data-title="Crea swapfile" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<ol start="6">
+<li>Agrega el archivo al sistema de archivos, es decir, al archivo <strong>fstab</strong>. (Yo voy a utilizar vim, si instalaste nano, utiliza nano)</li>
+</ol>
+<div class="highlight" id="id-23"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim /etc/fstab</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Al final del archivo agrega lo siguiente:</p>
+<div class="highlight" id="id-24"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">/swapfile none swap defaults 0 0</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="/images/posts/archvbox-install/agrega_swapfile_fstab-min.jpg" alt="Agrega swapfile a fstab" srcset="/images/posts/archvbox-install/agrega_swapfile_fstab-min.jpg?size=small, /images/posts/archvbox-install/agrega_swapfile_fstab-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/agrega_swapfile_fstab-min.jpg?size=large 2x" sizes="auto" data-title="Agrega swapfile a fstab" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h3 id="configura-tu-zona-horaria" class="heading-element">
+  <a href="#configura-tu-zona-horaria" class="heading-mark"></a>Configura tu zona horaria</h3><p>Ahora podemos continuar con la configuración de nuestra instalación, así que toca el turno de la zona horaria.</p>
+<ol>
+<li>Primero vamos a ver un listado de las zonas horarias disponibles. La zona horaria donde me encuentro es la zona de <strong>Chicago</strong>, sustituye Chicago por la ciudad que te corresponda, por ejemplo Mexico</li>
+</ol>
+<div class="highlight" id="id-25"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">timedatectl list-timezones <span class="p">|</span> grep Chicago</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>Una vez identificada la zona horaria, creamos un enlace simbolico en <strong>etc/localtime</strong></li>
+</ol>
+<div class="highlight" id="id-26"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ln -sf /usr/share/zoneinfo/America/Chicago /etc/localtime</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>Ahora ya podemos sincronizar el reloj del sistema con el reloj de hardware</li>
+</ol>
+<div class="highlight" id="id-27"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hwclock --systohc</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="configura-tu-localización" class="heading-element">
+  <a href="#configura-tu-localizaci%c3%b3n" class="heading-mark"></a>Configura tu &ldquo;Localización&rdquo;</h3><p>Esto es para decirle a Arch Linux donde te encuentras y cual es el grupo de caracteres que corresponden a tu idioma por ejemplo.</p>
+<p>En mi caso voy a utlizar Inglés de Estados Unidos, el código es <strong>&ldquo;en_US.UTF-8&rdquo;</strong> pero por ejemplo, si te encuentras en México y estás utilizando teclado en Español y deberás utilizar el código de <strong>&ldquo;es_MX.UTF-8&rdquo;</strong>.</p>
+<p><strong>Nota:</strong> Puedes habilitar más de un código de localización.</p>
+<ol>
+<li>Para habilitar el código de localización deseado, edita el siguente archivo y descomenta la línea donde se encuentre el código que andas buscando. (De nuevo, yo utilizo vim, tu puedes hacerlo con nano o con el que hayas instalado al inicio)</li>
+</ol>
+<div class="highlight" id="id-28"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim /etc/locale.gen</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="/images/posts/archvbox-install/vim_locale_gen-min.jpg" alt="vim locale.gen" srcset="/images/posts/archvbox-install/vim_locale_gen-min.jpg?size=small, /images/posts/archvbox-install/vim_locale_gen-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/vim_locale_gen-min.jpg?size=large 2x" sizes="auto" data-title="vim locale.gen" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<ol start="2">
+<li>Genera la localización en el sistema</li>
+</ol>
+<div class="highlight" id="id-29"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">locale-gen</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="/images/posts/archvbox-install/locale_gen-min.jpg" alt="locale-gen" srcset="/images/posts/archvbox-install/locale_gen-min.jpg?size=small, /images/posts/archvbox-install/locale_gen-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/locale_gen-min.jpg?size=large 2x" sizes="auto" data-title="locale-gen" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<ol start="3">
+<li>Ahora necesitamos crear el archivo de configuración en nuestra instalación para eso:</li>
+</ol>
+<div class="highlight" id="id-30"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8 &gt;&gt; /etc/locale.conf</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Nota:</strong> Sustituye &ldquo;en_US.UTF-8&rdquo; por el código que hayas habilitado en el paso anterior</p>
+<ol start="4">
+<li>(Opcional) Si al comienzo de la instalación seleccionaste el tipo de teclado, deberás agregarlo a tu instalación con el siguente comando:
+(Suponiendo que seleccionaste &ldquo;es&rdquo;)</li>
+</ol>
+<div class="highlight" id="id-31"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">KEYMAP</span><span class="o">=</span>es &gt;&gt; /etc/vconsole.conf</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="configura-la-red" class="heading-element">
+  <a href="#configura-la-red" class="heading-mark"></a>Configura la Red</h3><ol>
+<li>Crea el archivo &ldquo;hostname&rdquo; para darle un nombre a tu máquina virutal. En mi caso voy a ser creativo y le daré el nombre de &ldquo;archlinux&rdquo;</li>
+</ol>
+<div class="highlight" id="id-32"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim /etc/hostname</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="/images/posts/archvbox-install/hostname-min.jpg" alt="hostname" srcset="/images/posts/archvbox-install/hostname-min.jpg?size=small, /images/posts/archvbox-install/hostname-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/hostname-min.jpg?size=large 2x" sizes="auto" data-title="hostname" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<ol start="2">
+<li>Agrega lo siguiente a tu archivo /etc/hosts</li>
+</ol>
+<div class="highlight" id="id-33"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim /etc/hosts</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight" id="id-34"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">127.0.0.1	localhost
+</span></span><span class="line"><span class="cl">::1		localhost
+</span></span><span class="line"><span class="cl">127.0.1.1	archlinx.localdomain	archlinux</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="/images/posts/archvbox-install/hosts-min.jpg" alt="hosts" srcset="/images/posts/archvbox-install/hosts-min.jpg?size=small, /images/posts/archvbox-install/hosts-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/hosts-min.jpg?size=large 2x" sizes="auto" data-title="hosts" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h3 id="crea-un-password-para-root" class="heading-element">
+  <a href="#crea-un-password-para-root" class="heading-mark"></a>Crea un password para root</h3><p>El siguiente paso de la instalación es darle un password a nuestro usuario de root.</p>
+<p>Como ya estamos en nuestra instalación, para cambiar el password solo debemos teclear:</p>
+<div class="highlight" id="id-35"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">passwd</span></span></code></pre></td></tr></table>
+</div>
+</div><p>En el prompt escribe el nuevo password (Uno que no se te olvide) y en el siguente prompt vuelve a escribir el mismo password para confirmarlo.</p>
+<p><img loading="lazy" src="/images/posts/archvbox-install/passwd_root-min.jpg" alt="Password root" srcset="/images/posts/archvbox-install/passwd_root-min.jpg?size=small, /images/posts/archvbox-install/passwd_root-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/passwd_root-min.jpg?size=large 2x" sizes="auto" data-title="Password root" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h3 id="instala-los-paquetes-finales" class="heading-element">
+  <a href="#instala-los-paquetes-finales" class="heading-mark"></a>Instala los paquetes finales</h3><p>Es momento de instalar nuestro &ldquo;boot loader&rdquo; y paquetes finales antes de reiniciar la máquina. GRUB será nuestro boot loader.</p>
+<ol>
+<li>Instala los siguientes paquetes. Puedes agregar paquetes que creas necesarios.</li>
+</ol>
+<div class="highlight" id="id-36"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -S grub efibootmgr networkmanager network-manager-applet dialog os-prober mtools dosfstools base-devel linux-headers cups reflector openssh git xdg-utils xdg-user-dirs virtualbox-guest-utils</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Acepta todos los prompts por defecto. Y presiona ENTER para continuar con la instalación</p>
+<p><img loading="lazy" src="/images/posts/archvbox-install/paquetes_finales-min.jpg" alt="Instala Grub y Otros Paquetes" srcset="/images/posts/archvbox-install/paquetes_finales-min.jpg?size=small, /images/posts/archvbox-install/paquetes_finales-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/paquetes_finales-min.jpg?size=large 2x" sizes="auto" data-title="Instala Grub y Otros Paquetes" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p><img loading="lazy" src="/images/posts/archvbox-install/paquetes_finales2-min.jpg" alt="Instala Grub y Otros Paquetes" srcset="/images/posts/archvbox-install/paquetes_finales2-min.jpg?size=small, /images/posts/archvbox-install/paquetes_finales2-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/paquetes_finales2-min.jpg?size=large 2x" sizes="auto" data-title="Instala Grub y Otros Paquetes" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>Si te aparece la siguiente pantalla, presiona ENTER para aceptar las llaves PGP.</p>
+<p><img loading="lazy" src="/images/posts/archvbox-install/paquetes_finales3-min.jpg" alt="Instala Grub y Otros Paquetes" srcset="/images/posts/archvbox-install/paquetes_finales3-min.jpg?size=small, /images/posts/archvbox-install/paquetes_finales3-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/paquetes_finales3-min.jpg?size=large 2x" sizes="auto" data-title="Instala Grub y Otros Paquetes" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h3 id="instala-grub" class="heading-element">
+  <a href="#instala-grub" class="heading-mark"></a>Instala GRUB</h3><p>Es momento de instalar grub en el directorio /boot/efi que creamos al inicio, que es la partición de inicio</p>
+<div class="highlight" id="id-37"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grub-install --target<span class="o">=</span>x86_64-efi --efi-directory<span class="o">=</span>/boot/efi --botloader-id<span class="o">=</span>GRUB</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>Ahora necesitamos crear el archivo de configuración</li>
+</ol>
+<div class="highlight" id="id-38"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grub-mkconfig -o /boot/grub/grub.cfg</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="/images/posts/archvbox-install/grub-install-min.jpg" alt="Instala Grub" srcset="/images/posts/archvbox-install/grub-install-min.jpg?size=small, /images/posts/archvbox-install/grub-install-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/grub-install-min.jpg?size=large 2x" sizes="auto" data-title="Instala Grub" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h3 id="habilita-los-servicios" class="heading-element">
+  <a href="#habilita-los-servicios" class="heading-mark"></a>Habilita los servicios</h3><p>Llegó el momento de habilitar los servicios que correrán cada que reinicies la máquina.</p>
+<ol>
+<li>Habilita el manejador de la red</li>
+<li>Continua con el servicio de SSH</li>
+<li>Luego el servicio para imprimir</li>
+</ol>
+<div class="highlight" id="id-39"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl <span class="nb">enable</span> NetworkManager
+</span></span><span class="line"><span class="cl">systemctl <span class="nb">enable</span> sshd
+</span></span><span class="line"><span class="cl">systemctl <span class="nb">enable</span> org.cups.cupsd</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="/images/posts/archvbox-install/habilita_servicios-min.jpg" alt="Habilita Servicios" srcset="/images/posts/archvbox-install/habilita_servicios-min.jpg?size=small, /images/posts/archvbox-install/habilita_servicios-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/habilita_servicios-min.jpg?size=large 2x" sizes="auto" data-title="Habilita Servicios" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h3 id="crea-tu-usuario" class="heading-element">
+  <a href="#crea-tu-usuario" class="heading-mark"></a>Crea tu usuario</h3><p>Todo lo hemos hecho con el usuario de root, pero siempre es conveniente tener tu propio usuario para no utilizar root para las tareas diarias. Voy a crear mi usuario que se llamará &ldquo;jorge&rdquo;.</p>
+<ol>
+<li>Crea el usuario y asignalo al grupo &ldquo;wheel&rdquo;</li>
+<li>Crea un password para tu usuario</li>
+</ol>
+<div class="highlight" id="id-40"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">useradd -mG wheel jorge
+</span></span><span class="line"><span class="cl">passwd jorge</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>Ahora para darle privilegios de &ldquo;sudo&rdquo; y puedas ejecutar comandos como superusuario &ldquo;root&rdquo;, debemos descomentar la linea que dice <strong>&quot;%wheel ALL=(ALL) ALL&rdquo;</strong> con el siguiente comando</li>
+</ol>
+<p>Recuerda que puedes sustituir &ldquo;vim&rdquo; por &ldquo;nano&rdquo; si lo prefieres.</p>
+<div class="highlight" id="id-41"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">EDITOR</span><span class="o">=</span>vim visudo</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="/images/posts/archvbox-install/visudo-min.jpg" alt="/images/posts/archvbox-install/visudo-min.jpg" srcset="/images/posts/archvbox-install/visudo-min.jpg?size=small, /images/posts/archvbox-install/visudo-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/visudo-min.jpg?size=large 2x" sizes="auto" data-title="/images/posts/archvbox-install/visudo-min.jpg" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h3 id="sal-de-la-instalación-y-reinicia-la-máquina-virtual" class="heading-element">
+  <a href="#sal-de-la-instalaci%c3%b3n-y-reinicia-la-m%c3%a1quina-virtual" class="heading-mark"></a>Sal de la instalación y reinicia la máquina virtual</h3><p>Con esto terminamos la instalación, así que solo queda:</p>
+<ol>
+<li>Salir de la instalación</li>
+<li>Desmontar las particiones</li>
+<li>Reiniciar la máquina virtual</li>
+</ol>
+<div class="highlight" id="id-42"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">exit</span>
+</span></span><span class="line"><span class="cl">umount -a
+</span></span><span class="line"><span class="cl">reboot</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="/images/posts/archvbox-install/reboot-min.jpg" alt="/images/posts/archvbox-install/reboot-min.jpg" srcset="/images/posts/archvbox-install/reboot-min.jpg?size=small, /images/posts/archvbox-install/reboot-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/reboot-min.jpg?size=large 2x" sizes="auto" data-title="/images/posts/archvbox-install/reboot-min.jpg" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h2 id="instalación-exitosa" class="heading-element">
+  <a href="#instalaci%c3%b3n-exitosa" class="heading-mark"></a>Instalación Exitosa</h2><p>Después de reiniciar la máquina virtual verás que GRUB está instalado y debe estar funcionando correctamente.</p>
+<p><img loading="lazy" src="/images/posts/archvbox-install/grub_inicio-min.jpg" alt="/images/posts/archvbox-install/grub_inicio-min.jpg" srcset="/images/posts/archvbox-install/grub_inicio-min.jpg?size=small, /images/posts/archvbox-install/grub_inicio-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/grub_inicio-min.jpg?size=large 2x" sizes="auto" data-title="/images/posts/archvbox-install/grub_inicio-min.jpg" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>Entra a tu nueva instalación de Arch Linux con el usuario y password que creaste para verificar que todo esté funcionando correctamente.</p>
+<p><img loading="lazy" src="/images/posts/archvbox-install/instalacion_completa-min.jpg" alt="/images/posts/archvbox-install/instalacion_completa-min.jpg" srcset="/images/posts/archvbox-install/instalacion_completa-min.jpg?size=small, /images/posts/archvbox-install/instalacion_completa-min.jpg?size=medium 1.5x, /images/posts/archvbox-install/instalacion_completa-min.jpg?size=large 2x" sizes="auto" data-title="/images/posts/archvbox-install/instalacion_completa-min.jpg" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>Si encontraste este tutorial útil no olvides que puedes compartirlo con tus compañeros, familiares y amigos utilizando los botones al final del artículo.</p>
+<p>No dejes de visitarme porque estaré subiendo más tutoriales, ahora lo que sigue es instalar un escritorio en esta máquina virtual. ¿Cuál te gustaría instalar? ¿Gnome? ¿KDE? ¿O talvez un manejador de ventanas como i3 o awesome?</p>
+</div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="Actualizado el 2024-01-06 23:32:59">Actualizado el 2024-01-06&nbsp;</span>
+      </div><div class="post-info-license">
+            <span><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span>
+          </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/posts/como-instalar-archlinux-en-virtualbox/index.md" title="Leer Markdown" class="link-to-markdown">Leer Markdown</a></span></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="Compartir en Twitter" data-sharer="twitter" data-url="http://localhost:1313/posts/como-instalar-archlinux-en-virtualbox/" data-title="Como Instalar Archlinux en Virtualbox" data-via="@JorgeRS" data-hashtags="archlinux,linux"><i class="fa-brands fa-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Compartir en Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/como-instalar-archlinux-en-virtualbox/" data-hashtag="archlinux"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/archlinux/" class="post-tag" title="Etiquetas - archlinux">archlinux</a><a href="/tags/linux/" class="post-tag" title="Etiquetas - linux">linux</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">Regresar</a></span>&nbsp;|&nbsp;<span><a href="/">Inicio</a></span>
+    </section>
+  </div>
+
+  <div class="post-nav"><a href="/posts/como-instalar-python-en-windows-10/" class="post-nav-item" rel="prev" title="Como Instalar Python en Windows 10 en 3 Sencillos Pasos."><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>Como Instalar Python en Windows 10 en 3 Sencillos Pasos.</a>
+      <a href="/posts/como-instalar-bspwm-polybar-en-archlinux/" class="post-nav-item" rel="next" title="Como Instalar Bspwm Polybar en Archlinux">Como Instalar Bspwm Polybar en Archlinux<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="Contenido"><h2 class="toc-title">Contenido&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">Provisto por <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.121.1"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> | Tema - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.0"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">
+              <a href="/"></a></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="Volver arriba"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning"></div>
+  </noscript>
+</div><link rel="preload" href="/lib/katex/katex.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/katex/katex.min.js" defer></script><script src="/lib/katex/auto-render.min.js" defer></script><script src="/lib/katex/copy-tex.min.js" defer></script><script src="/lib/katex/mhchem.min.js" defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"Copiar al portapapeles","maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"De acuerdo","link":"Aprende más","message":"Este sitio web utiliza Cookies para mejorar su experiencia."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};</script><script src="/js/theme.min.js" defer></script></body>
+</html>

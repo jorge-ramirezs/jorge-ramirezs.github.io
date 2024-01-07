@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>Como Instalar Bspwm Polybar en Ubuntu 20.10 - Linux Fácil</title><meta name="author" content="">
+<meta name="author-link" content="">
+<meta name="description" content="En este artículo te voy a explicar como instalar BSPWM y Polybar en Ubuntu 20.10." /><meta name="keywords" content='bspwm, polybar, ubuntu' /><meta itemprop="name" content="Como Instalar Bspwm Polybar en Ubuntu 20.10">
+<meta itemprop="description" content="En este artículo te voy a explicar como instalar BSPWM y Polybar en Ubuntu 20.10."><meta itemprop="datePublished" content="2020-11-30T16:55:32-06:00" />
+<meta itemprop="dateModified" content="2024-01-06T23:32:59-06:00" />
+<meta itemprop="wordCount" content="953">
+<meta itemprop="keywords" content="bspwm,polybar,ubuntu," /><meta property="og:title" content="Como Instalar Bspwm Polybar en Ubuntu 20.10" />
+<meta property="og:description" content="En este artículo te voy a explicar como instalar BSPWM y Polybar en Ubuntu 20.10." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/como-instalar-bspwm-polybar-en-ubuntu/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-11-30T16:55:32-06:00" />
+<meta property="article:modified_time" content="2024-01-06T23:32:59-06:00" />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Como Instalar Bspwm Polybar en Ubuntu 20.10"/>
+<meta name="twitter:description" content="En este artículo te voy a explicar como instalar BSPWM y Polybar en Ubuntu 20.10."/>
+<meta name="twitter:site" content="@JorgeRS"/>
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://localhost:1313/posts/como-instalar-bspwm-polybar-en-ubuntu/" /><link rel="prev" href="http://localhost:1313/posts/como-instalar-archlinux-en-mbr/" /><link rel="next" href="http://localhost:1313/posts/como-configurar-neovim-como-vscode-para-python/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Como Instalar Bspwm Polybar en Ubuntu 20.10",
+    "inLanguage": "en",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/localhost:1313\/posts\/como-instalar-bspwm-polybar-en-ubuntu\/"
+    },"genre": "posts","keywords": "bspwm, polybar, ubuntu","wordcount":  953 ,
+    "url": "http:\/\/localhost:1313\/posts\/como-instalar-bspwm-polybar-en-ubuntu\/","datePublished": "2020-11-30T16:55:32-06:00","dateModified": "2024-01-06T23:32:59-06:00","license": "©{year}, All Rights Reserved","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "Autor"
+      },"description": "En este artículo te voy a explicar como instalar BSPWM y Polybar en Ubuntu 20.10."
+  }
+  </script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><script>(window.localStorage?.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('data-theme', 'dark');</script><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="Linux Fácil"><span class="header-title-text">Linux Fácil</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a
+                class="menu-link"
+                href="https://www.youtube.com/channel/UCkns-R5bBW3snQx7RAYRX-A"
+                
+                rel="noopener noreferrer" target="_blank"
+              ><i class="fa-brands fa-youtube fa-fw fa-sm" aria-hidden="true"></i> YouTube</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/archives/"
+                
+                
+              ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archivo</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/categories/"
+                
+                
+              ><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categorias</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/tags/"
+                
+                
+              ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item delimiter"></li><li class="menu-item theme-switch" title="Cambia el tema">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="Linux Fácil"><span class="header-title-text">Linux Fácil</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="https://www.youtube.com/channel/UCkns-R5bBW3snQx7RAYRX-A"
+                  
+                  rel="noopener noreferrer" target="_blank"
+                ><i class="fa-brands fa-youtube fa-fw fa-sm" aria-hidden="true"></i> YouTube</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/archives/"
+                  
+                  
+                ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archivo</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/categories/"
+                  
+                  
+                ><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categorias</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/tags/"
+                  
+                  
+                ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="Cambia el tema"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label=""></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>Como Instalar Bspwm Polybar en Ubuntu 20.10</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      </span></span><span class="post-included-in">&nbsp;incluido en <a href="/categories/window-manager/" class="post-category" title="Categoría - Window Manager"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Window Manager</a>&ensp;<a href="/categories/manejador-de-ventanas/" class="post-category" title="Categoría - Manejador de Ventanas"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Manejador de Ventanas</a></span></div><div class="post-meta-line"><span title="publicado el 2020-11-30 16:55:32"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2020-11-30">2020-11-30</time></span>&nbsp;<span title="Actualizado el 2024-01-06 23:32:59"><i class="fa-regular fa-calendar-check fa-fw me-1" aria-hidden="true"></i><time datetime="2024-01-06">2024-01-06</time></span>&nbsp;<span title="953 palabras"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>Aproximadamente 1000 palabras</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>5 minutos</span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>Contenido</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#en-youtube">En YouTube</a>
+      <ul>
+        <li><a href="#parte-1-la-instalación">Parte 1: La instalación</a></li>
+        <li><a href="#parte-2-la-configuración">Parte 2: La Configuración</a></li>
+      </ul>
+    </li>
+    <li><a href="#introducción">Introducción</a>
+      <ul>
+        <li><a href="#qué-es-bspwm">¿Qué es BSPWM?</a></li>
+      </ul>
+    </li>
+    <li><a href="#instalar-paquetes">Instalar Paquetes</a></li>
+    <li><a href="#crear-archivos-de-configuración">Crear Archivos de Configuración</a></li>
+    <li><a href="#modificar-los-archivos-de-configuración">Modificar los archivos de configuración:</a>
+      <ul>
+        <li><a href="#primero-modificamos-el-arcvhivo-sxhkdrc">Primero modificamos el arcvhivo &ldquo;sxhkdrc&rdquo;</a></li>
+        <li><a href="#segundo-configuramos-polybar">Segundo, configuramos &ldquo;Polybar&rdquo;</a></li>
+        <li><a href="#por-último-configuramos-bspwmrc">Por último, configuramos &ldquo;bspwmrc&rdquo;</a></li>
+      </ul>
+    </li>
+    <li><a href="#salir-de-sesión-e-iniciar-bspwm">Salir de Sesión e Iniciar BSPWM.</a></li>
+    <li><a href="#configurar-bspwm">Configurar BSPWM</a>
+      <ul>
+        <li><a href="#resolución-de-pantalla-opcional">Resolución de pantalla (Opcional)</a></li>
+        <li><a href="#combinación-de-teclas-importantes">Combinación de teclas importantes</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h2 id="en-youtube" class="heading-element">
+  <a href="#en-youtube" class="heading-mark"></a>En YouTube</h2><h3 id="parte-1-la-instalación" class="heading-element">
+  <a href="#parte-1-la-instalaci%c3%b3n" class="heading-mark"></a>Parte 1: La instalación</h3>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube-nocookie.com/embed/s18VrzOns9o" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h3 id="parte-2-la-configuración" class="heading-element">
+  <a href="#parte-2-la-configuraci%c3%b3n" class="heading-mark"></a>Parte 2: La Configuración</h3>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube-nocookie.com/embed/5qny4p3w_bE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h2 id="introducción" class="heading-element">
+  <a href="#introducci%c3%b3n" class="heading-mark"></a>Introducción</h2><h3 id="qué-es-bspwm" class="heading-element">
+  <a href="#qu%c3%a9-es-bspwm" class="heading-mark"></a>¿Qué es BSPWM?</h3><p>Según la <a href="https://github.com/baskerville/bspwm"target="_blank" rel="external nofollow noopener noreferrer">documentación oficial</a>:</p>
+<blockquote>
+<p><strong>bwspwm</strong> es un administrador de ventanas en mosaico que representa las ventanas como las hojas de un árbol binario completo.
+Solo responde a eventos <a href="https://en.wikipedia.org/wiki/X_Window_System"target="_blank" rel="external nofollow noopener noreferrer"> X Window System </a> y los mensajes que recibe en un conector dedicado.
+bspc es un programa que escribe mensajes en el socket de bspwm.
+bspwm no maneja ninguna entrada de teclado o puntero: se necesita un programa de terceros (por ejemplo,<a href="https://github.com/baskerville/sxhkd"target="_blank" rel="external nofollow noopener noreferrer"> sxhkd </a>) para traducir eventos de teclado y puntero a invocaciones bspc.</p>
+</blockquote>
+<h2 id="instalar-paquetes" class="heading-element">
+  <a href="#instalar-paquetes" class="heading-mark"></a>Instalar Paquetes</h2><p>Afortunadamente Ubuntu ya tiene listos los paquetes que necesitamos instalar, así entonces solo necesitamos abrir una terminal y ejecutar el siguiente comando:</p>
+<div class="highlight" id="id-1"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo apt-get install bspwm polybar suckless-tools</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Atención:</strong> sxhkd es una dependencia de bspwm, así que no es necesario mencionarlo en el comando anterior, solo verifica que este paquete también se instale.</p>
+<h2 id="crear-archivos-de-configuración" class="heading-element">
+  <a href="#crear-archivos-de-configuraci%c3%b3n" class="heading-mark"></a>Crear Archivos de Configuración</h2><p>El siguiente paso es crear, o mejor dicho, copiar los archivos de configuración de ejemplo y modificarlos a nuestro gusto:</p>
+<p>Primero vamos a crear los directorios que contendrán los archivos de configuración:</p>
+<div class="highlight" id="id-2"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ mkdir ~/.config/bspwm
+</span></span><span class="line"><span class="cl">$ mkdir ~/.config/sxhkd
+</span></span><span class="line"><span class="cl">$ mkdir ~/.config/polybar</span></span></code></pre></td></tr></table>
+</div>
+</div><p>El siguiente paso es copiar los archivos de ejemplo a nuestros nuevos directorios de configuración:</p>
+<div class="highlight" id="id-3"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ cp /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/
+</span></span><span class="line"><span class="cl">$ cp /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd/
+</span></span><span class="line"><span class="cl">$ cp /usr/share/doc/polybar/config ~/.config/polybar/</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="modificar-los-archivos-de-configuración" class="heading-element">
+  <a href="#modificar-los-archivos-de-configuraci%c3%b3n" class="heading-mark"></a>Modificar los archivos de configuración:</h2><p>Una vez que tenemos los archivos de configuración en nuestro directorio, lo siguiente es modificarlos para poderlos utilizar.</p>
+<h3 id="primero-modificamos-el-arcvhivo-sxhkdrc" class="heading-element">
+  <a href="#primero-modificamos-el-arcvhivo-sxhkdrc" class="heading-mark"></a>Primero modificamos el arcvhivo &ldquo;sxhkdrc&rdquo;</h3><p>Por defecto, sxhkd utiliza la terminal &ldquo;urxvt&rdquo; que probablemente no tengas instalada, por lo tanto debemos indicarle que mejor utilize &ldquo;gnome-terminal&rdquo;.</p>
+<p>Para eso vamos a requerir un editor de textos como &ldquo;nano&rdquo;, &ldquo;vim&rdquo;, o incluso &ldquo;gedit&rdquo; puede funcionar, utliza el que más se acomode a tu gusto:</p>
+<p>Para motivos de este tutorial y para no meternos en muchos problemas voy a utilizar &ldquo;gedit&rdquo; en el siguiente comando:</p>
+<div class="highlight" id="id-4"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ gedit ~/.config/sxhkd/sxhkdrc</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Ahora sustituye &ldquo;urxvt&rdquo; por &ldquo;gnome-terminal&rdquo; (Sin las comillas), guarda los cambios con &ldquo;CTRL+s&rdquo; y cierra el archivo.</p>
+<p><img loading="lazy" src="/images/posts/bspwm-polybar-ubuntu/sxhkdrc1.png" alt="sxhkdrc" srcset="/images/posts/bspwm-polybar-ubuntu/sxhkdrc1.png?size=small, /images/posts/bspwm-polybar-ubuntu/sxhkdrc1.png?size=medium 1.5x, /images/posts/bspwm-polybar-ubuntu/sxhkdrc1.png?size=large 2x" sizes="auto" data-title="sxhkdrc" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h3 id="segundo-configuramos-polybar" class="heading-element">
+  <a href="#segundo-configuramos-polybar" class="heading-mark"></a>Segundo, configuramos &ldquo;Polybar&rdquo;</h3><p>A continuación vamos a configurar Polybar, aqui lo que debemos hacer es crear un archivo que es el que se va a encargar de ejecutar Polybar.</p>
+<div class="highlight" id="id-5"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ gedit ~/.config/polybar/launch.sh</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Este comando abrirá una ventana en blanco porque se supone no tenemos este archivo, ahora copia lo siguiente y pegalo en gedit.</p>
+<div class="highlight" id="id-6"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">#!/usr/bin/env bash
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Terminate already running bar instances
+</span></span><span class="line"><span class="cl">killall -q polybar
+</span></span><span class="line"><span class="cl"># If all your bars have ipc enabled, you can also use
+</span></span><span class="line"><span class="cl"># polybar-msg cmd quit
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Launch bar1 and bar2
+</span></span><span class="line"><span class="cl">echo &#34;---&#34; | tee -a /tmp/polybar1.log /tmp/polybar2.log
+</span></span><span class="line"><span class="cl">polybar example &gt;&gt;/tmp/polybar1.log 2&gt;&amp;1 &amp; disown
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">echo &#34;Bars launched...&#34;</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Guarda el archivo y cierra &ldquo;gedit&rdquo;.</p>
+<p><img loading="lazy" src="/images/posts/bspwm-polybar-ubuntu/launch_sh.png" alt="launch.sh" srcset="/images/posts/bspwm-polybar-ubuntu/launch_sh.png?size=small, /images/posts/bspwm-polybar-ubuntu/launch_sh.png?size=medium 1.5x, /images/posts/bspwm-polybar-ubuntu/launch_sh.png?size=large 2x" sizes="auto" data-title="launch.sh" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>Ahora debemos asegurarnos de que el archivo que acabamos de crear sea ejectuable, para eso, corre el siguiente comando:</p>
+<div class="highlight" id="id-7"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ chmod +x ~/.config/polybar/launch.sh</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="por-último-configuramos-bspwmrc" class="heading-element">
+  <a href="#por-%c3%baltimo-configuramos-bspwmrc" class="heading-mark"></a>Por último, configuramos &ldquo;bspwmrc&rdquo;</h3><p>Ahora lo que nos resta, es decirla e bspwm que ejecute Polybar cuando se inicie, para eso, modificamos el siguiente archivo:</p>
+<div class="highlight" id="id-8"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ gedit ~/.config/bspwm/bspwmrc</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Agrega la siguiente línea:</p>
+<div class="highlight" id="id-9"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">$HOME/.config/polybar/launch.sh</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="/images/posts/bspwm-polybar-ubuntu/bspwmrc.png" alt="Agrega launch.sh en bspwmrc" srcset="/images/posts/bspwm-polybar-ubuntu/bspwmrc.png?size=small, /images/posts/bspwm-polybar-ubuntu/bspwmrc.png?size=medium 1.5x, /images/posts/bspwm-polybar-ubuntu/bspwmrc.png?size=large 2x" sizes="auto" data-title="Agrega launch.sh en bspwmrc" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>Guarda y Cierra el archivo.</p>
+<h2 id="salir-de-sesión-e-iniciar-bspwm" class="heading-element">
+  <a href="#salir-de-sesi%c3%b3n-e-iniciar-bspwm" class="heading-mark"></a>Salir de Sesión e Iniciar BSPWM.</h2><p>Con lo anterior ya dejamos la configuración básica, ahora lo que toca es iniciar la sesión pero utilizando BSPWM.</p>
+<p>Para eso primero cierra la sesión, luego en la pantalla de inicio, donde te pide tu nombre de usuario y contraseña, selecciona tu usuario y <strong>da clic en el engrane que se encuentra en la parte inferior derecha de la pantalla y selecciona &ldquo;bspwm&rdquo;</strong></p>
+<p><img loading="lazy" src="/images/posts/bspwm-polybar-ubuntu/gdm.png" alt="GDM" srcset="/images/posts/bspwm-polybar-ubuntu/gdm.png?size=small, /images/posts/bspwm-polybar-ubuntu/gdm.png?size=medium 1.5x, /images/posts/bspwm-polybar-ubuntu/gdm.png?size=large 2x" sizes="auto" data-title="GDM" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h2 id="configurar-bspwm" class="heading-element">
+  <a href="#configurar-bspwm" class="heading-mark"></a>Configurar BSPWM</h2><p>Cuando inicies la sesión deberás ver únicamente la pantalla en negro y la barra de estatus en la parte superior (Polybar)</p>
+<p><img loading="lazy" src="/images/posts/bspwm-polybar-ubuntu/bspwm_inicial.png" alt="Pantalla inicial" srcset="/images/posts/bspwm-polybar-ubuntu/bspwm_inicial.png?size=small, /images/posts/bspwm-polybar-ubuntu/bspwm_inicial.png?size=medium 1.5x, /images/posts/bspwm-polybar-ubuntu/bspwm_inicial.png?size=large 2x" sizes="auto" data-title="Pantalla inicial" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>Para abrir una terminal presiona &ldquo;Super + Enter&rdquo;, donde &ldquo;Super&rdquo; es la tecla de &ldquo;Windows&rdquo;.</p>
+<h3 id="resolución-de-pantalla-opcional" class="heading-element">
+  <a href="#resoluci%c3%b3n-de-pantalla-opcional" class="heading-mark"></a>Resolución de pantalla (Opcional)</h3><p>Para configurar la resolución de tu pantalla es necesario hacerlo con el comando <strong>&ldquo;xrandr&rdquo;</strong> como se muestra en el siguiente ejemplo:</p>
+<ol>
+<li>Verifica el nombre de la pantalla (Screen):</li>
+</ol>
+<div class="highlight" id="id-10"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ xrandr</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" src="/images/posts/bspwm-polybar-ubuntu/xrandr-Screen-Name.png" alt="xrandr output" srcset="/images/posts/bspwm-polybar-ubuntu/xrandr-Screen-Name.png?size=small, /images/posts/bspwm-polybar-ubuntu/xrandr-Screen-Name.png?size=medium 1.5x, /images/posts/bspwm-polybar-ubuntu/xrandr-Screen-Name.png?size=large 2x" sizes="auto" data-title="xrandr output" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>En esta imágen se ve la salida de mi maquina virtual que tiene un solo monitor con el nombre &ldquo;Virtual'1&rdquo;, el asterisco identifica la resolución actual.</p>
+<p>Si tu tienes más de un monitor conectado, verifica el nombre del dispositivo al que deseas cambiarle la resolución.</p>
+<p>Ejemplo:
+<img loading="lazy" src="/images/posts/bspwm-polybar-ubuntu/xrandr-Screen-Name-2.png" alt="xrandr output dos monitores" srcset="/images/posts/bspwm-polybar-ubuntu/xrandr-Screen-Name-2.png?size=small, /images/posts/bspwm-polybar-ubuntu/xrandr-Screen-Name-2.png?size=medium 1.5x, /images/posts/bspwm-polybar-ubuntu/xrandr-Screen-Name-2.png?size=large 2x" sizes="auto" data-title="xrandr output dos monitores" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>Ya que identificaste el nombre, para cambiarle la resolución utiliza lo siguiente:</p>
+<div class="highlight" id="id-11"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ xrandr -s 1920x1080 -r 60.00</span></span></code></pre></td></tr></table>
+</div>
+</div><p>En caso de cualquier duda puedes consultar el manual teclando &ldquo;man xrandr&rdquo; en la terminal.</p>
+<p>Si la configuración que seleccionaste funcionó, presiona &ldquo;Super + alt + r&rdquo; para que BSPWM se reinicie, esto hará que la Polybar ocupe el ancho de la pantalla correctamente.</p>
+<p>Ahora lo que toca es <strong>editar el archivo ~/.config/bspwm/bspwmrc</strong> para que cada vez que inicies BSPWM configure la pantalla correctamente.</p>
+<div class="highlight" id="id-12"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ gedit ~/.config/bspwm/bspwmrc</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Y agrega el comando que utilizaste:</p>
+<div class="highlight" id="id-13"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">xrandr --output Virtual-1 --mode 1920x1080</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Presiona &ldquo;Ctrl + s&rdquo; para grabar y luego &ldquo;Super + w&rdquo; para cerrar la ventana.</p>
+<p>Si tienes dudas con las combinaciones de teclas, recuerda que toda la configuración está en <strong>~/.config/sxhkd/sxhkdrc</strong></p>
+<h3 id="combinación-de-teclas-importantes" class="heading-element">
+  <a href="#combinaci%c3%b3n-de-teclas-importantes" class="heading-mark"></a>Combinación de teclas importantes</h3><p>Aquí te dejo algunas combinaciones de teclas que pueden ser de ayuda, recuerda que las puedes modificar y que puedes crear nuevas.</p>
+<p>Para cambiar de area de trabajo, presiona</p>
+<div class="highlight" id="id-14"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Super + 1</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Donde &ldquo;1&rdquo; es el número de área de trabajo, en Polybar puedes ver que por default tienes 10, si te quieres mover al 10, presiona &ldquo;Super + 0&rdquo;</p>
+<table>
+<thead>
+<tr>
+<th>Combinación</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Super + enter</td>
+<td>Abre la terminal</td>
+</tr>
+<tr>
+<td>Super + espacio</td>
+<td>Abre el menú (dmenu)</td>
+</tr>
+<tr>
+<td>Super + ESC</td>
+<td>Carga la configuración de sxhkd de nuevo</td>
+</tr>
+<tr>
+<td>Super + alt + q</td>
+<td>Para <strong>salir de BSPWM</strong></td>
+</tr>
+<tr>
+<td>Super + alt + r</td>
+<td>Para <strong>reiniciar BSPWM</strong></td>
+</tr>
+</tbody>
+</table>
+<p>¿Dudas, preguntas o consejos? Puedes encontrarme en <a href="https://twitter.com/JorgeRS"target="_blank" rel="external nofollow noopener noreferrer"> Twitter </a></p>
+</div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="Actualizado el 2024-01-06 23:32:59">Actualizado el 2024-01-06&nbsp;</span>
+      </div><div class="post-info-license">
+            <span><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span>
+          </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/posts/como-instalar-bspwm-polybar-en-ubuntu/index.md" title="Leer Markdown" class="link-to-markdown">Leer Markdown</a></span></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="Compartir en Twitter" data-sharer="twitter" data-url="http://localhost:1313/posts/como-instalar-bspwm-polybar-en-ubuntu/" data-title="Como Instalar Bspwm Polybar en Ubuntu 20.10" data-via="@JorgeRS" data-hashtags="bspwm,polybar,ubuntu"><i class="fa-brands fa-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Compartir en Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/como-instalar-bspwm-polybar-en-ubuntu/" data-hashtag="bspwm"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/bspwm/" class="post-tag" title="Etiquetas - bspwm">bspwm</a><a href="/tags/polybar/" class="post-tag" title="Etiquetas - polybar">polybar</a><a href="/tags/ubuntu/" class="post-tag" title="Etiquetas - ubuntu">ubuntu</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">Regresar</a></span>&nbsp;|&nbsp;<span><a href="/">Inicio</a></span>
+    </section>
+  </div>
+
+  <div class="post-nav"><a href="/posts/como-instalar-archlinux-en-mbr/" class="post-nav-item" rel="prev" title="Como Instalar Archlinux en BIOS - MBR"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>Como Instalar Archlinux en BIOS - MBR</a>
+      <a href="/posts/como-configurar-neovim-como-vscode-para-python/" class="post-nav-item" rel="next" title="Como Configurar Neovim Como VsCode">Como Configurar Neovim Como VsCode<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="Contenido"><h2 class="toc-title">Contenido&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">Provisto por <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.121.1"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> | Tema - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.0"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">
+              <a href="/"></a></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="Volver arriba"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning"></div>
+  </noscript>
+</div><link rel="preload" href="/lib/katex/katex.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/katex/katex.min.js" defer></script><script src="/lib/katex/auto-render.min.js" defer></script><script src="/lib/katex/copy-tex.min.js" defer></script><script src="/lib/katex/mhchem.min.js" defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"Copiar al portapapeles","maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"De acuerdo","link":"Aprende más","message":"Este sitio web utiliza Cookies para mejorar su experiencia."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};</script><script src="/js/theme.min.js" defer></script></body>
+</html>

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>Como Instalar Artix Linux Openrc - Linux Fácil</title><meta name="author" content="">
+<meta name="author-link" content="">
+<meta name="description" content="En esta ocasión vamos a instalar Artix Linux con OpenRC y MATE como escritorio. Básicamente Artix es Arch pero sin Systemd." /><meta name="keywords" content='artix, tutorial' /><meta itemprop="name" content="Como Instalar Artix Linux Openrc">
+<meta itemprop="description" content="En esta ocasión vamos a instalar Artix Linux con OpenRC y MATE como escritorio. Básicamente Artix es Arch pero sin Systemd."><meta itemprop="datePublished" content="2020-08-05T21:28:36-05:00" />
+<meta itemprop="dateModified" content="2024-01-06T23:32:59-06:00" />
+<meta itemprop="wordCount" content="625">
+<meta itemprop="keywords" content="artix,tutorial," /><meta property="og:title" content="Como Instalar Artix Linux Openrc" />
+<meta property="og:description" content="En esta ocasión vamos a instalar Artix Linux con OpenRC y MATE como escritorio. Básicamente Artix es Arch pero sin Systemd." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/como-instalar-artix-linux-openrc/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-08-05T21:28:36-05:00" />
+<meta property="article:modified_time" content="2024-01-06T23:32:59-06:00" />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Como Instalar Artix Linux Openrc"/>
+<meta name="twitter:description" content="En esta ocasión vamos a instalar Artix Linux con OpenRC y MATE como escritorio. Básicamente Artix es Arch pero sin Systemd."/>
+<meta name="twitter:site" content="@JorgeRS"/>
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://localhost:1313/posts/como-instalar-artix-linux-openrc/" /><link rel="prev" href="http://localhost:1313/posts/como-instalar-bspwm-polybar-en-archlinux/" /><link rel="next" href="http://localhost:1313/posts/como-instalar-archlinux-en-mbr/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Como Instalar Artix Linux Openrc",
+    "inLanguage": "en",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/localhost:1313\/posts\/como-instalar-artix-linux-openrc\/"
+    },"genre": "posts","keywords": "artix, tutorial","wordcount":  625 ,
+    "url": "http:\/\/localhost:1313\/posts\/como-instalar-artix-linux-openrc\/","datePublished": "2020-08-05T21:28:36-05:00","dateModified": "2024-01-06T23:32:59-06:00","license": "©{year}, All Rights Reserved","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "Autor"
+      },"description": "En esta ocasión vamos a instalar Artix Linux con OpenRC y MATE como escritorio. Básicamente Artix es Arch pero sin Systemd."
+  }
+  </script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><script>(window.localStorage?.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('data-theme', 'dark');</script><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="Linux Fácil"><span class="header-title-text">Linux Fácil</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a
+                class="menu-link"
+                href="https://www.youtube.com/channel/UCkns-R5bBW3snQx7RAYRX-A"
+                
+                rel="noopener noreferrer" target="_blank"
+              ><i class="fa-brands fa-youtube fa-fw fa-sm" aria-hidden="true"></i> YouTube</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/archives/"
+                
+                
+              ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archivo</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/categories/"
+                
+                
+              ><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categorias</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/tags/"
+                
+                
+              ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item delimiter"></li><li class="menu-item theme-switch" title="Cambia el tema">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="Linux Fácil"><span class="header-title-text">Linux Fácil</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="https://www.youtube.com/channel/UCkns-R5bBW3snQx7RAYRX-A"
+                  
+                  rel="noopener noreferrer" target="_blank"
+                ><i class="fa-brands fa-youtube fa-fw fa-sm" aria-hidden="true"></i> YouTube</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/archives/"
+                  
+                  
+                ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archivo</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/categories/"
+                  
+                  
+                ><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categorias</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/tags/"
+                  
+                  
+                ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="Cambia el tema"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label=""></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>Como Instalar Artix Linux Openrc</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      </span></span><span class="post-included-in">&nbsp;incluido en <a href="/categories/artix/" class="post-category" title="Categoría - Artix"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Artix</a>&ensp;<a href="/categories/tutorial/" class="post-category" title="Categoría - Tutorial"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Tutorial</a>&ensp;<a href="/categories/instalaci%C3%B3n-base/" class="post-category" title="Categoría - Instalación Base"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Instalación Base</a></span></div><div class="post-meta-line"><span title="publicado el 2020-08-05 21:28:36"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2020-08-05">2020-08-05</time></span>&nbsp;<span title="Actualizado el 2024-01-06 23:32:59"><i class="fa-regular fa-calendar-check fa-fw me-1" aria-hidden="true"></i><time datetime="2024-01-06">2024-01-06</time></span>&nbsp;<span title="625 palabras"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>Aproximadamente 700 palabras</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>3 minutos</span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>Contenido</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#tutorial-en-youtube">Tutorial en YouTube</a></li>
+    <li><a href="#bajar-el-iso">Bajar el ISO</a></li>
+    <li><a href="#comienza-la-instalación">Comienza la Instalación</a>
+      <ul>
+        <li><a href="#verificiar-que-tengas-conexión-a-internet">Verificiar que tengas conexión a Internet.</a></li>
+        <li><a href="#crear-particiones">Crear particiones</a></li>
+        <li><a href="#formatear-particiones">Formatear particiones</a></li>
+        <li><a href="#montar-las-particiones">Montar las particiones</a></li>
+        <li><a href="#instalar-el-sistema-base">Instalar el sistema base</a></li>
+        <li><a href="#generar-tabla-de-sistema-de-archivos-fstab">Generar tabla de sistema de archivos (fstab)</a></li>
+      </ul>
+    </li>
+    <li><a href="#configurar-el-sistema-base">Configurar el sistema base</a>
+      <ul>
+        <li><a href="#crear-archivo-de-swap">Crear archivo de Swap</a></li>
+        <li><a href="#editar-etcfstab">Editar /etc/fstab</a></li>
+        <li><a href="#configurar-el-reloj-del-sistema">Configurar el reloj del sistema</a>
+          <ul>
+            <li><a href="#sincroniza-el-reloj-del-hardware-con-el-del-sistema">Sincroniza el reloj del hardware con el del sistema</a></li>
+          </ul>
+        </li>
+        <li><a href="#localización">Localización</a></li>
+        <li><a href="#grub">GRUB</a></li>
+        <li><a href="#crea-un-password-para-usuario-root">Crea un password para usuario root</a></li>
+        <li><a href="#crea-tu-usuario">Crea tu usuario</a></li>
+        <li><a href="#habilita-el-grupo-wheel">Habilita el grupo &ldquo;wheel&rdquo;</a></li>
+        <li><a href="#configura-la-red">Configura la red</a></li>
+        <li><a href="#instala-connman">Instala connman</a></li>
+        <li><a href="#resetea-la-computadora">Resetea la computadora</a></li>
+      </ul>
+    </li>
+    <li><a href="#configuración-post-instalación-e-instalación-de-escritorio-mate">Configuración post-instalación e Instalación de Escritorio (MATE)</a>
+      <ul>
+        <li><a href="#instala-xorg">Instala xorg</a></li>
+        <li><a href="#instala-el-controlador-de-tu-tarjeta-de-video">Instala el controlador de tu tarjeta de video</a></li>
+        <li><a href="#instala-el-escritorio">Instala el escritorio</a></li>
+        <li><a href="#instala-el-administrador-de-inicio-de-sesión-display-manager">Instala el Administrador de Inicio de Sesión (Display Manager)</a></li>
+        <li><a href="#habilita-el-administrador-de-inicio-de-sesión-en-openrc">Habilita el Administrador de Inicio de Sesión en OPENRC</a></li>
+        <li><a href="#reinicia-el-sistema">Reinicia el sistema.</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h2 id="tutorial-en-youtube" class="heading-element">
+  <a href="#tutorial-en-youtube" class="heading-mark"></a>Tutorial en YouTube</h2>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube-nocookie.com/embed/8eAgxwZBPjI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h2 id="bajar-el-iso" class="heading-element">
+  <a href="#bajar-el-iso" class="heading-mark"></a>Bajar el ISO</h2><p>Lo primero es descargar el ISO del sitio <a href="https://artixlinux.org/download.php" target="_blank">web oficial de Artix Linux</a></p>
+<p>Artix tiene varias versiones, en esta ociasión vamos a realizar una instalación base, también instalaremos OpenRC en lugar de systemd y por último pondermos Mate como escritorio:</p>
+<p><img loading="lazy" src="/images/posts/artix-mate/download.png" alt="descarga el ISO que dice &amp;ldquo;openrc&amp;rdquo;" srcset="/images/posts/artix-mate/download.png?size=small, /images/posts/artix-mate/download.png?size=medium 1.5x, /images/posts/artix-mate/download.png?size=large 2x" sizes="auto" data-title="descarga el ISO que dice &amp;ldquo;openrc&amp;rdquo;" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h2 id="comienza-la-instalación" class="heading-element">
+  <a href="#comienza-la-instalaci%c3%b3n" class="heading-mark"></a>Comienza la Instalación</h2><p>Ya que arrancamos nuestra máquina, ya sea virtual o física comencemos la instalación entonces.</p>
+<p><img loading="lazy" src="/images/posts/artix-mate/login-screen.png" alt="Artix Pantalla Inicial" srcset="/images/posts/artix-mate/login-screen.png?size=small, /images/posts/artix-mate/login-screen.png?size=medium 1.5x, /images/posts/artix-mate/login-screen.png?size=large 2x" sizes="auto" data-title="Artix Pantalla Inicial" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h3 id="verificiar-que-tengas-conexión-a-internet" class="heading-element">
+  <a href="#verificiar-que-tengas-conexi%c3%b3n-a-internet" class="heading-mark"></a>Verificiar que tengas conexión a Internet.</h3><div class="highlight" id="id-1"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ip a</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Este comando debe regresar los nombres de los dispositivos de red y una dirección de IP.</p>
+<h3 id="crear-particiones" class="heading-element">
+  <a href="#crear-particiones" class="heading-mark"></a>Crear particiones</h3><p>Antes de crear las particiones y comezar la instalación, debemos cambiarnos al usuario de &ldquo;root&rdquo;</p>
+<div class="highlight" id="id-2"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo su -</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Para verificar el nombre del dispositivo, es decir el disco donde instalaremos Artix, teclea:</p>
+<div class="highlight" id="id-3"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">lsblk</span></span></code></pre></td></tr></table>
+</div>
+</div><p>En mi caso el disco que donde voy a instalar Artix es &ldquo;vda&rdquo;</p>
+<p><img loading="lazy" src="/images/posts/artix-mate/lsblk.png" alt="lsblk" srcset="/images/posts/artix-mate/lsblk.png?size=small, /images/posts/artix-mate/lsblk.png?size=medium 1.5x, /images/posts/artix-mate/lsblk.png?size=large 2x" sizes="auto" data-title="lsblk" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<div class="highlight" id="id-4"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cfdisk /dev/vda</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Como es una instalación sobre UEFI, selecciona &ldquo;gpt&rdquo;</p>
+<p>Crea una partición para &ldquo;boot&rdquo; y otra para &ldquo;/&rdquo;</p>
+<p>La partición de &ldquo;boot&rdquo; será de 100 MB y el resto del disco para &ldquo;raíz&rdquo;.</p>
+<p>Recuerda que la partición de &ldquo;boot&rdquo; debe ser tipo EFI system</p>
+<p><img loading="lazy" src="/images/posts/artix-mate/cfdisk.png" alt="Así deben quedar las particiones" srcset="/images/posts/artix-mate/cfdisk.png?size=small, /images/posts/artix-mate/cfdisk.png?size=medium 1.5x, /images/posts/artix-mate/cfdisk.png?size=large 2x" sizes="auto" data-title="Así deben quedar las particiones" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h3 id="formatear-particiones" class="heading-element">
+  <a href="#formatear-particiones" class="heading-mark"></a>Formatear particiones</h3><p>Formateamos la primera partición de tipo &ldquo;FAT32&rdquo;</p>
+<div class="highlight" id="id-5"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkfs.fat -F <span class="m">32</span> /dev/vda1</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Luego formateamos la segunda partición de tipo &ldquo;ext4&rdquo;</p>
+<div class="highlight" id="id-6"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkfs.ext4 /dev/vda2</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="montar-las-particiones" class="heading-element">
+  <a href="#montar-las-particiones" class="heading-mark"></a>Montar las particiones</h3><p>Primero montamos la partición 2 <strong>&ldquo;vda2&rdquo;</strong> en /mnt</p>
+<div class="highlight" id="id-7"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mount /dev/vda2 /mnt</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Luego creamos el directorio de <strong>boot</strong> y montamos la primera partición</p>
+<div class="highlight" id="id-8"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir /mnt/boot
+</span></span><span class="line"><span class="cl">mount /dev/vda1 /mnt/boot</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="instalar-el-sistema-base" class="heading-element">
+  <a href="#instalar-el-sistema-base" class="heading-mark"></a>Instalar el sistema base</h3><div class="highlight" id="id-9"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">basestrap /mnt base base-devel linux linux-firmware openrc vim amd-ucode <span class="o">(</span>intel-ucode si es tu caso<span class="o">)</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="generar-tabla-de-sistema-de-archivos-fstab" class="heading-element">
+  <a href="#generar-tabla-de-sistema-de-archivos-fstab" class="heading-mark"></a>Generar tabla de sistema de archivos (fstab)</h3><div class="highlight" id="id-10"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">fstabgen -U /mnt &gt;&gt; /mnt/etc/fstab</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="configurar-el-sistema-base" class="heading-element">
+  <a href="#configurar-el-sistema-base" class="heading-mark"></a>Configurar el sistema base</h2><p>Para esto hay que entrar a <strong>nuestra instalación</strong> tecleando:</p>
+<div class="highlight" id="id-11"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">artools-chroot /mnt</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="crear-archivo-de-swap" class="heading-element">
+  <a href="#crear-archivo-de-swap" class="heading-mark"></a>Crear archivo de Swap</h3><div class="highlight" id="id-12"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">dd <span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span>swapfile <span class="nv">bs</span><span class="o">=</span>1G <span class="nv">count</span><span class="o">=</span><span class="m">2</span> <span class="nv">status</span><span class="o">=</span>progress
+</span></span><span class="line"><span class="cl">chmod <span class="m">600</span> /swapfile
+</span></span><span class="line"><span class="cl">mkswap /swapfile
+</span></span><span class="line"><span class="cl">swapon /swapfile</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="editar-etcfstab" class="heading-element">
+  <a href="#editar-etcfstab" class="heading-mark"></a>Editar /etc/fstab</h3><p>Agrega lo siguiente al final del archivo</p>
+<div class="highlight" id="id-13"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">/swapfile   none    swap    defaults    0 0</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="configurar-el-reloj-del-sistema" class="heading-element">
+  <a href="#configurar-el-reloj-del-sistema" class="heading-mark"></a>Configurar el reloj del sistema</h3><div class="highlight" id="id-14"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ln -sf /usr/share/zoneinfo/America/Chicago /etc/localtime</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="sincroniza-el-reloj-del-hardware-con-el-del-sistema" class="heading-element">
+  <a href="#sincroniza-el-reloj-del-hardware-con-el-del-sistema" class="heading-mark"></a>Sincroniza el reloj del hardware con el del sistema</h4><div class="highlight" id="id-15"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hwclock --systohc</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="localización" class="heading-element">
+  <a href="#localizaci%c3%b3n" class="heading-mark"></a>Localización</h3><div class="highlight" id="id-16"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim /etc/locale.gen</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Genera el &ldquo;locale&rdquo;</p>
+<div class="highlight" id="id-17"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">locale-gen</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Necesitamos ahora poner este &ldquo;locale&rdquo; en el archivo de configuración</p>
+<div class="highlight" id="id-18"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim /etc/locale.conf</span></span></code></pre></td></tr></table>
+</div>
+</div><p>agrega lo siguiente</p>
+<div class="highlight" id="id-19"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">LANG=&#34;en_US.UTF-8&#34;</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="grub" class="heading-element">
+  <a href="#grub" class="heading-mark"></a>GRUB</h3><p>Para instalar GRUB</p>
+<div class="highlight" id="id-20"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -S grub os-prober efibootmgr
+</span></span><span class="line"><span class="cl">grub-install --target<span class="o">=</span>x86_64-efi --efi-directory<span class="o">=</span>/boot --bootloader-id<span class="o">=</span>grub <span class="o">(</span>para sistemas con UEFI<span class="o">)</span>
+</span></span><span class="line"><span class="cl">grub-mkconfig -o /boot/grub/grub.cfg</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="crea-un-password-para-usuario-root" class="heading-element">
+  <a href="#crea-un-password-para-usuario-root" class="heading-mark"></a>Crea un password para usuario root</h3><div class="highlight" id="id-21"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">passwd</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="crea-tu-usuario" class="heading-element">
+  <a href="#crea-tu-usuario" class="heading-mark"></a>Crea tu usuario</h3><div class="highlight" id="id-22"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">useradd -mG wheel jorge
+</span></span><span class="line"><span class="cl">passwd jorge</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="habilita-el-grupo-wheel" class="heading-element">
+  <a href="#habilita-el-grupo-wheel" class="heading-mark"></a>Habilita el grupo &ldquo;wheel&rdquo;</h3><div class="highlight" id="id-23"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">EDITOR</span><span class="o">=</span>vim visudo</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Descomenta la linea que dice:</p>
+<div class="highlight" id="id-24"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">%wheel ALL=(ALL) ALL</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="configura-la-red" class="heading-element">
+  <a href="#configura-la-red" class="heading-mark"></a>Configura la red</h3><p>Edita el archivo</p>
+<div class="highlight" id="id-25"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim /etc/hostname</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Agrega solo el nombre de tu computadora, sin dominio ni nada más</p>
+<p>Después edita el archivo</p>
+<div class="highlight" id="id-26"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim /etc/hosts</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Para que quede como sigue:</p>
+<div class="highlight" id="id-27"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl"># Static table lookup for hostnames.
+</span></span><span class="line"><span class="cl"># See hosts(5) for details.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">127.0.0.1	localhost
+</span></span><span class="line"><span class="cl">::1	localhost
+</span></span><span class="line"><span class="cl">127.0.0.1	artix.localdomain	artix</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="instala-connman" class="heading-element">
+  <a href="#instala-connman" class="heading-mark"></a>Instala connman</h3><div class="highlight" id="id-28"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pacman -S connman-openrc connman-gtk <span class="o">(</span>or cmst <span class="k">for</span> Qt-based DEs<span class="o">)</span>
+</span></span><span class="line"><span class="cl">rc-update add connmand</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="resetea-la-computadora" class="heading-element">
+  <a href="#resetea-la-computadora" class="heading-mark"></a>Resetea la computadora</h3><div class="highlight" id="id-29"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">exit</span>
+</span></span><span class="line"><span class="cl">umount -R /mnt
+</span></span><span class="line"><span class="cl">reboot</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="configuración-post-instalación-e-instalación-de-escritorio-mate" class="heading-element">
+  <a href="#configuraci%c3%b3n-post-instalaci%c3%b3n-e-instalaci%c3%b3n-de-escritorio-mate" class="heading-mark"></a>Configuración post-instalación e Instalación de Escritorio (MATE)</h2><h3 id="instala-xorg" class="heading-element">
+  <a href="#instala-xorg" class="heading-mark"></a>Instala xorg</h3><div class="highlight" id="id-30"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -Syyy
+</span></span><span class="line"><span class="cl">sudo pacman -S xorg --ignore xorg-server-xdmx</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="instala-el-controlador-de-tu-tarjeta-de-video" class="heading-element">
+  <a href="#instala-el-controlador-de-tu-tarjeta-de-video" class="heading-mark"></a>Instala el controlador de tu tarjeta de video</h3><p>Si tienes tarjeta <strong>intel</strong> instala:</p>
+<div class="highlight" id="id-31"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S xf86-video-intel</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Si tienes tarjeta <strong>AMD</strong> instala:</p>
+<div class="highlight" id="id-32"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S xf86-video-amdgpu</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Si tienes tarjeta <strong>NVIDIA</strong> instala:</p>
+<div class="highlight" id="id-33"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S nvidia-lts</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="instala-el-escritorio" class="heading-element">
+  <a href="#instala-el-escritorio" class="heading-mark"></a>Instala el escritorio</h3><div class="highlight" id="id-34"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S mate mate-extra system-config-printer blueman connman-gtk</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="instala-el-administrador-de-inicio-de-sesión-display-manager" class="heading-element">
+  <a href="#instala-el-administrador-de-inicio-de-sesi%c3%b3n-display-manager" class="heading-mark"></a>Instala el Administrador de Inicio de Sesión (Display Manager)</h3><div class="highlight" id="id-35"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo pacman -S displaymanager-openrc sddm</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="habilita-el-administrador-de-inicio-de-sesión-en-openrc" class="heading-element">
+  <a href="#habilita-el-administrador-de-inicio-de-sesi%c3%b3n-en-openrc" class="heading-mark"></a>Habilita el Administrador de Inicio de Sesión en OPENRC</h3><div class="highlight" id="id-36"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo rc-update add xdm default
+</span></span><span class="line"><span class="cl">sudo vim /etc/conf.d/xdm </span></span></code></pre></td></tr></table>
+</div>
+</div><p>Edita para que quede así:</p>
+<div class="highlight" id="id-37"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">DISPLAYMANAGER=&#34;sddm&#34;</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="reinicia-el-sistema" class="heading-element">
+  <a href="#reinicia-el-sistema" class="heading-mark"></a>Reinicia el sistema.</h3><div class="highlight" id="id-38"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo reboot</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="Actualizado el 2024-01-06 23:32:59">Actualizado el 2024-01-06&nbsp;</span>
+      </div><div class="post-info-license">
+            <span><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span>
+          </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/posts/como-instalar-artix-linux-openrc/index.md" title="Leer Markdown" class="link-to-markdown">Leer Markdown</a></span></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="Compartir en Twitter" data-sharer="twitter" data-url="http://localhost:1313/posts/como-instalar-artix-linux-openrc/" data-title="Como Instalar Artix Linux Openrc" data-via="@JorgeRS" data-hashtags="artix,tutorial"><i class="fa-brands fa-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Compartir en Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/como-instalar-artix-linux-openrc/" data-hashtag="artix"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/artix/" class="post-tag" title="Etiquetas - artix">artix</a><a href="/tags/tutorial/" class="post-tag" title="Etiquetas - tutorial">tutorial</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">Regresar</a></span>&nbsp;|&nbsp;<span><a href="/">Inicio</a></span>
+    </section>
+  </div>
+
+  <div class="post-nav"><a href="/posts/como-instalar-bspwm-polybar-en-archlinux/" class="post-nav-item" rel="prev" title="Como Instalar Bspwm Polybar en Archlinux"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>Como Instalar Bspwm Polybar en Archlinux</a>
+      <a href="/posts/como-instalar-archlinux-en-mbr/" class="post-nav-item" rel="next" title="Como Instalar Archlinux en BIOS - MBR">Como Instalar Archlinux en BIOS - MBR<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="Contenido"><h2 class="toc-title">Contenido&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">Provisto por <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.121.1"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> | Tema - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.0"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">
+              <a href="/"></a></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="Volver arriba"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning"></div>
+  </noscript>
+</div><link rel="preload" href="/lib/katex/katex.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/katex/katex.min.js" defer></script><script src="/lib/katex/auto-render.min.js" defer></script><script src="/lib/katex/copy-tex.min.js" defer></script><script src="/lib/katex/mhchem.min.js" defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"Copiar al portapapeles","maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"De acuerdo","link":"Aprende más","message":"Este sitio web utiliza Cookies para mejorar su experiencia."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};</script><script src="/js/theme.min.js" defer></script></body>
+</html>

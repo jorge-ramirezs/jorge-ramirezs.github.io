@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>Como Configurar Neovim Como VsCode - Linux Fácil</title><meta name="author" content="">
+<meta name="author-link" content="">
+<meta name="description" content="El día de hoy vamos a instalar y a configurar Neovim para utilizarlo como IDE para programar en Python. Vamos a utilizar algunos &#34;Plugins&#34; para obtener las ventajas que cualquier otro IDE tiene, tales como validación de sintaxis y autocompletado." /><meta name="keywords" content='vim, neovim, python, ide' /><meta itemprop="name" content="Como Configurar Neovim Como VsCode">
+<meta itemprop="description" content="El día de hoy vamos a instalar y a configurar Neovim para utilizarlo como IDE para programar en Python. Vamos a utilizar algunos &#34;Plugins&#34; para obtener las ventajas que cualquier otro IDE tiene, tales como validación de sintaxis y autocompletado."><meta itemprop="datePublished" content="2020-12-06T20:55:47-06:00" />
+<meta itemprop="dateModified" content="2024-01-06T23:32:59-06:00" />
+<meta itemprop="wordCount" content="2581">
+<meta itemprop="keywords" content="vim,neovim,python,ide," /><meta property="og:title" content="Como Configurar Neovim Como VsCode" />
+<meta property="og:description" content="El día de hoy vamos a instalar y a configurar Neovim para utilizarlo como IDE para programar en Python. Vamos a utilizar algunos &#34;Plugins&#34; para obtener las ventajas que cualquier otro IDE tiene, tales como validación de sintaxis y autocompletado." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/como-configurar-neovim-como-vscode-para-python/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-12-06T20:55:47-06:00" />
+<meta property="article:modified_time" content="2024-01-06T23:32:59-06:00" />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Como Configurar Neovim Como VsCode"/>
+<meta name="twitter:description" content="El día de hoy vamos a instalar y a configurar Neovim para utilizarlo como IDE para programar en Python. Vamos a utilizar algunos &#34;Plugins&#34; para obtener las ventajas que cualquier otro IDE tiene, tales como validación de sintaxis y autocompletado."/>
+<meta name="twitter:site" content="@JorgeRS"/>
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://localhost:1313/posts/como-configurar-neovim-como-vscode-para-python/" /><link rel="prev" href="http://localhost:1313/posts/como-instalar-bspwm-polybar-en-ubuntu/" /><link rel="next" href="http://localhost:1313/posts/comandos-basicos-de-linux/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Como Configurar Neovim Como VsCode",
+    "inLanguage": "en",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/localhost:1313\/posts\/como-configurar-neovim-como-vscode-para-python\/"
+    },"genre": "posts","keywords": "vim, neovim, python, ide","wordcount":  2581 ,
+    "url": "http:\/\/localhost:1313\/posts\/como-configurar-neovim-como-vscode-para-python\/","datePublished": "2020-12-06T20:55:47-06:00","dateModified": "2024-01-06T23:32:59-06:00","license": "©{year}, All Rights Reserved","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "Autor"
+      },"description": "El día de hoy vamos a instalar y a configurar Neovim para utilizarlo como IDE para programar en Python. Vamos a utilizar algunos \"Plugins\" para obtener las ventajas que cualquier otro IDE tiene, tales como validación de sintaxis y autocompletado."
+  }
+  </script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><script>(window.localStorage?.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('data-theme', 'dark');</script><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="Linux Fácil"><span class="header-title-text">Linux Fácil</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a
+                class="menu-link"
+                href="https://www.youtube.com/channel/UCkns-R5bBW3snQx7RAYRX-A"
+                
+                rel="noopener noreferrer" target="_blank"
+              ><i class="fa-brands fa-youtube fa-fw fa-sm" aria-hidden="true"></i> YouTube</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/archives/"
+                
+                
+              ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archivo</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/categories/"
+                
+                
+              ><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categorias</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/tags/"
+                
+                
+              ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item delimiter"></li><li class="menu-item theme-switch" title="Cambia el tema">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="Linux Fácil"><span class="header-title-text">Linux Fácil</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="https://www.youtube.com/channel/UCkns-R5bBW3snQx7RAYRX-A"
+                  
+                  rel="noopener noreferrer" target="_blank"
+                ><i class="fa-brands fa-youtube fa-fw fa-sm" aria-hidden="true"></i> YouTube</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/archives/"
+                  
+                  
+                ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> Archivo</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/categories/"
+                  
+                  
+                ><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> Categorias</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/tags/"
+                  
+                  
+                ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="Cambia el tema"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label=""></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>Como Configurar Neovim Como VsCode</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      </span></span><span class="post-included-in">&nbsp;incluido en <a href="/categories/neovim/" class="post-category" title="Categoría - neovim"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> neovim</a></span></div><div class="post-meta-line"><span title="publicado el 2020-12-06 20:55:47"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2020-12-06">2020-12-06</time></span>&nbsp;<span title="Actualizado el 2024-01-06 23:32:59"><i class="fa-regular fa-calendar-check fa-fw me-1" aria-hidden="true"></i><time datetime="2024-01-06">2024-01-06</time></span>&nbsp;<span title="2581 palabras"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>Aproximadamente 2600 palabras</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>13 minutos</span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>Contenido</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#introducción">Introducción</a></li>
+    <li><a href="#instalación">Instalación</a>
+      <ul>
+        <li><a href="#prerequisitos">Prerequisitos</a>
+          <ul>
+            <li><a href="#python-pip-y-pipenv">Python, Pip y Pipenv</a></li>
+            <li><a href="#git">Git</a></li>
+            <li><a href="#neovim">Neovim</a></li>
+            <li><a href="#nodejs">Node.js</a></li>
+            <li><a href="#nerdfont-tipo-de-letra">Nerdfont (Tipo de Letra)</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#configuración">Configuración</a>
+      <ul>
+        <li><a href="#directorio-nvim">Directorio nvim</a></li>
+        <li><a href="#ambiente-de-python-para-neovim">Ambiente de Python para Neovim</a></li>
+        <li><a href="#archivos-vim">Archivos .vim</a>
+          <ul>
+            <li><a href="#generalsettingsvim">general/settings.vim</a></li>
+          </ul>
+        </li>
+        <li><a href="#plugins">Plugins</a>
+          <ul>
+            <li><a href="#instala-vim-plug">Instala vim-plug</a></li>
+            <li><a href="#homeconfignvimnvim-pluginspluginsvim">$HOME/.config/nvim/nvim-plugins/plugins.vim</a></li>
+            <li><a href="#homeconfignvimplug-configcocvim">$HOME/.config/nvim/plug-config/coc.vim</a></li>
+            <li><a href="#homeconfignvimplug-confignerdcommentervim">$HOME/.config/nvim/plug-config/nerdcommenter.vim</a></li>
+            <li><a href="#homeconfignvimplug-configairlinevim">$HOME/.config/nvim/plug-config/airline.vim</a></li>
+            <li><a href="#homeconfignvimkeymappingkeysvim">$HOME/.config/nvim/keymapping/keys.vim</a></li>
+            <li><a href="#homeconfignviminitvim">$HOME/.config/nvim/init.vim</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#reiniciar-neovim-e-instalar-los-plugins">Reiniciar Neovim e instalar los plugins</a></li>
+    <li><a href="#paso-final-configura-coc-python">Paso Final: Configura coc-python</a></li>
+    <li><a href="#bonus">Bonus</a>
+      <ul>
+        <li><a href="#gruvbox-">Gruvbox 💻</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusión">Conclusión</a></li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h2 id="introducción" class="heading-element">
+  <a href="#introducci%c3%b3n" class="heading-mark"></a>Introducción</h2><p><a href="https://neovim.io/" target="_blank">Neovim</a> es VIM pero mejorado. La documentación oficial lo define como:</p>
+<blockquote>
+<p>Neovim es un editor de texto basado en Vim diseñado para la extensibilidad y usabilidad, para fomentar nuevas aplicaciones y contribuciones.</p>
+</blockquote>
+<h2 id="instalación" class="heading-element">
+  <a href="#instalaci%c3%b3n" class="heading-mark"></a>Instalación</h2><h3 id="prerequisitos" class="heading-element">
+  <a href="#prerequisitos" class="heading-mark"></a>Prerequisitos</h3><p>Como lo dice el título de este artículo, me estaré concentrando en configurar Neovim como IDE para python, entonces voy a asumir que ya tienes Python y Pip instalados en tu sistema.</p>
+<h4 id="python-pip-y-pipenv" class="heading-element">
+  <a href="#python-pip-y-pipenv" class="heading-mark"></a>Python, Pip y Pipenv</h4><p>Para verificar que tengas Python instalado corre uno de los siguientes comandos en la consola:</p>
+<div class="highlight" id="id-1"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ python --version
+</span></span><span class="line"><span class="cl">$ python3 --version</span></span></code></pre></td></tr></table>
+</div>
+</div><p>El comando anterior deberá decirte la versión de Python instalada en tu sistema</p>
+<p>Para verificar si Pip está instalado, solo ejecuta pip en la consola. El comando deberá regresar la &ldquo;ayuda&rdquo;.</p>
+<div class="highlight" id="id-2"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ pip
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Usage:
+</span></span><span class="line"><span class="cl">  pip &lt;command&gt; <span class="o">[</span>options<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Commands:
+</span></span><span class="line"><span class="cl">  install                     Install packages.
+</span></span><span class="line"><span class="cl">  download                    Download packages.
+</span></span><span class="line"><span class="cl">  uninstall                   Uninstall packages.
+</span></span><span class="line"><span class="cl">  freeze                      Output installed packages in requirements format.
+</span></span><span class="line"><span class="cl">  list                        List installed packages.
+</span></span><span class="line"><span class="cl">  show                        Show information about installed packages.
+</span></span><span class="line"><span class="cl">  check                       Verify installed packages have compatible dependencies.
+</span></span><span class="line"><span class="cl">  config                      Manage <span class="nb">local</span> and global configuration.
+</span></span><span class="line"><span class="cl">  search                      Search PyPI <span class="k">for</span> packages.
+</span></span><span class="line"><span class="cl">  cache                       Inspect and manage pip<span class="err">&#39;</span>s wheel cache.
+</span></span><span class="line"><span class="cl">  wheel                       Build wheels from your requirements.
+</span></span><span class="line"><span class="cl">  <span class="nb">hash</span>                        Compute hashes of package archives.
+</span></span><span class="line"><span class="cl">  completion                  A helper <span class="nb">command</span> used <span class="k">for</span> <span class="nb">command</span> completion.
+</span></span><span class="line"><span class="cl">  debug                       Show information useful <span class="k">for</span> debugging.
+</span></span><span class="line"><span class="cl">  <span class="nb">help</span>                        Show <span class="nb">help</span> <span class="k">for</span> commands.</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Si no tienes instalado pip, lo puedes instalar ejectando:</p>
+<div class="highlight" id="id-3"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo apt-get install python3-pip</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Para verificar si Pipenv está instalado, puedes ejecutar:</p>
+<div class="highlight" id="id-4"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ pipenv --version
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">pipenv, version 2020.11.15</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Para instalar Pipenv, utiliza el siguiente comando:</p>
+<div class="highlight" id="id-5"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ pip3 install pipenv</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="git" class="heading-element">
+  <a href="#git" class="heading-mark"></a>Git</h4><p>También vas a necesitar git para poder instalar el manejador de plugins &ldquo;<a href="https://github.com/junegunn/vim-plug%22"target="_blank" rel="external nofollow noopener noreferrer">https://github.com/junegunn/vim-plug"</a></p>
+<p>Si no lo tienes instalado, lo puedes instalar utilizando:</p>
+<div class="highlight" id="id-6"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo apt-get install git</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="neovim" class="heading-element">
+  <a href="#neovim" class="heading-mark"></a>Neovim</h4><p>Por supuesto, debemos tener instalado Neovim con soporte para python, si no lo tienes aún, lo puedes instalar de la siguiente manera:</p>
+<div class="highlight" id="id-7"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo apt-get install neovim python3-neovim</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="nodejs" class="heading-element">
+  <a href="#nodejs" class="heading-mark"></a>Node.js</h4><p>Para poder instalar los plugins que nos van a permitir utilizar Neovim como IDE y reemplazar de una vez por todas VsCode, es necesario también instalar Node.js.</p>
+<div class="highlight" id="id-8"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo apt-get install npm</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="nerdfont-tipo-de-letra" class="heading-element">
+  <a href="#nerdfont-tipo-de-letra" class="heading-mark"></a>Nerdfont (Tipo de Letra)</h4><p>Para poder visualizar los iconos en la terminal es necesario tener un tipo de letra que lo soporte, en lo personal a mi me gustan las Nerdfonts.</p>
+<p>Puedes descargar <a href="https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/DejaVuSansMono.zip">DejaVuSansMono Nerd Font</a>.</p>
+<p>Una vez que hayas descargado el archivo, descomprimelo y copia los archivos (*.ttf) al siguiente directorio:</p>
+<div class="highlight" id="id-9"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$HOME/.local/share/fonts/</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Si por alguna razón no tienes el directorio, lo puedes crear.</p>
+<p>Ya que hayas copiado los archivos, para poder utilizar este nuevo tipo de letra, debes ejecutar:</p>
+<div class="highlight" id="id-10"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ fc-cache -fv</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Asegurate de configurar este nuevo tipo de letra en la terminal que estés utilizando:</strong></p>
+<p><img loading="lazy" src="/images/posts/neovim-python/nerdfont-terminal.png" alt="Terminal" srcset="/images/posts/neovim-python/nerdfont-terminal.png?size=small, /images/posts/neovim-python/nerdfont-terminal.png?size=medium 1.5x, /images/posts/neovim-python/nerdfont-terminal.png?size=large 2x" sizes="auto" data-title="Terminal" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h2 id="configuración" class="heading-element">
+  <a href="#configuraci%c3%b3n" class="heading-mark"></a>Configuración</h2><h3 id="directorio-nvim" class="heading-element">
+  <a href="#directorio-nvim" class="heading-mark"></a>Directorio nvim</h3><p>Aunque puedes tener toda la configuración en tu archivo <strong>init.vim</strong> yo prefiero tener archivos separados para una mejor organización y fácil manejo.</p>
+<p>Crea la siguiente estructura de direcorios:</p>
+<div class="highlight" id="id-11"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">📂 $HOME/.config/nvim/
+</span></span><span class="line"><span class="cl">├──📁 general
+</span></span><span class="line"><span class="cl">├──📁 keymapping
+</span></span><span class="line"><span class="cl">├──📁 nvim-plugins
+</span></span><span class="line"><span class="cl">└──📁 plug-config</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight" id="id-12"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir <span class="nv">$HOME</span>/.config/nvim
+</span></span><span class="line"><span class="cl">mkdir <span class="nv">$HOME</span>/.config/nvim/general
+</span></span><span class="line"><span class="cl">mkdir <span class="nv">$HOME</span>/.config/nvim/keymapping
+</span></span><span class="line"><span class="cl">mkdir <span class="nv">$HOME</span>/.config/nvim/nvim-plugins
+</span></span><span class="line"><span class="cl">mkdir <span class="nv">$HOME</span>/.config/nvim/plug-config</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="ambiente-de-python-para-neovim" class="heading-element">
+  <a href="#ambiente-de-python-para-neovim" class="heading-mark"></a>Ambiente de Python para Neovim</h3><p>Vamos a crear un ambiente virtual dentro de la carpeta de configuración de Neovim. Para eso, en la terminal tecleamos lo siguiente:</p>
+<div class="highlight" id="id-13"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> ~/.config/nvim
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">pipenv install</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Copia la ruta donde se creó el ambiente virtual pues lo usaremos en el siguiente paso:</p>
+<p><img loading="lazy" src="/images/posts/neovim-python/pipenv-install.png" alt="pipenv output" srcset="/images/posts/neovim-python/pipenv-install.png?size=small, /images/posts/neovim-python/pipenv-install.png?size=medium 1.5x, /images/posts/neovim-python/pipenv-install.png?size=large 2x" sizes="auto" data-title="pipenv output" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h3 id="archivos-vim" class="heading-element">
+  <a href="#archivos-vim" class="heading-mark"></a>Archivos .vim</h3><h4 id="generalsettingsvim" class="heading-element">
+  <a href="#generalsettingsvim" class="heading-mark"></a>general/settings.vim</h4><div class="highlight" id="id-14"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-settings.vim" data-lang="settings.vim"><span class="line"><span class="cl"><span class="k">syntax</span> <span class="nx">enable</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">guicursor</span><span class="p">=</span>                                     <span class="c">&#34; Disable blinking for the n-v-c modes</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">termguicolors</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">guioptions</span><span class="p">-=</span><span class="nx">T</span>                                   <span class="c">&#34; No Tool bar</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">cursorline</span>                                     <span class="c">&#34; Highlight the current line</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">hidden</span>                                         <span class="c">&#34; When on a buffer becomes hidden when it is abandoned</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">path</span><span class="p">+=</span>**
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">nowrap</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">encoding</span><span class="p">=</span><span class="nx">UTF</span><span class="m">-8</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">number</span> <span class="nx">relativenumber</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">smartindent</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">smarttab</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">tabstop</span><span class="p">=</span><span class="m">4</span> <span class="nx">softtabstop</span><span class="p">=</span><span class="m">4</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">shiftwidth</span><span class="p">=</span><span class="m">4</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">expandtab</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">smartcase</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">incsearch</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">nohlsearch</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">completeopt</span><span class="p">=</span><span class="nx">menuone</span><span class="p">,</span><span class="nx">noinsert</span><span class="p">,</span><span class="nx">noselect</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">signcolumn</span><span class="p">=</span><span class="nx">yes</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">colorcolumn</span><span class="p">=</span><span class="m">80</span>
+</span></span><span class="line"><span class="cl"><span class="k">highlight</span> <span class="nx">ColorColumn</span> <span class="nx">ctermbg</span><span class="p">=</span><span class="m">0</span> <span class="nx">guibg</span><span class="p">=</span><span class="nx">lightgrey</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">noswapfile</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">nobackup</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">undofile</span>
+</span></span><span class="line"><span class="cl"><span class="k">execute</span> <span class="s1">&#39;set undodir=&#39;</span> . <span class="nx">g</span>:<span class="nx">nvim_data_root</span> . <span class="s1">&#39;/undodir&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Python virtual environment detection in linux</span>
+</span></span><span class="line"><span class="cl"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">loaded_python_provider</span> <span class="p">=</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; Ruta donde se creó el ambiente de Python con pipenv.</span>
+</span></span><span class="line"><span class="cl"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">python3_host_prog</span> <span class="p">=</span> <span class="s1">&#39;/home/{usuario}/.local/share/virtualenvs/{nvim-999999}/bin/python&#39;</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="plugins" class="heading-element">
+  <a href="#plugins" class="heading-mark"></a>Plugins</h3><h4 id="instala-vim-plug" class="heading-element">
+  <a href="#instala-vim-plug" class="heading-mark"></a>Instala vim-plug</h4><p>Para instalar vim-plug vamos a ejecutar el siguiente comando:</p>
+<div class="highlight" id="id-15"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sh -c <span class="s1">&#39;curl -fLo &#34;${XDG_DATA_HOME:-$HOME/.local/share}&#34;/nvim/site/autoload/plug.vim --create-dirs \
+</span></span></span><span class="line"><span class="cl"><span class="s1">       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim&#39;</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="homeconfignvimnvim-pluginspluginsvim" class="heading-element">
+  <a href="#homeconfignvimnvim-pluginspluginsvim" class="heading-mark"></a>$HOME/.config/nvim/nvim-plugins/plugins.vim</h4><div class="highlight" id="id-16"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-plugins.vim" data-lang="plugins.vim"><span class="line"><span class="cl"><span class="nx">call</span> <span class="nx">plug</span>#<span class="nx">begin</span><span class="p">(</span><span class="nx">stdpath</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">)</span>.<span class="s1">&#39;/plugged&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">    &#34; NERDTree</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Plug</span> <span class="s1">&#39;preservim/nerdtree&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">    &#34; VIM-DEVICONS icons for NERDTree</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Plug</span> <span class="s1">&#39;ryanoasis/vim-devicons&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">    &#34; Conquer Of Completion</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Plug</span> <span class="s1">&#39;neoclide/coc.nvim&#39;</span><span class="p">,</span> {<span class="s1">&#39;branch&#39;</span>: <span class="s1">&#39;release&#39;</span>}
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">    &#34; Surround.vim</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Plug</span> <span class="s1">&#39;tpope/vim-surround&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">    &#34; Airline status bar</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Plug</span> <span class="s1">&#39;vim-airline/vim-airline&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Plug</span> <span class="s1">&#39;vim-airline/vim-airline-themes&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">    &#34; NERDCommenter</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Plug</span> <span class="s1">&#39;preservim/nerdcommenter&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">call</span> <span class="nx">plug</span>#<span class="nx">end</span><span class="p">()</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="homeconfignvimplug-configcocvim" class="heading-element">
+  <a href="#homeconfignvimplug-configcocvim" class="heading-mark"></a>$HOME/.config/nvim/plug-config/coc.vim</h4><p>El siguiente es un ejemplo funcional tomado de <a href="https://github.com/neoclide/coc.nvim" target="_blank">la documentación oficial</a> en github.</p>
+<div class="highlight" id="id-17"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-coc.vim" data-lang="coc.vim"><span class="line"><span class="cl"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">coc_global_extensions</span> <span class="p">=</span> [
+</span></span><span class="line"><span class="cl">    \ <span class="s1">&#39;coc-snippets&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    \ <span class="s1">&#39;coc-pairs&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    \ <span class="s1">&#39;coc-python&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    \ <span class="s1">&#39;coc-prettier&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    \ <span class="s1">&#39;coc-vimlsp&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    \ <span class="s1">&#39;coc-marketplace&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">\ ]
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; TextEdit might fail if hidden is not set.</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">hidden</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Some servers have issues with backup files, see #649.</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">nobackup</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">nowritebackup</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Give more space for displaying messages.</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">cmdheight</span><span class="p">=</span><span class="m">2</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; delays and poor user experience.</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">updatetime</span><span class="p">=</span><span class="m">300</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Don&#39;t pass messages to |ins-completion-menu|.</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">shortmess</span><span class="p">+=</span><span class="nx">c</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Always show the signcolumn, otherwise it would shift the text each time</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; diagnostics appear/become resolved.</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="nx">has</span><span class="p">(</span><span class="s2">&#34;patch-8.1.1564&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c">  &#34; Recently vim can merge signcolumn and number column into one</span>
+</span></span><span class="line"><span class="cl">  <span class="k">set</span> <span class="nx">signcolumn</span><span class="p">=</span><span class="nx">number</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="k">set</span> <span class="nx">signcolumn</span><span class="p">=</span><span class="nx">yes</span>
+</span></span><span class="line"><span class="cl"><span class="k">endif</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Use tab for trigger completion with characters ahead and navigate.</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; NOTE: Use command &#39;:verbose imap &lt;tab&gt;&#39; to make sure tab is not mapped by</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; other plugin before putting this into your config.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">inoremap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;&lt;</span><span class="nx">expr</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">TAB</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      \ <span class="nx">pumvisible</span><span class="p">()</span> ? <span class="s2">&#34;\&lt;C-n&gt;&#34;</span> :
+</span></span><span class="line"><span class="cl">      \ <span class="p">&lt;</span><span class="nx">SID</span><span class="p">&gt;</span><span class="nx">check_back_space</span><span class="p">()</span> ? <span class="s2">&#34;\&lt;TAB&gt;&#34;</span> :
+</span></span><span class="line"><span class="cl">      \ <span class="nx">coc</span>#<span class="nx">refresh</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nx">inoremap</span> <span class="p">&lt;</span><span class="nx">expr</span><span class="p">&gt;&lt;</span><span class="nx">S</span><span class="p">-</span><span class="nx">TAB</span><span class="p">&gt;</span> <span class="nx">pumvisible</span><span class="p">()</span> ? <span class="s2">&#34;\&lt;C-p&gt;&#34;</span> : <span class="s2">&#34;\&lt;C-h&gt;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">function</span><span class="p">!</span> <span class="nx">s</span>:<span class="nx">check_back_space</span><span class="p">()</span> <span class="nx">abort</span>
+</span></span><span class="line"><span class="cl">  <span class="k">let</span> <span class="nx">col</span> <span class="p">=</span> <span class="nx">col</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span> <span class="p">-</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">return</span> <span class="p">!</span><span class="nx">col</span> <span class="p">||</span> <span class="nx">getline</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>[<span class="nx">col</span> <span class="p">-</span> <span class="m">1</span>]  <span class="p">=~</span># <span class="s1">&#39;\s&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="k">endfunction</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Use &lt;c-space&gt; to trigger completion.</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="nx">has</span><span class="p">(</span><span class="s1">&#39;nvim&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">inoremap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;&lt;</span><span class="nx">expr</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">c</span><span class="p">-</span><span class="nx">space</span><span class="p">&gt;</span> <span class="nx">coc</span>#<span class="nx">refresh</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">inoremap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;&lt;</span><span class="nx">expr</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">c</span><span class="p">-</span>@<span class="p">&gt;</span> <span class="nx">coc</span>#<span class="nx">refresh</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">endif</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Make &lt;CR&gt; auto-select the first completion item and notify coc.nvim to</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; format on enter, &lt;cr&gt; could be remapped by other vim plugin</span>
+</span></span><span class="line"><span class="cl"><span class="nx">inoremap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;&lt;</span><span class="nx">expr</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">cr</span><span class="p">&gt;</span> <span class="nx">pumvisible</span><span class="p">()</span> ? <span class="nx">coc</span>#<span class="nx">_select_confirm</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">                              \: <span class="s2">&#34;\&lt;C-g&gt;u\&lt;CR&gt;\&lt;c-r&gt;=coc#on_enter()\&lt;CR&gt;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Use `[g` and `]g` to navigate diagnostics</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nmap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;</span> [<span class="nx">g</span> <span class="p">&lt;</span><span class="nx">Plug</span><span class="p">&gt;(</span><span class="nx">coc</span><span class="p">-</span><span class="nx">diagnostic</span><span class="p">-</span><span class="nx">prev</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nmap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;</span> ]<span class="nx">g</span> <span class="p">&lt;</span><span class="nx">Plug</span><span class="p">&gt;(</span><span class="nx">coc</span><span class="p">-</span><span class="nx">diagnostic</span><span class="p">-</span><span class="nx">next</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; GoTo code navigation.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nmap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;</span> <span class="nx">gd</span> <span class="p">&lt;</span><span class="nx">Plug</span><span class="p">&gt;(</span><span class="nx">coc</span><span class="p">-</span><span class="nx">definition</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nmap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;</span> <span class="nx">gy</span> <span class="p">&lt;</span><span class="nx">Plug</span><span class="p">&gt;(</span><span class="nx">coc</span><span class="p">-</span><span class="nx">type</span><span class="p">-</span><span class="nx">definition</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nmap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;</span> <span class="nx">gi</span> <span class="p">&lt;</span><span class="nx">Plug</span><span class="p">&gt;(</span><span class="nx">coc</span><span class="p">-</span><span class="nx">implementation</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nmap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;</span> <span class="nx">gr</span> <span class="p">&lt;</span><span class="nx">Plug</span><span class="p">&gt;(</span><span class="nx">coc</span><span class="p">-</span><span class="nx">references</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Use K to show documentation in preview window.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;</span> <span class="nx">K</span> :<span class="nx">call</span> <span class="p">&lt;</span><span class="nx">SID</span><span class="p">&gt;</span><span class="nx">show_documentation</span><span class="p">()&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">function</span><span class="p">!</span> <span class="nx">s</span>:<span class="nx">show_documentation</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">index</span><span class="p">(</span>[<span class="s1">&#39;vim&#39;</span><span class="p">,</span><span class="s1">&#39;help&#39;</span>]<span class="p">,</span> &amp;<span class="k">filetype</span><span class="p">)</span> <span class="p">&gt;=</span> <span class="m">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">execute</span> <span class="s1">&#39;h &#39;</span>.<span class="nx">expand</span><span class="p">(</span><span class="s1">&#39;&lt;cword&gt;&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="k">elseif</span> <span class="p">(</span><span class="nx">coc</span>#<span class="nx">rpc</span>#<span class="nx">ready</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">call</span> <span class="nx">CocActionAsync</span><span class="p">(</span><span class="s1">&#39;doHover&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="k">execute</span> <span class="s1">&#39;!&#39;</span> . &amp;<span class="nx">keywordprg</span> . <span class="s2">&#34; &#34;</span> . <span class="nx">expand</span><span class="p">(</span><span class="s1">&#39;&lt;cword&gt;&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="k">endif</span>
+</span></span><span class="line"><span class="cl"><span class="k">endfunction</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Highlight the symbol and its references when holding the cursor.</span>
+</span></span><span class="line"><span class="cl"><span class="k">autocmd</span> <span class="nx">CursorHold</span> * <span class="nx">silent</span> <span class="nx">call</span> <span class="nx">CocActionAsync</span><span class="p">(</span><span class="s1">&#39;highlight&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Symbol renaming.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nmap</span> <span class="p">&lt;</span><span class="nx">leader</span><span class="p">&gt;</span><span class="nx">rn</span> <span class="p">&lt;</span><span class="nx">Plug</span><span class="p">&gt;(</span><span class="nx">coc</span><span class="p">-</span><span class="nx">rename</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Formatting selected code.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">xmap</span> <span class="p">&lt;</span><span class="nx">leader</span><span class="p">&gt;</span><span class="nx">f</span>  <span class="p">&lt;</span><span class="nx">Plug</span><span class="p">&gt;(</span><span class="nx">coc</span><span class="p">-</span><span class="nx">format</span><span class="p">-</span><span class="nx">selected</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nmap</span> <span class="p">&lt;</span><span class="nx">leader</span><span class="p">&gt;</span><span class="nx">f</span>  <span class="p">&lt;</span><span class="nx">Plug</span><span class="p">&gt;(</span><span class="nx">coc</span><span class="p">-</span><span class="nx">format</span><span class="p">-</span><span class="nx">selected</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">augroup</span> <span class="nx">mygroup</span>
+</span></span><span class="line"><span class="cl">  <span class="k">autocmd</span><span class="p">!</span>
+</span></span><span class="line"><span class="cl"><span class="c">  &#34; Setup formatexpr specified filetype(s).</span>
+</span></span><span class="line"><span class="cl">  <span class="k">autocmd</span> <span class="nx">FileType</span> <span class="nx">typescript</span><span class="p">,</span><span class="nx">json</span> <span class="nx">setl</span> <span class="nx">formatexpr</span><span class="p">=</span><span class="nx">CocAction</span><span class="p">(</span><span class="s1">&#39;formatSelected&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c">  &#34; Update signature help on jump placeholder.</span>
+</span></span><span class="line"><span class="cl">  <span class="k">autocmd</span> <span class="nx">User</span> <span class="nx">CocJumpPlaceholder</span> <span class="nx">call</span> <span class="nx">CocActionAsync</span><span class="p">(</span><span class="s1">&#39;showSignatureHelp&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">augroup</span> <span class="nx">end</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Applying codeAction to the selected region.</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; Example: `&lt;leader&gt;aap` for current paragraph</span>
+</span></span><span class="line"><span class="cl"><span class="nx">xmap</span> <span class="p">&lt;</span><span class="nx">leader</span><span class="p">&gt;</span><span class="nx">a</span>  <span class="p">&lt;</span><span class="nx">Plug</span><span class="p">&gt;(</span><span class="nx">coc</span><span class="p">-</span><span class="nx">codeaction</span><span class="p">-</span><span class="nx">selected</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nmap</span> <span class="p">&lt;</span><span class="nx">leader</span><span class="p">&gt;</span><span class="nx">a</span>  <span class="p">&lt;</span><span class="nx">Plug</span><span class="p">&gt;(</span><span class="nx">coc</span><span class="p">-</span><span class="nx">codeaction</span><span class="p">-</span><span class="nx">selected</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Remap keys for applying codeAction to the current buffer.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nmap</span> <span class="p">&lt;</span><span class="nx">leader</span><span class="p">&gt;</span><span class="nx">ac</span>  <span class="p">&lt;</span><span class="nx">Plug</span><span class="p">&gt;(</span><span class="nx">coc</span><span class="p">-</span><span class="nx">codeaction</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; Apply AutoFix to problem on the current line.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nmap</span> <span class="p">&lt;</span><span class="nx">leader</span><span class="p">&gt;</span><span class="nx">qf</span>  <span class="p">&lt;</span><span class="nx">Plug</span><span class="p">&gt;(</span><span class="nx">coc</span><span class="p">-</span><span class="nx">fix</span><span class="p">-</span><span class="nx">current</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Map function and class text objects</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; NOTE: Requires &#39;textDocument.documentSymbol&#39; support from the language server.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">xmap</span> <span class="k">if</span> <span class="p">&lt;</span><span class="nx">Plug</span><span class="p">&gt;(</span><span class="nx">coc</span><span class="p">-</span><span class="nx">funcobj</span><span class="p">-</span><span class="nx">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">omap</span> <span class="k">if</span> <span class="p">&lt;</span><span class="nx">Plug</span><span class="p">&gt;(</span><span class="nx">coc</span><span class="p">-</span><span class="nx">funcobj</span><span class="p">-</span><span class="nx">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">xmap</span> <span class="nx">af</span> <span class="p">&lt;</span><span class="nx">Plug</span><span class="p">&gt;(</span><span class="nx">coc</span><span class="p">-</span><span class="nx">funcobj</span><span class="p">-</span><span class="nx">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">omap</span> <span class="nx">af</span> <span class="p">&lt;</span><span class="nx">Plug</span><span class="p">&gt;(</span><span class="nx">coc</span><span class="p">-</span><span class="nx">funcobj</span><span class="p">-</span><span class="nx">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">xmap</span> <span class="nx">ic</span> <span class="p">&lt;</span><span class="nx">Plug</span><span class="p">&gt;(</span><span class="nx">coc</span><span class="p">-</span><span class="nx">classobj</span><span class="p">-</span><span class="nx">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">omap</span> <span class="nx">ic</span> <span class="p">&lt;</span><span class="nx">Plug</span><span class="p">&gt;(</span><span class="nx">coc</span><span class="p">-</span><span class="nx">classobj</span><span class="p">-</span><span class="nx">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">xmap</span> <span class="nx">ac</span> <span class="p">&lt;</span><span class="nx">Plug</span><span class="p">&gt;(</span><span class="nx">coc</span><span class="p">-</span><span class="nx">classobj</span><span class="p">-</span><span class="nx">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">omap</span> <span class="nx">ac</span> <span class="p">&lt;</span><span class="nx">Plug</span><span class="p">&gt;(</span><span class="nx">coc</span><span class="p">-</span><span class="nx">classobj</span><span class="p">-</span><span class="nx">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Remap &lt;C-f&gt; and &lt;C-b&gt; for scroll float windows/popups.</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="nx">has</span><span class="p">(</span><span class="s1">&#39;nvim-0.4.0&#39;</span><span class="p">)</span> <span class="p">||</span> <span class="nx">has</span><span class="p">(</span><span class="s1">&#39;patch-8.2.0750&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;&lt;</span><span class="nx">nowait</span><span class="p">&gt;&lt;</span><span class="nx">expr</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">f</span><span class="p">&gt;</span> <span class="nx">coc</span>#<span class="nx">float</span>#<span class="nx">has_scroll</span><span class="p">()</span> ? <span class="nx">coc</span>#<span class="nx">float</span>#<span class="nx">scroll</span><span class="p">(</span><span class="m">1</span><span class="p">)</span> : <span class="s2">&#34;\&lt;C-f&gt;&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;&lt;</span><span class="nx">nowait</span><span class="p">&gt;&lt;</span><span class="nx">expr</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">b</span><span class="p">&gt;</span> <span class="nx">coc</span>#<span class="nx">float</span>#<span class="nx">has_scroll</span><span class="p">()</span> ? <span class="nx">coc</span>#<span class="nx">float</span>#<span class="nx">scroll</span><span class="p">(</span><span class="m">0</span><span class="p">)</span> : <span class="s2">&#34;\&lt;C-b&gt;&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">inoremap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;&lt;</span><span class="nx">nowait</span><span class="p">&gt;&lt;</span><span class="nx">expr</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">f</span><span class="p">&gt;</span> <span class="nx">coc</span>#<span class="nx">float</span>#<span class="nx">has_scroll</span><span class="p">()</span> ? <span class="s2">&#34;\&lt;c-r&gt;=coc#float#scroll(1)\&lt;cr&gt;&#34;</span> : <span class="s2">&#34;\&lt;Right&gt;&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">inoremap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;&lt;</span><span class="nx">nowait</span><span class="p">&gt;&lt;</span><span class="nx">expr</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">b</span><span class="p">&gt;</span> <span class="nx">coc</span>#<span class="nx">float</span>#<span class="nx">has_scroll</span><span class="p">()</span> ? <span class="s2">&#34;\&lt;c-r&gt;=coc#float#scroll(0)\&lt;cr&gt;&#34;</span> : <span class="s2">&#34;\&lt;Left&gt;&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">vnoremap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;&lt;</span><span class="nx">nowait</span><span class="p">&gt;&lt;</span><span class="nx">expr</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">f</span><span class="p">&gt;</span> <span class="nx">coc</span>#<span class="nx">float</span>#<span class="nx">has_scroll</span><span class="p">()</span> ? <span class="nx">coc</span>#<span class="nx">float</span>#<span class="nx">scroll</span><span class="p">(</span><span class="m">1</span><span class="p">)</span> : <span class="s2">&#34;\&lt;C-f&gt;&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">vnoremap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;&lt;</span><span class="nx">nowait</span><span class="p">&gt;&lt;</span><span class="nx">expr</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">b</span><span class="p">&gt;</span> <span class="nx">coc</span>#<span class="nx">float</span>#<span class="nx">has_scroll</span><span class="p">()</span> ? <span class="nx">coc</span>#<span class="nx">float</span>#<span class="nx">scroll</span><span class="p">(</span><span class="m">0</span><span class="p">)</span> : <span class="s2">&#34;\&lt;C-b&gt;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">endif</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Use CTRL-S for selections ranges.</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; Requires &#39;textDocument/selectionRange&#39; support of language server.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nmap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">s</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">Plug</span><span class="p">&gt;(</span><span class="nx">coc</span><span class="p">-</span><span class="nx">range</span><span class="p">-</span><span class="nx">select</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">xmap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">s</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">Plug</span><span class="p">&gt;(</span><span class="nx">coc</span><span class="p">-</span><span class="nx">range</span><span class="p">-</span><span class="nx">select</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Add `:Format` command to format current buffer.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">command</span><span class="p">!</span> <span class="p">-</span><span class="nx">nargs</span><span class="p">=</span><span class="m">0</span> <span class="nx">Format</span> :<span class="nx">call</span> <span class="nx">CocAction</span><span class="p">(</span><span class="s1">&#39;format&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Add `:Fold` command to fold current buffer.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">command</span><span class="p">!</span> <span class="p">-</span><span class="nx">nargs</span><span class="p">=</span>? <span class="nx">Fold</span> :<span class="nx">call</span>     <span class="nx">CocAction</span><span class="p">(</span><span class="s1">&#39;fold&#39;</span><span class="p">,</span> <span class="p">&lt;</span><span class="nx">f</span><span class="p">-</span><span class="nx">args</span><span class="p">&gt;)</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Add `:OR` command for organize imports of the current buffer.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">command</span><span class="p">!</span> <span class="p">-</span><span class="nx">nargs</span><span class="p">=</span><span class="m">0</span> <span class="nx">OR</span>   :<span class="nx">call</span>     <span class="nx">CocAction</span><span class="p">(</span><span class="s1">&#39;runCommand&#39;</span><span class="p">,</span> <span class="s1">&#39;editor.action.organizeImport&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Add (Neo)Vim&#39;s native statusline support.</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; NOTE: Please see `:h coc-status` for integrations with external plugins that</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; provide custom statusline: lightline.vim, vim-airline.</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">statusline</span>^<span class="p">=</span>%{<span class="nx">coc</span>#<span class="nx">status</span><span class="p">()</span>}%{<span class="nx">get</span><span class="p">(</span><span class="nx">b</span>:<span class="p">,</span><span class="s1">&#39;coc_current_function&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>}
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Mappings for CoCList</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; Show all diagnostics.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;&lt;</span><span class="nx">nowait</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">space</span><span class="p">&gt;</span><span class="nx">a</span>  :<span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">u</span><span class="p">&gt;</span><span class="nx">CocList</span> <span class="nx">diagnostics</span><span class="p">&lt;</span><span class="nx">cr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; Manage extensions.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;&lt;</span><span class="nx">nowait</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">space</span><span class="p">&gt;</span><span class="nx">e</span>  :<span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">u</span><span class="p">&gt;</span><span class="nx">CocList</span> <span class="nx">extensions</span><span class="p">&lt;</span><span class="nx">cr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; Show commands.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;&lt;</span><span class="nx">nowait</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">space</span><span class="p">&gt;</span><span class="nx">c</span>  :<span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">u</span><span class="p">&gt;</span><span class="nx">CocList</span> <span class="nx">commands</span><span class="p">&lt;</span><span class="nx">cr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; Find symbol of current document.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;&lt;</span><span class="nx">nowait</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">space</span><span class="p">&gt;</span><span class="nx">o</span>  :<span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">u</span><span class="p">&gt;</span><span class="nx">CocList</span> <span class="nx">outline</span><span class="p">&lt;</span><span class="nx">cr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; Search workspace symbols.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;&lt;</span><span class="nx">nowait</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">space</span><span class="p">&gt;</span><span class="nx">s</span>  :<span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">u</span><span class="p">&gt;</span><span class="nx">CocList</span> <span class="p">-</span><span class="nx">I</span> <span class="nx">symbols</span><span class="p">&lt;</span><span class="nx">cr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; Do default action for next item.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;&lt;</span><span class="nx">nowait</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">space</span><span class="p">&gt;</span><span class="nx">j</span>  :<span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">u</span><span class="p">&gt;</span><span class="nx">CocNext</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; Do default action for previous item.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;&lt;</span><span class="nx">nowait</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">space</span><span class="p">&gt;</span><span class="nx">k</span>  :<span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">u</span><span class="p">&gt;</span><span class="nx">CocPrev</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; Resume latest coc list.</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;&lt;</span><span class="nx">nowait</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">space</span><span class="p">&gt;</span><span class="nx">p</span>  :<span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">u</span><span class="p">&gt;</span><span class="nx">CocListResume</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="homeconfignvimplug-confignerdcommentervim" class="heading-element">
+  <a href="#homeconfignvimplug-confignerdcommentervim" class="heading-mark"></a>$HOME/.config/nvim/plug-config/nerdcommenter.vim</h4><div class="highlight" id="id-18"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nerdcommenter.vim" data-lang="nerdcommenter.vim"><span class="line"><span class="cl"><span class="c">&#34; Add spaces after comment delimiters by default</span>
+</span></span><span class="line"><span class="cl"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">NERDSpaceDelims</span> <span class="p">=</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Use compact syntax for prettified multi-line comments</span>
+</span></span><span class="line"><span class="cl"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">NERDCompactSexyComs</span> <span class="p">=</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Align line-wise comment delimiters flush left instead of following code indentation</span>
+</span></span><span class="line"><span class="cl"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">NERDDefaultAlign</span> <span class="p">=</span> <span class="s1">&#39;left&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Set a language to use its alternate delimiters by default</span>
+</span></span><span class="line"><span class="cl"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">NERDAltDelims_java</span> <span class="p">=</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Add your own custom formats or override the defaults</span>
+</span></span><span class="line"><span class="cl"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">NERDCustomDelimiters</span> <span class="p">=</span> { <span class="s1">&#39;c&#39;</span>: { <span class="s1">&#39;left&#39;</span>: <span class="s1">&#39;/**&#39;</span><span class="p">,</span><span class="s1">&#39;right&#39;</span>: <span class="s1">&#39;*/&#39;</span>  }  }
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Allow commenting and inverting empty lines (useful when commenting a region)</span>
+</span></span><span class="line"><span class="cl"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">NERDCommentEmptyLines</span> <span class="p">=</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Enable trimming of trailing whitespace when uncommenting</span>
+</span></span><span class="line"><span class="cl"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">NERDTrimTrailingWhitespace</span> <span class="p">=</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Enable NERDCommenterToggle to check all selected lines is commented or not</span>
+</span></span><span class="line"><span class="cl"> <span class="k">let</span> <span class="nx">g</span>:<span class="nx">NERDToggleCheckAllLines</span> <span class="p">=</span> <span class="m">1</span>&#34;</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="homeconfignvimplug-configairlinevim" class="heading-element">
+  <a href="#homeconfignvimplug-configairlinevim" class="heading-mark"></a>$HOME/.config/nvim/plug-config/airline.vim</h4><div class="highlight" id="id-19"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-airline.vim" data-lang="airline.vim"><span class="line"><span class="cl"><span class="c">&#34; enable tabline</span>
+</span></span><span class="line"><span class="cl"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">airline</span>#<span class="nx">extensions</span>#<span class="nx">tabline</span>#<span class="nx">enabled</span> <span class="p">=</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; let g:airline#extensions#tabline#left_sep = &#39;&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; let g:airline#extensions#tabline#left_alt_sep = &#39;&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; let g:airline#extensions#tabline#right_sep = &#39;&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; let g:airline#extensions#tabline#right_alt_sep = &#39;&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; enable powerline fonts</span>
+</span></span><span class="line"><span class="cl"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">airline_powerline_fonts</span> <span class="p">=</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; let g:airline_left_sep = &#39;&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; let g:airline_right_sep = &#39;&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Always show tabs</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">showtabline</span><span class="p">=</span><span class="m">2</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; We don&#39;t need to see things like -- INSERT -- anymore</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">noshowmode</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="homeconfignvimkeymappingkeysvim" class="heading-element">
+  <a href="#homeconfignvimkeymappingkeysvim" class="heading-mark"></a>$HOME/.config/nvim/keymapping/keys.vim</h4><div class="highlight" id="id-20"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-keys.vim" data-lang="keys.vim"><span class="line"><span class="cl"><span class="c">&#34; Edit vimrc faster</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">Leader</span><span class="p">&gt;</span><span class="nx">v</span> :<span class="nx">e</span> $<span class="nx">MYVIMRC</span><span class="p">&lt;</span><span class="nx">cr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Reload init.vim</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">Leader</span><span class="p">&gt;&lt;</span><span class="nx">Leader</span><span class="p">&gt;</span> :<span class="nx">source</span> $<span class="nx">MYVIMRC</span><span class="p">&lt;</span><span class="nx">cr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34;Change working directory</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">leader</span><span class="p">&gt;</span><span class="nx">cd</span> :<span class="nx">cd</span> %:<span class="nx">p</span>:<span class="nx">h</span><span class="p">&lt;</span><span class="nx">cr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34;Mapping NERDTree</span>
+</span></span><span class="line"><span class="cl"><span class="k">map</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">n</span><span class="p">&gt;</span> :<span class="nx">NERDTreeToggle</span><span class="p">&lt;</span><span class="nx">cr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Use alt + hjkl to resize windows</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">M</span><span class="p">-</span><span class="nx">j</span><span class="p">&gt;</span>  :<span class="nx">resize</span> <span class="m">-2</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">M</span><span class="p">-</span><span class="nx">k</span><span class="p">&gt;</span>  :<span class="nx">resize</span> <span class="p">+</span><span class="m">2</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">M</span><span class="p">-</span><span class="nx">h</span><span class="p">&gt;</span>  :<span class="nx">vertical</span> <span class="nx">resize</span> <span class="m">-2</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">M</span><span class="p">-</span><span class="nx">l</span><span class="p">&gt;</span>  :<span class="nx">vertical</span> <span class="nx">resize</span> <span class="p">+</span><span class="m">2</span><span class="p">&lt;</span><span class="nx">CR</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; NerdCommenter Toggle remap to CTRL+/</span>
+</span></span><span class="line"><span class="cl"><span class="nx">vmap</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">_</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">Plug</span><span class="p">&gt;</span><span class="nx">NERDCommenterToggle</span><span class="p">&lt;</span><span class="nx">cr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nmap</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">_</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">Plug</span><span class="p">&gt;</span><span class="nx">NERDCommenterToggle</span><span class="p">&lt;</span><span class="nx">cr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Start Terminal using PowerShell 7 (Preview)</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; For default shell, remove &#34;://pwsh.exe&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; You can customize the shell by replacing &#34;pwsh.exe&#34; with your shell for example:</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34;       :edit term://bash</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34;       :vsplit term://top</span>
+</span></span><span class="line"><span class="cl"><span class="c">&#34; For more :help terminal</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nmap</span> <span class="p">&lt;</span><span class="nx">leader</span><span class="p">&gt;</span><span class="nx">t</span> :<span class="nx">vsplit</span> <span class="nx">term</span>:<span class="sr">//</span><span class="nx">bash</span><span class="p">&lt;</span><span class="nx">cr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Move between buffers</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">leader</span><span class="p">&gt;&lt;</span><span class="nx">tab</span><span class="p">&gt;</span> :<span class="nx">bn</span><span class="p">&lt;</span><span class="nx">cr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">leader</span><span class="p">&gt;&lt;</span><span class="nx">S</span><span class="p">-</span><span class="nx">tab</span><span class="p">&gt;</span> :<span class="nx">bp</span><span class="p">&lt;</span><span class="nx">cr</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">
+</span></span></span><span class="line"><span class="cl"><span class="c">&#34; Closing and hiding current buffer</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nnoremap</span> <span class="p">&lt;</span><span class="nx">leader</span><span class="p">&gt;</span><span class="nx">w</span> :<span class="nx">bd</span><span class="p">&lt;</span><span class="nx">cr</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="homeconfignviminitvim" class="heading-element">
+  <a href="#homeconfignviminitvim" class="heading-mark"></a>$HOME/.config/nvim/init.vim</h4><div class="highlight" id="id-21"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-init.vim" data-lang="init.vim"><span class="line"><span class="cl"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">nvim_data_root</span> <span class="p">=</span> <span class="nx">stdpath</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">nvim_config_root</span> <span class="p">=</span> <span class="nx">stdpath</span><span class="p">(</span><span class="s1">&#39;config&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">config_file_list</span> <span class="p">=</span> [<span class="s1">&#39;/nvim-plugins/plugins.vim&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    \ <span class="s1">&#39;/general/settings.vim&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    \ <span class="s1">&#39;/keymapping/keys.vim&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    \ <span class="s1">&#39;/plug-config/airline.vim&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    \ <span class="s1">&#39;/plug-config/coc.vim&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    \ <span class="s1">&#39;/plug-config/nerdcommenter.vim&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    \ ]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">for</span> <span class="nx">f</span> <span class="nx">in</span> <span class="nx">g</span>:<span class="nx">config_file_list</span>
+</span></span><span class="line"><span class="cl">    <span class="k">execute</span> <span class="s1">&#39;source &#39;</span> . <span class="nx">g</span>:<span class="nx">nvim_config_root</span> . <span class="nx">f</span>
+</span></span><span class="line"><span class="cl"><span class="nx">endfor</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="reiniciar-neovim-e-instalar-los-plugins" class="heading-element">
+  <a href="#reiniciar-neovim-e-instalar-los-plugins" class="heading-mark"></a>Reiniciar Neovim e instalar los plugins</h2><p>Una vez que guardes los cambios, debes salir de Neovim y volver a entrar, luego ejecutar <strong>:PlugInstall</strong></p>
+<p>Esto instalará los plugins y las extensiones de CConquer of Completion (coc).</p>
+<h2 id="paso-final-configura-coc-python" class="heading-element">
+  <a href="#paso-final-configura-coc-python" class="heading-mark"></a>Paso Final: Configura coc-python</h2><p>Para que todo funcione correctamente debes instalar de manera global una libreria de python llamada <a href="https://pypi.org/project/jedi/" target="_blank">&ldquo;jedi&rdquo;</a>. Al instalarlo de manera global te evitarás tener que instalarlo en cada uno de tus ambientes virtuales.</p>
+<p>Para Instalar:</p>
+<div class="highlight" id="id-22"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ pip install jedi</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Una vez instalada, hay que configurar CoC. Primero copia la ruta donde se instaló jedi, para saber esa ruta ejecuta lo siguiente en la terminal:</p>
+<div class="highlight" id="id-23"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ pip show jedi
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Name: jedi
+</span></span><span class="line"><span class="cl">Version: 0.17.2
+</span></span><span class="line"><span class="cl">Summary: An autocompletion tool <span class="k">for</span> Python that can be used <span class="k">for</span> text editors.
+</span></span><span class="line"><span class="cl">Home-page: https://github.com/davidhalter/jedi
+</span></span><span class="line"><span class="cl">Author: David Halter
+</span></span><span class="line"><span class="cl">Author-email: davidhalter88@gmail.com
+</span></span><span class="line"><span class="cl">License: MIT
+</span></span><span class="line"><span class="cl">Location: /usr/lib/python3.9/site-packages &lt;<span class="o">==</span> Esta es la ruta que debes copiar en el siguiente archivo de configuración
+</span></span><span class="line"><span class="cl">Requires: parso
+</span></span><span class="line"><span class="cl">Required-by:</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Abre Neovim y ejecuta <strong>:CocConfig</strong></p>
+<p>Esto abrirá un buffer vacío, este buffer es donde <a href="https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file" target="_blank">configuras CoC</a></p>
+<p>Agrega lo siguiente, reemplazando la ruta por la ruta donde está instalado &ldquo;jedi&rdquo; en tu sistema:</p>
+<div class="highlight" id="id-24"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-coc-settings.json" data-lang="coc-settings.json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;python.jediPath&#34;</span><span class="p">:</span> <span class="s2">&#34;/usr/lib/python3.9/site-packages&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>Guarda el archivo, cierra Neovim y vuelve a abrir.</p>
+<p>Listo, hasta aquí tienes una configuración lista para trabajar con Neovim y reemplazar VSCode.</p>
+<h2 id="bonus" class="heading-element">
+  <a href="#bonus" class="heading-mark"></a>Bonus</h2><h3 id="gruvbox-" class="heading-element">
+  <a href="#gruvbox-" class="heading-mark"></a>Gruvbox 💻</h3><p>En lo personal, el mejor tema para programar en Neovim, es <a href="https://github.com/morhetz/gruvbox" target="_blank"> Gruvbox</a>, la combinación de colores se me hace seria y sobretodo muy cómodo para la vista, simple y sencillamente&hellip; ¡Me Encanta!</p>
+<p>Primero agregamos el plugin en $HOME/.config/nvim/nvim-plugins/plugins.vim</p>
+<div class="highlight" id="id-25"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-plugins.vim" data-lang="plugins.vim"><span class="line"><span class="cl"><span class="c">    &#34; Other themes</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Plug</span> <span class="s1">&#39;morhetz/gruvbox&#39;</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>Recuerda que una vez que guardes los cambios, debes salir de Neovim y volver a entrar, luego correr :PlugInstall</p>
+<p>Después hay que editar $HOME/.config/nvim/general/settings.vim para agregar gruvbox como tema por defecto.</p>
+<div class="highlight" id="id-26"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-settings.vim" data-lang="settings.vim"><span class="line"><span class="cl"><span class="c">&#34; Gruvbox por defecto</span>
+</span></span><span class="line"><span class="cl"><span class="k">colorscheme</span> <span class="nx">gruvbox</span>
+</span></span><span class="line"><span class="cl"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">gruvbox_contrast_dark</span><span class="p">=</span><span class="s1">&#39;hard&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="k">set</span> <span class="nx">background</span><span class="p">=</span><span class="nb">dark</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>Por último, vamos a configurar Airline con el mismo tema de colores. Para eso hay que editar $HOME/.config/nvim/plug-config/airline.vim</p>
+<div class="highlight" id="id-27"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-airline.vim" data-lang="airline.vim"><span class="line"><span class="cl"><span class="c">&#34;Gruvbox</span>
+</span></span><span class="line"><span class="cl"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">airline_theme</span><span class="p">=</span><span class="s1">&#39;gruvbox&#39;</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="conclusión" class="heading-element">
+  <a href="#conclusi%c3%b3n" class="heading-mark"></a>Conclusión</h2><p><img loading="lazy" src="/images/posts/neovim-python/neovim-como-vscode.png" alt="Neovim Como VSCode" srcset="/images/posts/neovim-python/neovim-como-vscode.png?size=small, /images/posts/neovim-python/neovim-como-vscode.png?size=medium 1.5x, /images/posts/neovim-python/neovim-como-vscode.png?size=large 2x" sizes="auto" data-title="Neovim Como VSCode" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p><a href="https://neovim.io" target="_blank">Neovim</a> es un editor de textos ligero y sobretodo muy &ldquo;configurable&rdquo;, al principio puede parecer intimidante pero con el tiempo y la práctica se vuelve una herramienta muy útil para el desarrollo.</p>
+<p>Si deseas conocer que otras extensiones existen para CoC, visita la <a href="https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions" target="_blank">wiki oficial</a> donde encontraras basta información.</p>
+<p>Si tienes algún comentario o recomendación de algún artículo que te gustaría que cubriera en este blog, no dudes en mandarme un mensaje en twitter a <a href="https://twitter.com/jorgers" target="\_blank">@JorgeRS</a></p>
+<p>Si te gustó este artículo por favor compartelo en cualquiera de las redes sociales utilizando los botones más abajo.</p>
+</div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="Actualizado el 2024-01-06 23:32:59">Actualizado el 2024-01-06&nbsp;</span>
+      </div><div class="post-info-license">
+            <span><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span>
+          </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/posts/como-configurar-neovim-como-vscode-para-python/index.md" title="Leer Markdown" class="link-to-markdown">Leer Markdown</a></span></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="Compartir en Twitter" data-sharer="twitter" data-url="http://localhost:1313/posts/como-configurar-neovim-como-vscode-para-python/" data-title="Como Configurar Neovim Como VsCode" data-via="@JorgeRS" data-hashtags="vim,neovim,python,ide"><i class="fa-brands fa-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Compartir en Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/como-configurar-neovim-como-vscode-para-python/" data-hashtag="vim"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/vim/" class="post-tag" title="Etiquetas - vim">vim</a><a href="/tags/neovim/" class="post-tag" title="Etiquetas - neovim">neovim</a><a href="/tags/python/" class="post-tag" title="Etiquetas - python">python</a><a href="/tags/ide/" class="post-tag" title="Etiquetas - ide">ide</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">Regresar</a></span>&nbsp;|&nbsp;<span><a href="/">Inicio</a></span>
+    </section>
+  </div>
+
+  <div class="post-nav"><a href="/posts/como-instalar-bspwm-polybar-en-ubuntu/" class="post-nav-item" rel="prev" title="Como Instalar Bspwm Polybar en Ubuntu 20.10"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>Como Instalar Bspwm Polybar en Ubuntu 20.10</a>
+      <a href="/posts/comandos-basicos-de-linux/" class="post-nav-item" rel="next" title="Comandos Basicos De Linux: Piérdele el miedo a la terminal.">Comandos Basicos De Linux: Piérdele el miedo a la terminal.<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="Contenido"><h2 class="toc-title">Contenido&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">Provisto por <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.121.1"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> | Tema - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.0"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">
+              <a href="/"></a></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="Volver arriba"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning"></div>
+  </noscript>
+</div><link rel="preload" href="/lib/katex/katex.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/katex/katex.min.js" defer></script><script src="/lib/katex/auto-render.min.js" defer></script><script src="/lib/katex/copy-tex.min.js" defer></script><script src="/lib/katex/mhchem.min.js" defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"Copiar al portapapeles","maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"De acuerdo","link":"Aprende más","message":"Este sitio web utiliza Cookies para mejorar su experiencia."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false}};</script><script src="/js/theme.min.js" defer></script></body>
+</html>

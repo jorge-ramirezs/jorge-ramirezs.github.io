@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>distribuciones on Linux Fácil</title>
+    <link>https://linuxfacil.mx/tags/distribuciones/</link>
+    <description>Recent content in distribuciones on Linux Fácil</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <copyright>©2023, All Rights Reserved</copyright>
+    <lastBuildDate>Tue, 11 Oct 2022 10:46:50 -0500</lastBuildDate>
+    
+        <atom:link href="https://linuxfacil.mx/tags/distribuciones/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Como Seleccionar La Mejor Distribución De Linux Para Mí</title>
+        <link>https://linuxfacil.mx/blog/linux/como-seleccionar-la-distribucion-correcta-de-linux/</link>
+        <pubDate>Tue, 11 Oct 2022 10:46:50 -0500</pubDate>
+        
+        <atom:modified>Tue, 11 Oct 2022 10:46:50 -0500</atom:modified>
+        <guid>https://linuxfacil.mx/blog/linux/como-seleccionar-la-distribucion-correcta-de-linux/</guid>
+        <description>Todo se reduce al escritorio Cuando estás buscando la mejor distribución de Linux para tu día a día, ya seas novato o experto, todo se reduce al escritorio que vas a estar utilizando.
+Independientemente de que tan fácil o complicado es de configurar lo más importante es que tan sencillo es de utilizar.
+Existen muchos escritorios y manejadores de ventanas de donde escoger, Gnome, KDE, Cinnamon, Budgie, Mate, XFCE4, Enlightenment, LXDE, i3, BSPWM entre otros.</description>
+        
+        <dc:creator>Jorge R.</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>linux</category>
+            
+          
+            
+              <category>distribuciones</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
